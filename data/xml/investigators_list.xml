@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<investigators_list>
+    <investigator name="Beta Test">
+        <expansion>Le roi en Jaune</expansion>
+        <occupation>Betatesteur</occupation>
+        <home>DTC</home>
+        <sanity>4</sanity>
+        <stamina>6</stamina>
+        <focus>2</focus>
+        <skill name ="speed">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="sneak">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="fight">
+            <min>2</min>
+            <max>5</max>
+        </skill>
+        <skill name ="will">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="lore">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="luck">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <inventory>
+        </inventory>
+    </investigator>
+
+    <investigator name="Amanda Sharpe">
+        <image>Amanda_Sharp.jpg</image>
+        <expansion>Jeu de base</expansion>
+        <occupation>Student</occupation>
+        <home>The Bank of Arkham</home>
+        <sanity>5</sanity>
+        <stamina>5</stamina>
+        <focus>3</focus>
+        <skill name ="speed">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="sneak">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="fight">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="will">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="lore">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="luck">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <inventory>
+            <money>1</money>
+            <clue_tokens>1</clue_tokens>
+            <common_objects>
+                <number>1</number>
+            </common_objects>
+        </inventory>
+    </investigator>
+</investigators_list>
