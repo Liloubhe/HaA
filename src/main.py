@@ -10,6 +10,10 @@ import sys, logging, os, inspect
 __src__ = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))
 __xml__ = __src__ + "/../data/xml/"
 
+if sys.version_info > (3, 0):
+    raw_input = input
+#from __future__ import print_function
+
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
