@@ -28,8 +28,8 @@ def choose_expansion(available_expansions):
     _str += "- " + final_expansion_list[0]
 
     for _iel, exp in enumerate(available_expansions):
-        _input = raw_input(">> Do you want to play with: " + exp + "? (Y/N) ")
-        if _input.lower() == "y" or _input.lower() == "yes":
+        _input = raw_input(">> Do you want to play with: " + exp + "? [Y/n] ")
+        if _input.lower() == "y" or _input.lower() == "yes" or _input =="":
             _str += "\n- " + exp
             final_expansion_list.append(exp)
     _str += "\n"
