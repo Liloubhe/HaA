@@ -18,13 +18,15 @@ This module defines the following classes:
 #-------------------------------------------------------------------------------
 
 import logging
+from random import randint
+
 #from __future__ import print_function
 
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__, ___dbg___, __xml__
+from main import __function__, ___dbg___
 
 #-------------------------------------------------------------------------------
 # Investigator container
@@ -34,13 +36,11 @@ class Investigator:
     """
     Class gathering all the informations about an investigator
     """
-    def __init__(self, elt, player_nb):
+    def __init__(self, elt):
         """
         Initializes all the information about an investigator
         """
         self.name        = elt.get('name')
-        self.player      = "[Player" + str(player_nb) + "] "
-        logging.info(self.player + self.name + ' is entering the game!')
         self.location    = elt.find('home').text
         self.occupation  = elt.find('occupation').text
         self.expansion   = elt.find('expansion').text
@@ -49,7 +49,7 @@ class Investigator:
         self.stamina_max = int(elt.find('stamina').text)
 
         self.sanity, self.stamina = self.sanity_max, self.stamina_max
-        self.blessed, self.cursed = False, False
+        self.blessed, self.cursed, self.account = False, False, False
 
         self.skill       = {}
         for _iel in elt.findall("skill"):
@@ -63,11 +63,44 @@ class Investigator:
         if ___dbg___:
             self.display()
 
-        images_folder = __xml__ + "/images/investigators/"
-        self.image       = images_folder + "default.png"
-        if elt.find('image') is not None:
-            self.image   = images_folder + elt.find('image').text
+#        images_folder = __xml__ + "/images/investigators/"
+#        self.image       = images_folder + "default.png"
+#        if elt.find('image') is not None:
+#            self.image   = images_folder + elt.find('image').text
 
+
+    def upkeep(self):
+        """
+        """
+        # Blessing/curse
+        if self.blessed or self.cursed:
+            dice_roll = randint(1, 6)
+            _str = self.name + " is upkeeping the "
+            _str += ("blessing:" if self.blessed else "curse:")
+            logging.info(_str)
+            _str = "Dice result: " + str(dice_roll) + " | " + self.name + " is"
+            if dice_roll == 1:
+                self.blessed = False
+                _str += " no longer "
+            else : 
+                _str += " still "
+            _str += "blessed." if self.blessed else "cursed."
+            logging.info(_str)
+
+        # Account
+        if self.account:
+            self.inventory.money += 2
+            dice_roll = randint(1, 6)
+            logging.info(self.name + " won 2$ and is upkeeping the account:")
+            _str = "Dice result: " + str(dice_roll) + " | " + self.name + " is"
+            if dice_roll == 1:
+                self.account = False
+                _str += " no longer"
+            _str += " keeping the account."
+            logging.info(_str)
+
+    # Skills
+    # ------------
 
     def initialize_skill(self, place):
         """
@@ -92,6 +125,93 @@ class Investigator:
         self.skill_line[line][0].move_to_the_left(value)
         self.skill_line[line][1].move_to_the_left(value)
 
+
+    # Sanity
+    # ------------
+
+    def increase_sanity(self, value = 1):
+        """
+        Increases (if possible) the sanity of the investigator
+        """
+        if self.sanity < self.sanity_max:
+            self.sanity += value
+            self.sanity = min(self.sanity, self.sanity_max)
+            logging.info("Sanity gain (" + str(value) + ") | "\
+                        + "new " + self.name + "'s sanity: "\
+                        + str(self.sanity) + "/" + str(self.sanity_max))
+        else:
+            logging.info("Sanity gain (" + str(value) + ") | "\
+                        + self.name + "'s sanity already to the max ("\
+                        + str(self.sanity_max) + ")")
+
+
+    def decrease_sanity(self, value = 1):
+        """
+        Decreases the sanity of the investigator
+        """
+        if self.sanity > 0:
+            self.sanity -= value
+            self.sanity = max(self.sanity, 0)
+            logging.info("Sanity loss (" + str(value) + ") | "\
+                        + "new " + self.name + "'s sanity: "\
+                        + str(self.sanity) + "/" + str(self.sanity_max))
+        if self.sanity == 0:
+            self.become_crazy()
+
+
+    def become_crazy(self):
+        logging.debug("[START] " + __function__())
+        self.location = "The Asylum"
+        logging.info(self.name + " becomes crazy")
+        logging.info(self.name + " is going to the " + self.location)
+        logging.warning("the function 'become_crazy' is not implemented")
+        logging.debug("[END] " + __function__())
+
+
+    # Stamina
+    # -------------
+
+    def increase_stamina(self, value = 1):
+        """
+        Increases (if possible) the stamina of the investigator
+        """
+        if self.stamina < self.stamina_max:
+            self.stamina += value
+            self.stamina = min(self.stamina, self.stamina_max)
+            logging.info("Stamina gain (" + str(value) + ") | "\
+                        + "new " + self.name + "'s stamina: "\
+                        + str(self.stamina) + "/" + str(self.stamina_max))
+        else:
+            logging.info("Stamina gain (" + str(value) + ") | "\
+                        + self.name + "'s stamina already to the max ("\
+                         + str(self.stamina_max) + ")")
+
+
+    def decrease_stamina(self, value = 1):
+        """
+        Decreases the stamina of the investigator
+        """
+        if self.stamina > 0:
+            self.stamina -= value
+            self.stamina = max(self.stamina, 0)
+            logging.info("Stamina loss (" + str(value) + ") | "\
+                        + "new " + self.name + "'s sanity: "\
+                        + str(self.stamina) + "/" + str(self.stamina_max))
+        if self.stamina == 0:
+            self.fall_unconscious()
+
+
+    def fall_unconscious(self):
+        logging.debug("[START] " + __function__())
+        self.location = "The Hospital"
+        logging.info(self.name + " falls unconscious")
+        logging.info(self.name + " is going to the " + self.location)
+        logging.warning("the function 'fall_unconscious' is not implemented")
+        logging.debug("[END] " + __function__())
+
+
+    # Displaying info in text
+    # -----------------------
 
     def text(self):
         """
@@ -127,82 +247,9 @@ class Investigator:
         print(_str)
 
 
-    def increase_sanity(self, value = 1):
-        """
-        Increases (if possible) the sanity of the investigator
-        """
-        if self.sanity < self.sanity_max:
-            self.sanity += value
-            self.sanity = min(self.sanity, self.sanity_max)
-            logging.info("Sanity gain (" + str(value) + ") | "\
-                        + "new " + self.name + "'s sanity: "\
-                        + str(self.sanity) + "/" + str(self.sanity_max))
-        else:
-            logging.info("Sanity gain (" + str(value) + ") | "\
-                        + self.name + "'s sanity already to the max ("\
-                        + str(self.sanity_max) + ")")
-
-
-    def decrease_sanity(self, value = 1):
-        """
-        Decreases the sanity of the investigator
-        """
-        if self.sanity > 0:
-            self.sanity -= value
-            self.sanity = max(self.sanity, 0)
-            logging.info("Sanity loss (" + str(value) + ") | "\
-                        + "new " + self.name + "'s sanity: "\
-                        + str(self.sanity) + "/" + str(self.sanity_max))
-        if self.sanity == 0:
-            self.become_crazy()
-
-
-    def increase_stamina(self, value = 1):
-        """
-        Increases (if possible) the stamina of the investigator
-        """
-        if self.stamina < self.stamina_max:
-            self.stamina += value
-            self.stamina = min(self.stamina, self.stamina_max)
-            logging.info("Stamina gain (" + str(value) + ") | "\
-                        + "new " + self.name + "'s stamina: "\
-                        + str(self.stamina) + "/" + str(self.stamina_max))
-        else:
-            logging.info("Stamina gain (" + str(value) + ") | "\
-                        + self.name + "'s stamina already to the max ("\
-                         + str(self.stamina_max) + ")")
-
-
-    def decrease_stamina(self, value = 1):
-        """
-        Decreases the stamina of the investigator
-        """
-        if self.stamina > 0:
-            self.stamina -= value
-            self.stamina = max(self.stamina, 0)
-            logging.info("Stamina loss (" + str(value) + ") | "\
-                        + "new " + self.name + "'s sanity: "\
-                        + str(self.stamina) + "/" + str(self.stamina_max))
-        if self.stamina == 0:
-            self.fall_unconscious()
-
-
-    def become_crazy(self):
-        logging.debug("[START] " + __function__())
-        self.location = "The Asylum"
-        logging.info(self.name + " becomes crazy")
-        logging.info(self.name + " is going to the " + self.location)
-        logging.warning("the function 'become_crazy' is not implemented")
-        logging.debug("[END] " + __function__())
-
-    def fall_unconscious(self):
-        logging.debug("[START] " + __function__())
-        self.location = "The Hospital"
-        logging.info(self.name + " falls unconscious")
-        logging.info(self.name + " is going to the " + self.location)
-        logging.warning("the function 'fall_unconscious' is not implemented")
-        logging.debug("[END] " + __function__())
-
+#-------------------------------------------------------------------------------
+# Skill container
+#-------------------------------------------------------------------------------
 
 class Skill:
     """
@@ -260,6 +307,9 @@ class Skill:
         self.place = max(0, self.place)
         self.value = self.range[self.place]
 
+#-------------------------------------------------------------------------------
+# Inventory container
+#-------------------------------------------------------------------------------
 
 class Inventory:
     """
