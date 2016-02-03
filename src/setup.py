@@ -7,17 +7,15 @@
 #-------------------------------------------------------------------------------
 
 import logging
-from xml.etree.ElementTree import parse
 #from __future__ import print_function
 
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
 
+from main import __function__
 from Class.Deck import Deck
 from Class.Player import Player
-#from Class.Investigator import Investigator
-from main import __function__, __xml__
 
 #-------------------------------------------------------------------------------
 
@@ -48,21 +46,31 @@ def choose_investigators(expansion, nb_players):
     logging.debug("[START] " + __function__())
 
     investigators_list = Deck("investigators_list", expansion)
-    print("There are " +str(investigators_list.cards_numbers) +
+    print("There are " +str(investigators_list.cards_number) +
           " investigators implemented in these expansions:")
     for _iel, _elt in enumerate(investigators_list.remaining_cards):
         print(str(_iel) + ": " + _elt.name)
 
     players = []
+    names_already_used = []
     for _iel in range(0, int(nb_players)):
-        name = raw_input(">> (Enter a number between 1 and "+\
-                           str(investigators_list.cards_numbers) +") Player" +\
-                           str(_iel + 1) + " choose investigator " + "n° ")
-        
-        players.append(Player(_iel + 1,
-                              investigators_list.remaining_cards[int(name)]))
+        already_used = False
+        while not already_used:
+            name = raw_input(">> [Player" + str(_iel + 1)\
+                            + "] choose investigator " + "n° ")
+            if name in names_already_used:
+                print("This investigator is already taken. Choose another one.")
+            elif int(name) > investigators_list.cards_number - 1:
+                print("Wrong number! Choose a number between 0 and "\
+                     + str(investigators_list.cards_number - 1) + ".")
+            else:
+                players.append(Player(_iel + 1, 
+                               investigators_list.remaining_cards[int(name)]))
+                names_already_used.append(name)
+                already_used = True
 
     logging.debug("[END] " + __function__())
+    return players
 
 #-------------------------------------------------------------------------------
 # Main program driving the setup
@@ -81,7 +89,7 @@ def main_setup():
     nb_players = raw_input(">> How many are you (choose between 2 and 7)? ")
     logging.info("You are " + str(nb_players) + " players\n")
 
-    choose_investigators(chosen_expansions, nb_players)
+    players = choose_investigators(chosen_expansions, nb_players)
 
     logging.debug("[END] " + __function__())
 
