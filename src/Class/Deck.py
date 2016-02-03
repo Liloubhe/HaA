@@ -50,7 +50,7 @@ class Deck:
                         self.remaining_cards.append(Investigator(_elt))
         shuffle(self.remaining_cards)
         self.discarding_cards = []
-        self.cards_numbers = len(self.remaining_cards)
+        self.cards_number = len(self.remaining_cards)
 
 #-------------------------------------------------------------------------------
 # End
