@@ -3,7 +3,7 @@
     <investigator name="Beta Test">
         <expansion>Le roi en Jaune</expansion>
         <occupation>Betatesteur</occupation>
-        <home>DTC</home>
+        <home>Black Cave</home>
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>2</focus>
@@ -39,7 +39,7 @@
         <image>Amanda_Sharp.jpg</image>
         <expansion>Jeu de base</expansion>
         <occupation>Student</occupation>
-        <home>The Bank of Arkham</home>
+        <home>Bank of Arkham</home>
         <sanity>5</sanity>
         <stamina>5</stamina>
         <focus>3</focus>
