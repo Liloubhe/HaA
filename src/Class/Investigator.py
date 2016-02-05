@@ -41,7 +41,7 @@ class Investigator:
         Initializes all the information about an investigator
         """
         self.name        = elt.get('name')
-        self.location    = elt.find('home').text
+        self.init_location    = elt.find('home').text
         self.occupation  = elt.find('occupation').text
         self.expansion   = elt.find('expansion').text
         self.focus       = int(elt.find('focus').text)
@@ -60,13 +60,18 @@ class Investigator:
                            (self.skill["lore"], self.skill["luck"])]
 
         self.inventory = Inventory(elt.find('inventory'))
-        if ___dbg___:
-            self.display()
 
 #        images_folder = __xml__ + "/images/investigators/"
 #        self.image       = images_folder + "default.png"
 #        if elt.find('image') is not None:
 #            self.image   = images_folder + elt.find('image').text
+
+
+    def move_to(self, location):
+        if hasattr(self, 'location'):
+            self.location.leaving_investigator(self.name)
+        self.location = location
+        location.incoming_investigator(self.name)
 
 
     def upkeep(self):
@@ -234,7 +239,7 @@ class Investigator:
             _str += self.skill[_iel].__str__()
         _str += "-"*40 + "\n\n" 
         _str += self.inventory.__str__()
-        _str += "\n(Actual location: " + self.location + ")\n"
+        _str += "\n(Actual location: " + self.location.name + ")\n"
         _str +=  "="*40 + "\n\n"
 
         return _str
