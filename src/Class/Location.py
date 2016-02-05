@@ -57,7 +57,8 @@ class Location:
         self.monsters      = []
         self.portal        = []
 
-    def display(self, verbosity = 1):
+
+    def __str__(self):
         """
         Displays (in the shell) all the characteristics about the location
         """
@@ -84,15 +85,14 @@ class Location:
         else:
             _str += "None\n"
 
-        if verbosity > 1:
-            _str += "\nLocations accessibles from here:\n" + "-"*32 + "\n"
-            for _iel, neighbor in enumerate(self.neighbors):
-                if len(self.neighbors) > 1:
-                    _str += " | " + str(_iel + 1) + ": " + neighbor + "\n"
-                else:
-                    _str += " | " + neighbor + "\n"
+        _str += "\nLocations accessibles from here:\n" + "-"*32 + "\n"
+        for _iel, neighbor in enumerate(self.neighbors):
+            if len(self.neighbors) > 1:
+                _str += " | " + str(_iel + 1) + ": " + neighbor + "\n"
+            else:
+                _str += " | " + neighbor + "\n"
 
-        print(_str)
+        return _str
 
 #-------------------------------------------------------------------------------
 # End
@@ -104,4 +104,4 @@ if __name__ == "__main__":
     root = tree.getroot()
     for _elt in root:
         where = Location(_elt)
-        where.display()
+        print(where)
