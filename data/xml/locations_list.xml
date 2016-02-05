@@ -5,6 +5,11 @@
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Streets of Miskatonik University"/>
     </location>
+    <location name="Arkham Asylum">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Downton</neighborhood>
+        <neighbor name="Streets of Downton"/>
+    </location>
     <location name="Bank of Arkham">
         <expansion>Jeu de base</expansion>
         <neighborhood>Downton</neighborhood>
