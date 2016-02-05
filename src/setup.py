@@ -7,16 +7,20 @@
 #-------------------------------------------------------------------------------
 
 import logging
+from xml.etree.ElementTree import parse
 #from __future__ import print_function
 
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__
-from Class.Deck   import Deck
-from Class.Player import Player
+from main import __function__, __xml__
+from Class.Deck     import Deck
+from Class.Location import Location
+from Class.Player   import Player
 
+#-------------------------------------------------------------------------------
+global locations_list
 #-------------------------------------------------------------------------------
 
 def choose_expansion(available_expansions):
@@ -42,6 +46,23 @@ def choose_expansion(available_expansions):
 
     logging.debug("[END] " + __function__())
     return final_expansion_list
+
+
+#-------------------------------------------------------------------------------
+
+def setup_locations(expansions):
+    """
+    """
+    _xml_file = __xml__ + "locations_list.xml"
+    tree = parse(_xml_file)
+    root = tree.getroot()
+    locations_list = []
+
+    for _elt in root:
+        for exp in expansions:
+            if _elt.find('expansion').text == exp:
+                locations_list.append(Location(_elt))
+    return locations_list
 
 
 #-------------------------------------------------------------------------------
@@ -137,12 +158,14 @@ def main_setup():
     available_expansions.append("Le roi en Jaune")
     chosen_expansions = choose_expansion(available_expansions)
 
+    # General game setup: locations
+    locations_list = setup_locations(chosen_expansions)
+
     # General game setup: numbers of players
     nb_players = raw_input(">> How many are you (choose between 2 and 7)? ")
     logging.info("You are " + str(nb_players) + " players\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
-    players = choose_new_investigator(chosen_expansions, players, 1)
 
     logging.debug("[END] " + __function__())
 
