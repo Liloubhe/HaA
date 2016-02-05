@@ -161,7 +161,7 @@ class Investigator:
 
     def become_crazy(self):
         logging.debug("[START] " + __function__())
-        self.location = "The Asylum"
+        self.location = "Arkham Asylum"
         logging.info(self.name + " becomes crazy")
         logging.info(self.name + " is going to the " + self.location)
         logging.warning("the function 'become_crazy' is not implemented")
@@ -203,7 +203,7 @@ class Investigator:
 
     def fall_unconscious(self):
         logging.debug("[START] " + __function__())
-        self.location = "The Hospital"
+        self.location = "St. Mary's Hospital"
         logging.info(self.name + " falls unconscious")
         logging.info(self.name + " is going to the " + self.location)
         logging.warning("the function 'fall_unconscious' is not implemented")
