@@ -213,9 +213,9 @@ class Investigator:
     # Displaying info in text
     # -----------------------
 
-    def text(self):
+    def __str__(self):
         """
-        Creates a string containing the investigator information
+        Displays (in the shell) all the characteristics of the investigator
         """
         _str = "="*40 + "\n"
         _str += self.name + "\n(" + self.occupation + ")\n" + _str
@@ -226,25 +226,18 @@ class Investigator:
         if self.cursed:
             _str += "\n... and is cursed!\n"
         _str += "\n\n(Focus: " + str(self.focus) + ")\n"
-
-        return _str
-
-
-    def display(self):
-        """
-        Displays (in the shell) all the characteristics of the investigator
-        """
-        _str  = self.text()
+        
         for __i, _iel in enumerate(["speed", "sneak", "fight",
                                     "will", "lore", "luck"]):
             if __i % 2 == 0:
                 _str += "-"*40 + "\n"
-            _str += self.skill[_iel].text()
+            _str += self.skill[_iel].__str__()
         _str += "-"*40 + "\n\n" 
-        _str += self.inventory.text()
+        _str += self.inventory.__str__()
         _str += "\n(Actual location: " + self.location + ")\n"
         _str +=  "="*40 + "\n\n"
-        print(_str)
+
+        return _str
 
 
 #-------------------------------------------------------------------------------
@@ -272,7 +265,7 @@ class Skill:
         self.value = self.range[self.place]
 
 
-    def text(self):
+    def __str__(self):
         """
         Creates a string containing the investigator's skill information
         """
@@ -327,7 +320,7 @@ class Inventory:
             self.clue_tokens = int(elt.find('clue_tokens').text)
 
 
-    def text(self):
+    def __str__(self):
         """
         Creates a string containing the investigator's inventory information
         """
