@@ -19,6 +19,7 @@
         <expansion>Jeu de base</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Streets of Rivertown"/>
+        <unstable>True</unstable>
     </location>
     <location name="Curiositie Shoppe">
         <expansion>Jeu de base</expansion>
@@ -34,21 +35,25 @@
         <expansion>Jeu de base</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Streets of Rivertown"/>
+        <unstable>True</unstable>
     </location>
     <location name="Hibb's Roadhouse'">
         <expansion>Jeu de base</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Streets of Easttown"/>
+        <unstable>True</unstable>
     </location>
     <location name="Historical Society">
         <expansion>Jeu de base</expansion>
         <neighborhood>Southside</neighborhood>
         <neighbor name="Streets of Southside"/>
+        <unstable>True</unstable>
     </location>
     <location name="Independance Square">
         <expansion>Jeu de base</expansion>
         <neighborhood>Downtown</neighborhood>
         <neighbor name="Streets of Downtown"/>
+        <unstable>True</unstable>
     </location>
     <location name="Library">
         <expansion>Jeu de base</expansion>
@@ -74,16 +79,19 @@
         <expansion>Jeu de base</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Streets of Merchant District"/>
+        <aquatic>True</aquatic>
     </location>
     <location name="Science Building">
         <expansion>Jeu de base</expansion>
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Streets of Miskatonik University"/>
+        <unstable>True</unstable>
     </location>
     <location name="Silver Twilight Lodge">
         <expansion>Jeu de base</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="Streets of French Hill"/>
+        <unstable>True</unstable>
     </location>
     <location name="South Church">
         <expansion>Jeu de base</expansion>
@@ -99,11 +107,13 @@
         <expansion>Jeu de base</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Streets of Merchant District"/>
+        <unstable>True</unstable>
     </location>
     <location name="The Witch House">
         <expansion>Jeu de base</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="Streets of French Hill"/>
+        <unstable>True</unstable>
     </location>
     <location name="Train Station">
         <expansion>Jeu de base</expansion>
@@ -114,6 +124,8 @@
         <expansion>Jeu de base</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Streets of Merchant District"/>
+        <unstable>True</unstable>
+        <aquatic>True</aquatic>
     </location>
     <location name="Velma's Dinner">
         <expansion>Jeu de base</expansion>
@@ -124,6 +136,7 @@
         <expansion>Jeu de base</expansion>
         <neighborhood>Uptown</neighborhood>
         <neighbor name="Streets of Uptown"/>
+        <unstable>True</unstable>
     </location>
     <location name="Ye Olde Magick Shoppe">
         <expansion>Jeu de base</expansion>
@@ -139,6 +152,7 @@
         <neighbor name="Streets of Northside"/>
         <neighbor name="Streets of Merchant District"/>
         <neighbor name="Streets of Easttown"/>
+    </location>
     <location name="Streets of Easttown">
         <expansion>Jeu de base</expansion>
         <neighborhood>Easttown</neighborhood>
@@ -216,9 +230,3 @@
         <neighbor name="Streets of University Miskatonik"/>
     </location>
 </locations_list>
-
-
-
-
-
-
