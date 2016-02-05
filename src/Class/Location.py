@@ -57,6 +57,13 @@ class Location:
         self.monsters      = []
         self.portal        = []
 
+    def incoming_investigator(self, investigator_name):
+        logging.info(investigator_name + " arrives in: " + self.name)
+        self.investigators.append(investigator_name)
+
+    def leaving_investigator(self, investigator_name):
+        logging.info(investigator_name + " is leaving: " + self.name)
+        self.investigators.remove(investigator_name)
 
     def __str__(self):
         """
@@ -68,24 +75,24 @@ class Location:
         if self.aquatic:
             _str += "--> aquatic location\n"
 
-        _str += "- clue token(s):   " + str(self.clue_tokens) + "\n"
-        _str += "- investigator(s): "
+        _str += "- clue token(s):   " + str(self.clue_tokens)
+        _str += "\n- investigator(s): "
         if len(self.investigators) >0:
             _str += ', '.join(self.investigators)
         else:
-            _str += "None\n"
-        _str += "- monster(s):      "
+            _str += "None"
+        _str += "\n- monster(s):      "
         if len(self.monsters) >0:
             _str += ', '.join(self.monsters)
         else:
-            _str += "None\n"
-        _str += "- portal:          "
+            _str += "None"
+        _str += "\n- portal:          "
         if len(self.portal) >0:
             _str += ', '.join(self.portal)
         else:
-            _str += "None\n"
+            _str += "None"
 
-        _str += "\nLocations accessibles from here:\n" + "-"*32 + "\n"
+        _str += "\n\nLocations accessibles from here:\n" + "-"*32 + "\n"
         for _iel, neighbor in enumerate(self.neighbors):
             if len(self.neighbors) > 1:
                 _str += " | " + str(_iel + 1) + ": " + neighbor + "\n"
