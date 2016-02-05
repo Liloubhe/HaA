@@ -20,7 +20,10 @@ from Class.Location import Location
 from Class.Player   import Player
 
 #-------------------------------------------------------------------------------
-global locations_list
+
+available_expansions = []
+available_expansions.append("Le roi en Jaune")
+
 #-------------------------------------------------------------------------------
 
 def choose_expansion(available_expansions):
@@ -56,13 +59,13 @@ def setup_locations(expansions):
     _xml_file = __xml__ + "locations_list.xml"
     tree = parse(_xml_file)
     root = tree.getroot()
-    locations_list = []
+    locations = []
 
     for _elt in root:
         for exp in expansions:
             if _elt.find('expansion').text == exp:
-                locations_list.append(Location(_elt))
-    return locations_list
+                locations.append(Location(_elt))
+    return locations
 
 
 #-------------------------------------------------------------------------------
@@ -94,10 +97,14 @@ def choose_investigators(expansion, nb_players):
                 print("Wrong number! Choose a number between 0 and "\
                      + str(investigators_list.cards_number - 1) + ".")
             else:
-                players.append(Player(_iel + 1, 
-                               investigators_list.remaining_cards[int(name)]))
+                new_player = Player(_iel + 1,
+                                  investigators_list.remaining_cards[int(name)])
+                players.append(new_player)
                 names_already_used.append(name)
                 already_used = True
+                for _loc in locations_list:
+                    if _loc.name == new_player.investigator.init_location:
+                        new_player.investigator.move_to(_loc)
 
     logging.debug("[END] " + __function__())
     return players
@@ -154,11 +161,10 @@ def main_setup():
     logging.info("Starting the game !!!")
 
     # General game setup: expansions
-    available_expansions = []
-    available_expansions.append("Le roi en Jaune")
     chosen_expansions = choose_expansion(available_expansions)
 
     # General game setup: locations
+    global locations_list
     locations_list = setup_locations(chosen_expansions)
 
     # General game setup: numbers of players
@@ -166,6 +172,8 @@ def main_setup():
     logging.info("You are " + str(nb_players) + " players\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
+
+    return chosen_expansions, locations_list, players
 
     logging.debug("[END] " + __function__())
 
