@@ -43,7 +43,7 @@ def __function__():
 def launch_game():
     logging.debug("[START] " + __function__())
 
-    main_setup()
+    chosen_expansions, locations_list, players = main_setup()
 
     logging.debug("[END] " + __function__())
 
@@ -53,4 +53,5 @@ def launch_game():
 
 if __name__ == "__main__":
     launch_game()
+
 

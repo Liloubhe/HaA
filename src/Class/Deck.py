@@ -41,7 +41,7 @@ class Deck:
         _xml_file = __xml__ + xml_file + ".xml"
         tree = parse(_xml_file)
         root = tree.getroot()
-        self.remaining_cards  = []
+        self.remaining_cards, self.discarding_cards = [], []
         
         for _elt in root.findall(xml_file[:-6]):
             for exp in expansion_list:
@@ -49,9 +49,31 @@ class Deck:
                     if xml_file[:-6] == "investigator":
                         self.remaining_cards.append(Investigator(_elt))
         shuffle(self.remaining_cards)
-        self.discarding_cards = []
         self.cards_number = len(self.remaining_cards)
 
+    def pick_card(self):
+        """
+        Picks the first card of the deck (and remove it from the deck)
+        """
+        card = self.remaining_cards.pop(0)
+        return card
+
+    def discard_card(self, card):
+        """
+        Discards the card on the discard deck
+        """
+        self.discarding_cards.append(card)
+
+    def mix(self):
+        """
+        Mixes the discard deck with the remaining cards
+        """
+        for _iel in self.discarding_cards:
+            self.remaining_cards.append(_iel)
+        self.discarding_cards = []
+        shuffle(self.remaining_cards)
+        
 #-------------------------------------------------------------------------------
 # End
 #-------------------------------------------------------------------------------
+
