@@ -9,7 +9,11 @@
 import logging
 from xml.etree.ElementTree import parse
 #from __future__ import print_function
-
+try:
+    import __builtin__
+    input = getattr(__builtin__, 'raw_input')
+except (ImportError, AttributeError):
+    pass
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
@@ -144,7 +148,7 @@ def choose_new_investigator(expansion, players, number):
             if new_name in names_already_used:
                 print("This investigator is already taken. Choose another one.")
             else:
-                players.__delitem__(number)
+                del players[number]
                 new_player = investigators_list.remaining_cards[int(name)]
                 new_player.attribute_player(number)
                 players[number] = new_player
@@ -176,7 +180,6 @@ def main_setup():
     logging.info("You are " + str(nb_players) + " players\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
-    players = choose_new_investigator(chosen_expansions, players, 1)
 
     return chosen_expansions, locations_list, players
 
