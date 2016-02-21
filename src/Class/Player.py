@@ -31,11 +31,13 @@ class Player:
         """
         Initializes all the information about the player
         """
-        self.name   = "[Player" + str(number) + "] "
-        self.number = int(number)
+        self.name         = "[Player" + str(number) + "] "
+        self.number       = int(number)
+        self.investigator = investigator
         logging.info(self.name + investigator.name + ' is entering the game!')
 
 
 #-------------------------------------------------------------------------------
 # End
 #-------------------------------------------------------------------------------
+
