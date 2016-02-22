@@ -60,7 +60,6 @@ class Investigator:
                            (self.skill["lore"], self.skill["luck"])]
 
         self.inventory = Inventory(elt.find('inventory'))
-        print(self.inventory.common_items_nb)
 
 #        images_folder = __xml__ + "/images/investigators/"
 #        self.image       = images_folder + "default.png"
@@ -71,12 +70,11 @@ class Investigator:
         self.player = "[Player" + str(number) + "] "
         logging.info(self.player + self.name + ' is entering the game!')
 
-<<<<<<< HEAD
+
     def setup_inventory(self, common_items_deck):
         for _iel in range(0, self.inventory.common_items_nb):
             self.inventory.common_items.append(common_items_deck.pick_card())
-=======
->>>>>>> master
+
 
     def move_to(self, location):
         if hasattr(self, 'location'):
