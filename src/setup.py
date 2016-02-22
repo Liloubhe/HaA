@@ -9,7 +9,11 @@
 import logging
 from xml.etree.ElementTree import parse
 #from __future__ import print_function
-
+try:
+    import __builtin__
+    input = getattr(__builtin__, 'raw_input')
+except (ImportError, AttributeError):
+    pass
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
@@ -22,7 +26,7 @@ from Class.Location import Location
 
 available_expansions = []
 available_expansions.append("Le roi en Jaune")
-
+common_items_deck =[]
 #-------------------------------------------------------------------------------
 
 def choose_expansion(available_expansions):
@@ -38,7 +42,7 @@ def choose_expansion(available_expansions):
     _str += "- " + final_expansion_list[0]
 
     for _iel, exp in enumerate(available_expansions):
-        _input = raw_input(">> Do you want to play with: " + exp + "? [Y/n] ")
+        _input = input(">> Do you want to play with: " + exp + "? [Y/n] ")
         if _input.lower() == "y" or _input.lower() == "yes" or _input =="":
             _str += "\n- " + exp
             final_expansion_list.append(exp)
@@ -84,26 +88,26 @@ def choose_investigators(expansion, nb_players):
           " investigators implemented in these expansions:")
     for _iel, _elt in enumerate(investigators_list.remaining_cards):
         print(str(_iel) + ": " + _elt.name)
-
-    for _iel in range(0, int(nb_players)):
+    players = dict()
+    for _iel in range(1, int(nb_players) + 1):
         already_used = False
         while not already_used:
-            name = raw_input(">> [Player" + str(_iel + 1)\
-                            + "] choose investigator " + "n° ")
+            name = input(">> [Player" + str(_iel)\
+                        + "] choose investigator " + "n° ")
             if name in names_already_used:
                 print("This investigator is already taken. Choose another one.")
             elif int(name) > investigators_list.cards_number - 1:
                 print("Wrong number! Choose a number between 0 and "\
                      + str(investigators_list.cards_number - 1) + ".")
             else:
-                new_player = Player(_iel + 1,
-                                  investigators_list.remaining_cards[int(name)])
-                players.append(new_player)
+                new_player = investigators_list.remaining_cards[int(name)]
+                new_player.attribute_player(_iel)
+                players[_iel] = new_player
                 names_already_used.append(name)
                 already_used = True
                 for _loc in locations_list:
-                    if _loc.name == new_player.investigator.init_location:
-                        new_player.investigator.move_to(_loc)
+                    if _loc.name == new_player.init_location:
+                        new_player.move_to(_loc)
 
     logging.debug("[END] " + __function__())
     return players
@@ -119,7 +123,7 @@ def choose_new_investigator(expansion, players, number):
 
     names_already_used = []
     investigators_list = Deck("investigators_list", expansion)
-    logging.info(players[number - 1].name + "has to choose a new investigator.")
+    logging.info(players[number].player + "has to choose a new investigator.")
 
     print("There are " +str(investigators_list.cards_number) +
           " investigators implemented in these expansions:")
@@ -127,15 +131,15 @@ def choose_new_investigator(expansion, players, number):
         print(str(_iel) + ": " + _elt.name)
 
     _str = "And these investigators are already taken: "
-    for _elt in players:
-        _str += _elt.investigator.name +", "
-        names_already_used.append(_elt.investigator.name)
+    for _elt in players.values():
+        _str += _elt.name +", "
+        names_already_used.append(_elt.name)
     print(_str)
 
     already_used = False
     while not already_used:
-        name = raw_input(">> " + players[number - 1].name\
-                        + "choose investigator " + "n° ")
+        name = input(">> " + players[number].player\
+                    + "choose investigator " + "n° ")
         if int(name) > investigators_list.cards_number - 1:
             print("Wrong number! Choose a number between 0 and "\
                  + str(investigators_list.cards_number - 1) + ".")
@@ -144,9 +148,14 @@ def choose_new_investigator(expansion, players, number):
             if new_name in names_already_used:
                 print("This investigator is already taken. Choose another one.")
             else:
-                players[number - 1] = Player(number, 
-                                  investigators_list.remaining_cards[int(name)])
+                del players[number]
+                new_player = investigators_list.remaining_cards[int(name)]
+                new_player.attribute_player(number)
+                players[number] = new_player
                 already_used    = True
+                for _loc in locations_list:
+                    if _loc.name == new_player.init_location:
+                        new_player.move_to(_loc)
 
     logging.debug("[END] " + __function__())
     return players
@@ -167,11 +176,11 @@ def main_setup():
     locations_list = setup_locations(chosen_expansions)
 
     # General game setup: common items
-    global common_items_list
+    global common_items_deck
     common_items_deck = Deck("common_items_list", chosen_expansions)
-    
+
     # General game setup: numbers of players
-    nb_players = raw_input(">> How many are you (choose between 2 and 7)? ")
+    nb_players = input(">> How many are you (choose between 2 and 7)? ")
     logging.info("You are " + str(nb_players) + " players\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
