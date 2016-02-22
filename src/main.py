@@ -10,10 +10,12 @@ import sys, logging, os, inspect
 __src__ = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))
 __xml__ = __src__ + "/../data/xml/"
 
-if sys.version_info > (3, 0):
-    raw_input = input
 #from __future__ import print_function
-
+try:
+    import __builtin__
+    input = getattr(__builtin__, 'raw_input')
+except (ImportError, AttributeError):
+    pass
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
@@ -43,7 +45,7 @@ def __function__():
 def launch_game():
     logging.debug("[START] " + __function__())
 
-    chosen_expansions, locations_list, players = main_setup()
+    players, locations_list, common_items_deck = main_setup()
 
     logging.debug("[END] " + __function__())
 
@@ -53,5 +55,3 @@ def launch_game():
 
 if __name__ == "__main__":
     launch_game()
-
-
