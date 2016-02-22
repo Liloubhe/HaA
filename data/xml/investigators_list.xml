@@ -70,9 +70,10 @@
         <inventory>
             <money>1</money>
             <clue_tokens>1</clue_tokens>
-            <common_objects>
-                <number>1</number>
-            </common_objects>
+            <skills>2</skills>
+            <unique_items>1</unique_items>
+            <common_items>2</common_items>
+            <spells>1</spells>
         </inventory>
     </investigator>
 </investigators_list>
