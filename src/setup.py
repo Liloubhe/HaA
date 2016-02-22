@@ -17,7 +17,6 @@ from xml.etree.ElementTree import parse
 from main import __function__, __xml__
 from Class.Deck     import Deck
 from Class.Location import Location
-from Class.Player   import Player
 
 #-------------------------------------------------------------------------------
 
