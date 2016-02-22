@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<common_objects_list>
-    <common_object name="whisky">
-        <expansion>Jeu de base</expansion>
-        <number>4</number>
-        <cost>2</cost>
-    </common_object>
-</common_objects_list>
