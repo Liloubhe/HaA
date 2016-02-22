@@ -22,7 +22,7 @@ import logging
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__, ___dbg___
+from main import __function__, __dbg__
 
 #-------------------------------------------------------------------------------
 # Common Object container

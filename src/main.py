@@ -26,8 +26,8 @@ from setup import *
 # Log config
 #-------------------------------------------------------------------------------
 
-___dbg___ = False
-if ___dbg___:
+__dbg__ = False
+if __dbg__:
     logging.basicConfig(format='%(levelname)s: %(message)s',
                         level=logging.DEBUG)
 else:

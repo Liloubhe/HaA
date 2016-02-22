@@ -26,7 +26,7 @@ from random import randint
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__, ___dbg___
+from main import __function__, __dbg__
 
 #-------------------------------------------------------------------------------
 # Investigator container
