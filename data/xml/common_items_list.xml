@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<common_items_list>
+    <common_item name="Telescope">
+        <expansion>Jeu de base</expansion>
+        <description>Any: Discard Telescope to avoid being delayed.</description>
+        <Bonus>+1 Sneak check (but not Evade checks)</Bonus>
+        <count>2</count>
+        <cost>2</cost>
+    </common_item>
+    <common_item name="Time Bomb">
+        <expansion>Le roi en Jaune</expansion>
+        <description>Upkeep: If this card is on a location or street area, discard 1 clue token from it.If there are no clue tokens left to discard, return all monsters in the location/area to the cup, reduce all investigatorsin the location/area to 0 stamina, and discard this card. | Movement: You may place this card on your current Arkham location or street area with up to 3 clue tokens from the bank on it.</description>
+        <count>3</count>
+        <cost>3</cost>
+    </common_item>
+    <common_item name="Tommy Gun">
+        <expansion>Jeu de base</expansion>
+        <type>Physical weapon</type>
+        <Bonus>+6 Combat check</Bonus>
+        <hands>2</hands>
+        <count>2</count>
+        <cost>7</cost>
+    </common_item>
+    <common_item name="Understudy's Script">
+        <expansion>Le roi en Jaune</expansion>
+        <type>Tome</type>
+        <description>Movement: Exhaust and spend 2 movement points to make a will (-2) check. If you pass, draw 1 spell, gain 2 clue tokens, and discard Understudy's Script. If you fail, you lose 1 sanity.</description>
+        <count>3</count>
+        <cost>3</cost>
+    </common_item>
+    <common_item name="Whiskey">
+        <description>Any: Discard Whiskey to reduce any Sanity loss by 1.</description>
+        <expansion>Jeu de base</expansion>
+        <count>3</count>
+        <cost>1</cost>
+    </common_item>
+</common_items_list>

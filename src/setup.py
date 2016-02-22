@@ -102,6 +102,10 @@ def choose_investigators(expansion, nb_players):
             else:
                 new_player = investigators_list.remaining_cards[int(name)]
                 new_player.attribute_player(_iel)
+<<<<<<< HEAD
+                new_player.setup_inventory(common_items_deck)
+=======
+>>>>>>> master
                 players[_iel] = new_player
                 names_already_used.append(name)
                 already_used = True
@@ -160,6 +164,11 @@ def choose_new_investigator(expansion, players, number):
     logging.debug("[END] " + __function__())
     return players
 
+def inc_i():
+        """Fonction chargée d'incrémenter i de 1"""
+        global i # Python recherche i en dehors de l'espace local de la fonction
+        i += 1
+
 #-------------------------------------------------------------------------------
 # Main program driving the setup
 #-------------------------------------------------------------------------------
@@ -175,13 +184,19 @@ def main_setup():
     global locations_list
     locations_list = setup_locations(chosen_expansions)
 
+    # General game setup: common items
+    global common_items_deck
+    common_items_deck = Deck("common_items_list", chosen_expansions)
+
     # General game setup: numbers of players
     nb_players = input(">> How many are you (choose between 2 and 7)? ")
     logging.info("You are " + str(nb_players) + " players\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
+    print(players[1].inventory)
+    
 
-    return chosen_expansions, locations_list, players
+    return players, locations_list, common_items_deck
 
     logging.debug("[END] " + __function__())
 
