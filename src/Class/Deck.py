@@ -25,6 +25,7 @@ from xml.etree.ElementTree import parse
 
 from main import __function__, __xml__
 from Class.Investigator import Investigator
+from Class.CommonItem   import CommonItem
 
 #-------------------------------------------------------------------------------
 # Deck container
@@ -48,6 +49,10 @@ class Deck:
                 if _elt.find('expansion').text == exp:
                     if xml_file[:-6] == "investigator":
                         self.remaining_cards.append(Investigator(_elt))
+                    elif xml_file[:-6] == "common_item":
+                        new_item = CommonItem(_elt)
+                        for _iel in range(0, new_item.count):
+                            self.remaining_cards.append(new_item)
         shuffle(self.remaining_cards)
         self.cards_number = len(self.remaining_cards)
 
