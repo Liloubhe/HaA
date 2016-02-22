@@ -40,13 +40,13 @@ class Investigator:
         """
         Initializes all the information about an investigator
         """
-        self.name        = elt.get('name')
-        self.init_location    = elt.find('home').text
-        self.occupation  = elt.find('occupation').text
-        self.expansion   = elt.find('expansion').text
-        self.focus       = int(elt.find('focus').text)
-        self.sanity_max  = int(elt.find('sanity').text)
-        self.stamina_max = int(elt.find('stamina').text)
+        self.name          = elt.get('name')
+        self.init_location = elt.find('home').text
+        self.occupation    = elt.find('occupation').text
+        self.expansion     = elt.find('expansion').text
+        self.focus         = int(elt.find('focus').text)
+        self.sanity_max    = int(elt.find('sanity').text)
+        self.stamina_max   = int(elt.find('stamina').text)
 
         self.sanity, self.stamina = self.sanity_max, self.stamina_max
         self.blessed, self.cursed, self.account = False, False, False
@@ -60,12 +60,20 @@ class Investigator:
                            (self.skill["lore"], self.skill["luck"])]
 
         self.inventory = Inventory(elt.find('inventory'))
+        print(self.inventory.common_items_nb)
 
 #        images_folder = __xml__ + "/images/investigators/"
 #        self.image       = images_folder + "default.png"
 #        if elt.find('image') is not None:
 #            self.image   = images_folder + elt.find('image').text
 
+    def attribute_player(self, number):
+        self.player = "[Player" + str(number) + "] "
+        logging.info(self.player + self.name + ' is entering the game!')
+
+    def setup_inventory(self, common_items_deck):
+        for _iel in range(0, self.inventory.common_items_nb):
+            self.inventory.common_items.append(common_items_deck.pick_card())
 
     def move_to(self, location):
         if hasattr(self, 'location'):
@@ -324,18 +332,24 @@ class Inventory:
         if elt.find('clue_tokens') is not None:
             self.clue_tokens = int(elt.find('clue_tokens').text)
 
+        self.common_items, self.common_items_nb = [], 0
+        if elt.find("common_items") is not None:
+            self.common_items_nb = int(elt.find('common_items').text)
+
 
     def __str__(self):
         """
         Creates a string containing the investigator's inventory information
         """
         _str  = "Inventory:\n" + "-"*10 + "\n"
-        _str += "Money:       " + str(self.money)       + " $\n"
-        _str += "Clue tokens: " + str(self.clue_tokens) + "\n"
+        _str += "Money       : " + str(self.money)       + "$\n"
+        _str += "Clue tokens : " + str(self.clue_tokens) + "\n"
+        _str += "Common items: " + str(self.common_items_nb) + "\n"
+        for _iel in self.common_items:
+            _str += _iel.__str__()
 
         return _str
 
 #-------------------------------------------------------------------------------
 # End
 #-------------------------------------------------------------------------------
-
