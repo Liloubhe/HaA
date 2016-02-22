@@ -102,7 +102,10 @@ def choose_investigators(expansion, nb_players):
             else:
                 new_player = investigators_list.remaining_cards[int(name)]
                 new_player.attribute_player(_iel)
+<<<<<<< HEAD
                 new_player.setup_inventory(common_items_deck)
+=======
+>>>>>>> master
                 players[_iel] = new_player
                 names_already_used.append(name)
                 already_used = True
