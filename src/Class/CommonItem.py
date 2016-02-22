@@ -61,18 +61,17 @@ class CommonItem:
         """
         Displays (in the shell) all the characteristics of the common item
         """
-        _str = "="*40 + "\n"
-        _str += self.name + "\n" + "-"*len(self.name) + "\n"
-        _str += "Cost: " + str(self.cost) + "$\n"
+        _str = " | " + self.name + "\n" + " | " + "-"*len(self.name) + "\n"
+        _str += " | " + "Cost: " + str(self.cost) + "$\n"
         
         if self.hands > 0:
-            _str += "Require " + str(self.hands) + " hand"
+            _str += " | " + "Require " + str(self.hands) + " hand"
             _str += "s\n" if self.hands >1 else "\n"
         if self.type is not None:
-            _str += "Type: " + self.type + "\n"
+            _str += " | " + "Type: " + self.type + "\n"
         if self.description is not None:
-            _str += self.description.replace('| ', '\n') + "\n"
-        _str += "\n" + "="*40 + "\n\n"
+            _str += " | " + self.description.replace('| ', '\n') + "\n"
+        _str += " | " + "\n"
         return _str
 
 #-------------------------------------------------------------------------------
