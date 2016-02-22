@@ -167,6 +167,10 @@ def main_setup():
     global locations_list
     locations_list = setup_locations(chosen_expansions)
 
+    # General game setup: common items
+    global common_items_list
+    common_items_deck = Deck("common_items_list", chosen_expansions)
+    
     # General game setup: numbers of players
     nb_players = raw_input(">> How many are you (choose between 2 and 7)? ")
     logging.info("You are " + str(nb_players) + " players\n")
