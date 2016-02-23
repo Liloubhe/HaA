@@ -190,8 +190,6 @@ def main_setup():
     logging.info("You are " + str(nb_players) + " players\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
-    print(players[1].inventory)
-    
 
     return players, locations_list, common_items_deck
 
