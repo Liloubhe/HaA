@@ -18,7 +18,8 @@ This module defines the following classes:
 #-------------------------------------------------------------------------------
 
 import logging
-from random import randint
+from random   import randint
+from textwrap import wrap
 
 #from __future__ import print_function
 
@@ -44,6 +45,7 @@ class Investigator:
         self.init_location = elt.find('home').text
         self.occupation    = elt.find('occupation').text
         self.expansion     = elt.find('expansion').text
+        self.description   = elt.find('description').text
         self.focus         = int(elt.find('focus').text)
         self.sanity_max    = int(elt.find('sanity').text)
         self.stamina_max   = int(elt.find('stamina').text)
@@ -237,6 +239,13 @@ class Investigator:
         """
         _str = "="*40 + "\n"
         _str += self.name + "\n(" + self.occupation + ")\n" + _str
+
+        description_split = self.description.split('| ')
+        for i in range(len(description_split)):
+            for line in wrap(description_split[i], 40):
+                _str += line + "\n"
+        _str += "-"*40 + "\n"
+
         _str += "Sanity:  " + str(self.sanity) + "/" + str(self.sanity_max)
         _str += "\nStamina: " + str(self.stamina) + "/" + str(self.stamina_max)
         if self.blessed:
