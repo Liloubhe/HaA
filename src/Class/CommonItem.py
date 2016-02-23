@@ -70,7 +70,7 @@ class CommonItem:
         if self.type is not None:
             _str += " | " + "Type: " + self.type + "\n"
         if self.description is not None:
-            _str += " | " + self.description.replace('| ', '\n') + "\n"
+            _str += " | " + self.description.replace('| ', '\n | ') + "\n"
         _str += " | " + "\n"
         return _str
 
