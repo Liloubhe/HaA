@@ -75,7 +75,7 @@ class CommonItem:
         if self.description is not None:
             description_split = self.description.split('| ')
             for i in range(len(description_split)):
-                for line in wrap(description_split[i], 80):
+                for line in wrap(description_split[i], 77):
                     _str += " | " + line + "\n"
         if self.bonus is not None:
             _str += " | " + "Bonus: " + self.bonus + "\n"
