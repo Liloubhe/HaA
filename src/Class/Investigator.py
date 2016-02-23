@@ -28,6 +28,7 @@ from textwrap import wrap
 #-------------------------------------------------------------------------------
 
 from main import __function__, __dbg__
+from module.COLORS import *
 
 #-------------------------------------------------------------------------------
 # Investigator container
@@ -69,7 +70,7 @@ class Investigator:
 #            self.image   = images_folder + elt.find('image').text
 
     def attribute_player(self, number):
-        self.player = "[Player" + str(number) + "] "
+        self.player = players_color[number - 1] + "[Player" + str(number) + "] " + RESET
         logging.info(self.player + self.name + ' is entering the game!')
 
 
