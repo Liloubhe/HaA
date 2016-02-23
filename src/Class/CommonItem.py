@@ -16,6 +16,7 @@ This module defines the following classes:
 #-------------------------------------------------------------------------------
 
 import logging
+from textwrap import wrap
 #from __future__ import print_function
 
 #-------------------------------------------------------------------------------
@@ -68,11 +69,14 @@ class CommonItem:
         
         if self.hands > 0:
             _str += " | " + "Require " + str(self.hands) + " hand"
-            _str += "s\n" if self.hands >1 else "\n"
+            _str += "s\n" if self.hands > 1 else "\n"
         if self.type is not None:
             _str += " | " + "Type: " + self.type + "\n"
         if self.description is not None:
-            _str += " | " + self.description.replace('| ', '\n') + "\n"
+            description_split = self.description.split('| ')
+            for i in range(len(description_split)):
+                for line in wrap(description_split[i], 80):
+                    _str += " | " + line + "\n"
         if self.bonus is not None:
             _str += " | " + "Bonus: " + self.bonus + "\n"
         _str += " | " + "\n"
