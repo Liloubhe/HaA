@@ -73,14 +73,18 @@ class Investigator:
 
     def setup_inventory(self, common_items_deck):
         for _iel in range(0, self.inventory.common_items_nb):
-            self.inventory.common_items.append(common_items_deck.pick_card())
+            new_possession = common_items_deck.pick_card()
+            logging.info(self.player + self.name + ' picks a new common item: '
+                        + new_possession.name)
+            print(new_possession)
+            self.inventory.common_items.append(new_possession)
 
 
     def move_to(self, location):
         if hasattr(self, 'location'):
-            self.location.leaving_investigator(self.name)
+            self.location.leaving_investigator(self.player + self.name)
         self.location = location
-        location.incoming_investigator(self.name)
+        location.incoming_investigator(self.player + self.name)
 
 
     def upkeep(self):
