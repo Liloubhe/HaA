@@ -16,6 +16,7 @@ This module defines the following classes:
 #-------------------------------------------------------------------------------
 
 import logging
+from textwrap import wrap
 #from __future__ import print_function
 
 #-------------------------------------------------------------------------------
@@ -41,13 +42,15 @@ class CommonItem:
         self.count       = int(elt.find('count').text)
         self.cost        = int(elt.find('cost').text)
         self.hands       = 0
-        self.type, self.description = None, None
+        self.type, self.bonus, self.description = None, None, None
         if elt.find('description') is not None:
             self.description = str(elt.find('description').text)
         if elt.find('hands') is not None:
             self.hands       = int(elt.find('hands').text)
         if elt.find('type') is not None:
-            self.type       = elt.find('type').text
+            self.type        = elt.find('type').text
+        if elt.find('bonus') is not None:
+            self.bonus       = elt.find('bonus').text
 
 #        images_folder = __xml__ + "/images/common_objects/"
 #        self.image       = images_folder + "default.png"
@@ -66,11 +69,17 @@ class CommonItem:
         
         if self.hands > 0:
             _str += " | " + "Require " + str(self.hands) + " hand"
-            _str += "s\n" if self.hands >1 else "\n"
+            _str += "s\n" if self.hands > 1 else "\n"
         if self.type is not None:
             _str += " | " + "Type: " + self.type + "\n"
         if self.description is not None:
             _str += " | " + self.description.replace('| ', '\n | ') + "\n"
+            description_split = self.description.split('| ')
+            for i in range(len(description_split)):
+                for line in wrap(description_split[i], 77):
+                    _str += " | " + line + "\n"
+        if self.bonus is not None:
+            _str += " | " + "Bonus: " + self.bonus + "\n"
         _str += " | " + "\n"
         return _str
 

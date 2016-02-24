@@ -21,6 +21,7 @@ except (ImportError, AttributeError):
 #-------------------------------------------------------------------------------
 
 from setup import *
+from module.COLORS import *
 
 #-------------------------------------------------------------------------------
 # Log config
@@ -31,8 +32,9 @@ if __dbg__:
     logging.basicConfig(format='%(levelname)s: %(message)s',
                         level=logging.DEBUG)
 else:
+    format_date = HIGHT_BOLD_GREY + '%d/%m/%Y %I:%M:%S %p' + RESET
     logging.basicConfig(format='%(asctime)s | %(message)s',
-                        datefmt='%d/%m/%Y %I:%M:%S %p',
+                        datefmt=format_date,
                         level=logging.INFO)
 
 def __function__():

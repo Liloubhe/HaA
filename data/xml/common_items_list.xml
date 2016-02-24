@@ -1,37 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <common_items_list>
+    <common_item name="test">
+        <expansion>expansion</expansion>
+        <description>blabla</description>
+        <type>type</type>
+        <bonus>check</bonus>
+        <hands>0</hands>
+        <cost>0</cost>
+        <count>0</count>
+    </common_item>
+        
+    <common_item name="Safety Deposit Key">
+        <expansion>Le roi en Jaune</expansion>
+        <description>Movement: Spend 1 movement point and discard this card while in the Bank of Arkham to make a Luck (-2) check. If you succeed, draw 1 Unique item. If you fail, gain 2 Clue tokens.</description>
+        <cost>2</cost>
+        <count>3</count>
+    </common_item>
+        <common_item name="Sedanette">
+        <expansion>Le roi en Jaune</expansion>
+        <description>You may automatically Evade monsters of toughness 1 while in the street.</description>
+        <cost>4</cost>
+        <count>2</count>
+    </common_item>
+    <common_item name="Shotgun">
+        <expansion>Jeu de base</expansion>
+        <description>Any: When using Shotgun in combat, all 6's rolled count as 2 successes.</description>
+        <type>Physical weapon</type>
+        <bonus>+4 Combat check</bonus>
+        <hands>2</hands>
+        <cost>6</cost>
+        <count>2</count>
+    </common_item>
+    <common_item name="Sledgehammer">
+        <expansion>The lurker at the Threshold</expansion>
+        <description>Reduce the thoughness of monsters you fight by 1 to a minimum of 1 (this does not affect their values as trophies).</description>
+        <type>Physical weapon</type>
+        <bonus>+3 to Combat checks and +1 to Fight checks</bonus>
+        <hands>2</hands>
+        <cost>6</cost>
+        <count>1</count>
+    </common_item>
+    <common_item name="Student Newspaper">
+        <expansion>La chèvre noire</expansion>
+        <description>Movement: Discard Student Newspaper to choose a Clue token in any location. Take that Clue token.</description>
+        <cost>1</cost>
+        <count>2</count>
+    </common_item>
     <common_item name="Telescope">
         <expansion>Jeu de base</expansion>
         <description>Any: Discard Telescope to avoid being delayed.</description>
-        <Bonus>+1 Sneak check (but not Evade checks)</Bonus>
-        <count>2</count>
+        <bonus>+1 Sneak check (but not Evade checks)</bonus>
         <cost>2</cost>
+        <count>2</count>
     </common_item>
     <common_item name="Time Bomb">
         <expansion>Le roi en Jaune</expansion>
-        <description>Upkeep: If this card is on a location or street area, discard 1 clue token from it.If there are no clue tokens left to discard, return all monsters in the location/area to the cup, reduce all investigatorsin the location/area to 0 stamina, and discard this card. | Movement: You may place this card on your current Arkham location or street area with up to 3 clue tokens from the bank on it.</description>
+        <description>Upkeep: If this card is on a location or street area, discard 1 clue token from it.If there are no clue tokens left to discard, return all monsters in the location/area to the cup, reduce all investigators in the location/area to 0 stamina, and discard this card. | Movement: You may place this card on your current Arkham location or street area with up to 3 clue tokens from the bank on it.</description>
         <count>3</count>
         <cost>3</cost>
     </common_item>
     <common_item name="Tommy Gun">
         <expansion>Jeu de base</expansion>
         <type>Physical weapon</type>
-        <Bonus>+6 Combat check</Bonus>
+        <bonus>+6 Combat check</bonus>
         <hands>2</hands>
-        <count>2</count>
         <cost>7</cost>
+        <count>2</count>
     </common_item>
     <common_item name="Understudy's Script">
         <expansion>Le roi en Jaune</expansion>
         <type>Tome</type>
-        <description>Movement: Exhaust and spend 2 movement points to make a will (-2) check. If you pass, draw 1 spell, gain 2 clue tokens, and discard Understudy's Script. If you fail, you lose 1 sanity.</description>
-        <count>3</count>
+        <description>Movement: Exhaust and spend 2 movement points to make a Will (-2) check. If you pass, draw 1 spell, gain 2 clue tokens, and discard Understudy's Script. If you fail, you loose 1 sanity.</description>
         <cost>3</cost>
+        <count>3</count>
     </common_item>
     <common_item name="Whiskey">
-        <description>Any: Discard Whiskey to reduce any Sanity loss by 1.</description>
         <expansion>Jeu de base</expansion>
-        <count>3</count>
+        <description>Any: Discard Whiskey to reduce any Sanity loss by 1.</description>
         <cost>1</cost>
+        <count>3</count>
     </common_item>
 </common_items_list>

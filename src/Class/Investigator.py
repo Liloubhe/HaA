@@ -18,7 +18,8 @@ This module defines the following classes:
 #-------------------------------------------------------------------------------
 
 import logging
-from random import randint
+from random   import randint
+from textwrap import wrap
 
 #from __future__ import print_function
 
@@ -27,6 +28,7 @@ from random import randint
 #-------------------------------------------------------------------------------
 
 from main import __function__, __dbg__
+from module.COLORS import *
 
 #-------------------------------------------------------------------------------
 # Investigator container
@@ -44,6 +46,7 @@ class Investigator:
         self.init_location = elt.find('home').text
         self.occupation    = elt.find('occupation').text
         self.expansion     = elt.find('expansion').text
+        self.description   = elt.find('description').text
         self.focus         = int(elt.find('focus').text)
         self.sanity_max    = int(elt.find('sanity').text)
         self.stamina_max   = int(elt.find('stamina').text)
@@ -67,20 +70,24 @@ class Investigator:
 #            self.image   = images_folder + elt.find('image').text
 
     def attribute_player(self, number):
-        self.player = "[Player" + str(number) + "] "
+        self.player = players_color[number - 1] + "[Player" + str(number) + "] " + RESET
         logging.info(self.player + self.name + ' is entering the game!')
 
 
     def setup_inventory(self, common_items_deck):
         for _iel in range(0, self.inventory.common_items_nb):
-            self.inventory.common_items.append(common_items_deck.pick_card())
+            new_possession = common_items_deck.pick_card()
+            logging.info(self.player + self.name + ' picks a new common item: '
+                        + new_possession.name)
+            print(new_possession)
+            self.inventory.common_items.append(new_possession)
 
 
     def move_to(self, location):
         if hasattr(self, 'location'):
-            self.location.leaving_investigator(self.name)
+            self.location.leaving_investigator(self.player + self.name)
         self.location = location
-        location.incoming_investigator(self.name)
+        location.incoming_investigator(self.player + self.name)
 
 
     def upkeep(self):
@@ -233,6 +240,13 @@ class Investigator:
         """
         _str = "="*40 + "\n"
         _str += self.name + "\n(" + self.occupation + ")\n" + _str
+
+        description_split = self.description.split('| ')
+        for i in range(len(description_split)):
+            for line in wrap(description_split[i], 40):
+                _str += line + "\n"
+        _str += "-"*40 + "\n"
+
         _str += "Sanity:  " + str(self.sanity) + "/" + str(self.sanity_max)
         _str += "\nStamina: " + str(self.stamina) + "/" + str(self.stamina_max)
         if self.blessed:
