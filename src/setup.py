@@ -21,6 +21,7 @@ except (ImportError, AttributeError):
 
 from main import __xml__
 from module.COLORS import *
+from module.TUI    import *
 from module.debug  import *
 from Class.Deck     import Deck
 from Class.Location import Location
@@ -89,17 +90,20 @@ def choose_investigators(expansion, nb_players):
     names_already_used = []
     investigators_list = Deck("investigators_list", expansion)
 
-    print("There are " +str(investigators_list.cards_number) +
-          " investigators implemented in these expansions:")
-    for _iel, _elt in enumerate(investigators_list.remaining_cards):
-        print(str(_iel) + ": " + _elt.name)
+    _str  = "-"*TERM_WIDTH
+    _str += "There are " +str(investigators_list.cards_number) +\
+            " investigators implemented in these expansions:\n"
+    for _list, _elt in enumerate(investigators_list.remaining_cards):
+        _str += indent(_elt.name, " | " + str(_list) + "/ ")
+
     players = dict()
     for _iel in range(1, int(nb_players) + 1):
         already_used = False
         while not already_used:
-            player_number = players_color[_iel - 1] + " [Player" + str(_iel)\
-                          + "]" + RESET
-            name = input(">>" + player_number + " choose investigator " + "n° ")
+            print(_str)
+            player_number = players_color[_iel - 1] + "[Player" + str(_iel)\
+                                                    + "]" + RESET
+            name = input(player_number + " >> choose investigator " + "n° ")
             if name in names_already_used:
                 print("This investigator is already taken. Choose another one.")
             elif int(name) > investigators_list.cards_number - 1:
