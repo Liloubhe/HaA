@@ -8,8 +8,6 @@ __appname__ = 'HaA'
 #-------------------------------------------------------------------------------
 
 import sys, logging, os, inspect
-import gettext
-gettext.install(__appname__)
 
 __src__ = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))
 __xml__ = __src__ + "/../data/xml/"
@@ -28,6 +26,13 @@ except (ImportError, AttributeError):
 from setup         import *
 from module.COLORS import *
 from module.debug  import *
+
+try:
+    import i18n.i18n as i18n
+    _ = i18n.language.gettext
+except (ImportError, AttributeError):
+    import gettext
+    gettext.install(__appname__)
 
 #-------------------------------------------------------------------------------
 # Main program
