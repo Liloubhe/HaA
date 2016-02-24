@@ -20,9 +20,9 @@ except (ImportError, AttributeError):
 #-------------------------------------------------------------------------------
 
 from main import __xml__
-from module.COLORS import *
-from module.TUI    import *
-from module.debug  import *
+from module.COLORS  import BOLD_BLACK, RESET
+from module.TUI     import *
+from module.debug   import *
 from Class.Deck     import Deck
 from Class.Location import Location
 
