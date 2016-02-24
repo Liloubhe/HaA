@@ -23,7 +23,8 @@ from textwrap import wrap
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__, __dbg__
+#from module.COLORS import *
+#from module.debug  import *
 
 #-------------------------------------------------------------------------------
 # Common Object container
