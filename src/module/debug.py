@@ -5,6 +5,7 @@
 
 import sys, logging
 from module.COLORS import *
+from module.TUI    import TERM_WIDTH
 
 #-------------------------------------------------------------------------------
 # Log config
@@ -16,7 +17,9 @@ if __dbg__:
                         level=logging.DEBUG)
 else:
     format_date = HIGHT_BOLD_GREY + '%d/%m/%Y %I:%M:%S %p' + RESET
-    logging.basicConfig(format='%(asctime)s | %(message)s',
+#    format_log  = '%(asctime)s | %(message)s'
+    format_log  = '%(message)s'
+    logging.basicConfig(format= format_log,
                         datefmt=format_date,
                         level=logging.INFO)
 
