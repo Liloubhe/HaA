@@ -23,9 +23,11 @@ def indent(msg, idt = " | ", color = RESET):
         formatted_msg : indented message in a wanted color
     """
     formatted_msg = []
+    msg           = msg.split(" | ")
     indent_width  = TERM_WIDTH - len(idt)
-    for line in wrap(msg, width = indent_width):
-        tmp_line = "".join(wrap(line, initial_indent = idt))
-        formatted_msg.append(tmp_line + "\n")
+    for _iel in range(0, len(msg)):
+        for line in wrap(msg[_iel], width = indent_width):
+            tmp_line = "".join(wrap(line, initial_indent = idt))
+            formatted_msg.append(tmp_line + "\n")
 
     return color + "".join(formatted_msg) + RESET
