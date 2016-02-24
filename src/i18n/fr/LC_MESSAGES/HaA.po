@@ -1,0 +1,27 @@
+# French translations for C package
+# Traductions françaises du paquet C.
+# Copyright (C) 2016 THE C'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the C package.
+# Lucie BERTHON <liloubhe@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: C 41270\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-24 17:09+0100\n"
+"PO-Revision-Date: 2016-02-24 16:57+0100\n"
+"Last-Translator: Lucie BERTHON <liloubhe@gmail.com>\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: module/debug.py:43
+msgid "[START] "
+msgstr "[DEBUT] "
+
+#: module/debug.py:47
+msgid "[END] "
+msgstr "[FIN] "
