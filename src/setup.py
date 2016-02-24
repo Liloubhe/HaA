@@ -91,7 +91,7 @@ def choose_investigators(expansion, nb_players):
     investigators_list = Deck("investigators_list", expansion)
 
     _str  = "-"*TERM_WIDTH
-    _str += "There are " +str(investigators_list.cards_number) +\
+    _str += "\nThere are " +str(investigators_list.cards_number) +\
             " investigators implemented in these expansions:\n"
     for _list, _elt in enumerate(investigators_list.remaining_cards):
         _str += indent(_elt.name, " | " + str(_list) + "/ ")

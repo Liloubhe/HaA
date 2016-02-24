@@ -7,8 +7,11 @@ import os
 from module.COLORS import *
 from textwrap import wrap
 
-TERM_HIGHT, TERM_WIDTH = os.popen('stty size', 'r').read().split()
-TERM_HIGHT, TERM_WIDTH = int(TERM_HIGHT), int(TERM_WIDTH)
+try:
+    TERM_HIGHT, TERM_WIDTH = os.popen('stty size', 'r').read().split()
+    TERM_HIGHT, TERM_WIDTH = int(TERM_HIGHT), int(TERM_WIDTH)
+except:
+    TERM_HIGHT, TERM_WIDTH = 40, 80
 
 def indent(msg, idt = " | ", color = RESET):
     """
