@@ -25,7 +25,7 @@ from xml.etree.ElementTree import parse
 # Application modules
 #-------------------------------------------------------------------------------
 
-#from main import __function__, ___dbg___
+from module.COLORS import BOLD_BLACK, RESET
 
 #-------------------------------------------------------------------------------
 # Investigator container
@@ -40,6 +40,7 @@ class Location:
         Initializes all the information about a location
         """
         self.name         = elt.get('name')
+        self.name_colored = BOLD_BLACK + self.name + RESET
         self.expansion    = elt.find('expansion').text
         self.neighborhood = elt.find('neighborhood').text
         self.neighbors    = []
@@ -58,11 +59,11 @@ class Location:
         self.portal        = []
 
     def incoming_investigator(self, investigator_name):
-        logging.info(investigator_name + " arrives in: " + self.name)
+        logging.info(investigator_name + " arrives in: " + self.name_colored)
         self.investigators.append(investigator_name)
 
     def leaving_investigator(self, investigator_name):
-        logging.info(investigator_name + " is leaving: " + self.name)
+        logging.info(investigator_name + " is leaving: " + self.name_colored)
         self.investigators.remove(investigator_name)
 
     def __str__(self):

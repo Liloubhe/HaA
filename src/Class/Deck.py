@@ -23,7 +23,8 @@ from xml.etree.ElementTree import parse
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__, __xml__
+from main import __xml__
+from module.debug       import *
 from Class.Investigator import Investigator
 from Class.CommonItem   import CommonItem
 
@@ -77,7 +78,7 @@ class Deck:
             self.remaining_cards.append(_iel)
         self.discarding_cards = []
         shuffle(self.remaining_cards)
-        
+
 #-------------------------------------------------------------------------------
 # End
 #-------------------------------------------------------------------------------

@@ -1,12 +1,16 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__author__ = "LB"
+__author__  = "LB"
+__appname__ = 'HaA'
 
 #-------------------------------------------------------------------------------
 # Standard modules
 #-------------------------------------------------------------------------------
 
 import sys, logging, os, inspect
+import gettext
+gettext.install(__appname__)
+
 __src__ = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))
 __xml__ = __src__ + "/../data/xml/"
 
@@ -16,40 +20,25 @@ try:
     input = getattr(__builtin__, 'raw_input')
 except (ImportError, AttributeError):
     pass
+
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
 
-from setup import *
+from setup         import *
 from module.COLORS import *
-
-#-------------------------------------------------------------------------------
-# Log config
-#-------------------------------------------------------------------------------
-
-__dbg__ = False
-if __dbg__:
-    logging.basicConfig(format='%(levelname)s: %(message)s',
-                        level=logging.DEBUG)
-else:
-    format_date = HIGHT_BOLD_GREY + '%d/%m/%Y %I:%M:%S %p' + RESET
-    logging.basicConfig(format='%(asctime)s | %(message)s',
-                        datefmt=format_date,
-                        level=logging.INFO)
-
-def __function__():
-    return sys._getframe(1).f_code.co_name
+from module.debug  import *
 
 #-------------------------------------------------------------------------------
 # Main program
 #-------------------------------------------------------------------------------
 
 def launch_game():
-    logging.debug("[START] " + __function__())
+    start(function())
 
     players, locations_list, common_items_deck = main_setup()
 
-    logging.debug("[END] " + __function__())
+    end(function())
 
 #-------------------------------------------------------------------------------
 # End

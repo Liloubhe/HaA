@@ -9,7 +9,21 @@
         <cost>0</cost>
         <count>0</count>
     </common_item>
-        
+
+    <common_item name="Research Materials">
+        <expansion>Jeu de base</expansion>
+        <description>Any: Discard Research Materials instead of spending 1 Clue token.</description>
+        <cost>1</cost>
+        <count>2</count>
+    </common_item>
+    <common_item name="Rifle">
+        <expansion>Jeu de base</expansion>
+        <type>Physical weapon</type>
+        <bonus>+5 Combat check</bonus>
+        <hands>2</hands>
+        <cost>6</cost>
+        <count>2</count>
+    </common_item>
     <common_item name="Safety Deposit Key">
         <expansion>Le roi en Jaune</expansion>
         <description>Movement: Spend 1 movement point and discard this card while in the Bank of Arkham to make a Luck (-2) check. If you succeed, draw 1 Unique item. If you fail, gain 2 Clue tokens.</description>
