@@ -23,8 +23,9 @@ from textwrap import wrap
 # Application modules
 #-------------------------------------------------------------------------------
 
-#from module.COLORS import *
+from module.COLORS import *
 #from module.debug  import *
+from module.TUI import *
 
 #-------------------------------------------------------------------------------
 # Common Object container
@@ -65,24 +66,21 @@ class CommonItem:
         """
         Displays (in the shell) all the characteristics of the common item
         """
-        _str = " | " + self.name + "\n" + " | " + "-"*len(self.name) + "\n"
-        _str += " | " + "Cost: " + str(self.cost) + "$\n"
+        _str = indent(self.name, color = BOLD_BLACK)
+        _str += indent("-"*len(self.name))
+        _str += indent("Cost: " + str(self.cost) + "$")
         
         if self.hands > 0:
-            _str += " | " + "Require " + str(self.hands) + " hand"
-            _str += "s\n" if self.hands > 1 else "\n"
+            _str += indent("Require " + str(self.hands) + " hand"\
+                           + ("s" if self.hands > 1 else ""))
         if self.type is not None:
-            _str += " | " + "Type: " + self.type + "\n"
+            _str += indent("Type: " + self.type)
         if self.description is not None:
-            description_split = self.description.split('| ')
-            for i in range(len(description_split)):
-                for line in wrap(description_split[i], 77):
-                    _str += " | " + line + "\n"
+            _str += indent(self.description)
         if self.bonus is not None:
-            _str += " | " + "Bonus: " + self.bonus + "\n"
-        _str += " | " + "\n"
+            _str += indent("Bonus: " + self.bonus)
+        _str += "\n"
         return _str
-
 #-------------------------------------------------------------------------------
 # End
 #-------------------------------------------------------------------------------
