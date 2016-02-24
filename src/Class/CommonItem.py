@@ -79,7 +79,7 @@ class CommonItem:
             _str += indent(self.description)
         if self.bonus is not None:
             _str += indent("Bonus: " + self.bonus)
-        _str += "\n"
+        
         return _str
 #-------------------------------------------------------------------------------
 # End
