@@ -1,11 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+__author__  = "LB"
+__appname__ = 'HaA'
 
 #-------------------------------------------------------------------------------
 
 import sys, logging
 from module.COLORS import *
 from module.TUI    import TERM_WIDTH
+
+try:
+    import i18n.i18n as i18n
+    _ = i18n.language.gettext
+except (ImportError, AttributeError):
+    import gettext
+    gettext.install(__appname__)
 
 #-------------------------------------------------------------------------------
 # Log config
