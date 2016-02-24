@@ -14,12 +14,14 @@ try:
     input = getattr(__builtin__, 'raw_input')
 except (ImportError, AttributeError):
     pass
+
 #-------------------------------------------------------------------------------
 # Application modules
 #-------------------------------------------------------------------------------
 
-from main import __function__, __xml__
+from main import __xml__
 from module.COLORS import *
+from module.debug  import *
 from Class.Deck     import Deck
 from Class.Location import Location
 
@@ -35,7 +37,7 @@ def choose_expansion(available_expansions):
     TUI that allows the players to choose with which expansions they want to 
     play for this game
     """
-    logging.debug("[START] " + __function__())
+    start(function())
 
     final_expansion_list = []
     final_expansion_list.append("Jeu de base")
@@ -51,7 +53,7 @@ def choose_expansion(available_expansions):
 
     logging.info(_str)
 
-    logging.debug("[END] " + __function__())
+    end(function())
     return final_expansion_list
 
 
@@ -60,6 +62,7 @@ def choose_expansion(available_expansions):
 def setup_locations(expansions):
     """
     """
+    start(function())
     _xml_file = __xml__ + "locations_list.xml"
     tree = parse(_xml_file)
     root = tree.getroot()
@@ -69,6 +72,7 @@ def setup_locations(expansions):
         for exp in expansions:
             if _elt.find('expansion').text == exp:
                 locations.append(Location(_elt))
+    end(function())
     return locations
 
 
@@ -79,7 +83,7 @@ def choose_investigators(expansion, nb_players):
     TUI that allows the player to choose with which investigator they want to 
     play for this game
     """
-    logging.debug("[START] " + __function__())
+    start(function())
 
     players = []
     names_already_used = []
@@ -112,7 +116,7 @@ def choose_investigators(expansion, nb_players):
                     if _loc.name == new_player.init_location:
                         new_player.move_to(_loc)
 
-    logging.debug("[END] " + __function__())
+    end(function())
     return players
 
 
@@ -122,7 +126,7 @@ def choose_new_investigator(expansion, players, number):
     """
     TUI that allows the player to choose a new investigator during the game
     """
-    logging.debug("[START] " + __function__())
+    start(function())
 
     names_already_used = []
     investigators_list = Deck("investigators_list", expansion)
@@ -154,26 +158,22 @@ def choose_new_investigator(expansion, players, number):
                 del players[number]
                 new_player = investigators_list.remaining_cards[int(name)]
                 new_player.attribute_player(number)
+                new_player.setup_inventory(common_items_deck)
                 players[number] = new_player
                 already_used    = True
                 for _loc in locations_list:
                     if _loc.name == new_player.init_location:
                         new_player.move_to(_loc)
 
-    logging.debug("[END] " + __function__())
+    end(function())
     return players
-
-def inc_i():
-        """Fonction chargée d'incrémenter i de 1"""
-        global i # Python recherche i en dehors de l'espace local de la fonction
-        i += 1
 
 #-------------------------------------------------------------------------------
 # Main program driving the setup
 #-------------------------------------------------------------------------------
 
 def main_setup():
-    logging.debug("[START] " + __function__())
+    start(function())
     logging.info("Starting the game !!!")
 
     # General game setup: expansions
@@ -195,7 +195,7 @@ def main_setup():
 
     return players, locations_list, common_items_deck
 
-    logging.debug("[END] " + __function__())
+    end(function())
 
 #-------------------------------------------------------------------------------
 # End
