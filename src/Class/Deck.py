@@ -44,13 +44,14 @@ class Deck:
         tree = parse(_xml_file)
         root = tree.getroot()
         self.remaining_cards, self.discarding_cards = [], []
-        
-        for _elt in root.findall(xml_file[:-6]):
+
+        cut = xml_file.find('_list')-len(xml_file)-1
+        for _elt in root.findall(xml_file[:cut]):
             for exp in expansion_list:
                 if _elt.find('expansion').text == exp:
-                    if xml_file. find("investigator") > -1:
+                    if xml_file.find("investigator") > -1:
                         self.remaining_cards.append(Investigator(_elt))
-                    elif xml_file. find("common_item") > -1:
+                    elif xml_file.find("common_item") > -1:
                         new_item = CommonItem(_elt)
                         for _iel in range(0, new_item.count):
                             self.remaining_cards.append(new_item)
