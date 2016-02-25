@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <investigators_list>
     <investigator name="Beta Test">
-        <expansion>King in Yellow</expansion>
+        <expansion>Le roi en Jaune</expansion>
         <occupation>Betatesteur</occupation>
         <description>Fake profile for testing | It should be on a second line.</description>
         <home>Black Cave</home>
@@ -38,7 +38,7 @@
 
     <investigator name="Amanda Sharpe">
         <image>Amanda_Sharp.jpg</image>
-        <expansion>Core game</expansion>
+        <expansion>Jeu de base</expansion>
         <description>Any: Whenever Amanda draws one or more cards from the Skill deck, she draws one extra and then discards one of the cards.</description>
         <occupation>Student</occupation>
         <home>Bank of Arkham</home>
@@ -80,7 +80,7 @@
     </investigator>
     <investigator name="Ashcan Pete">
         <image>Ashcan_Pete.jpg</image>
-        <expansion>Core game</expansion>
+        <expansion>Jeu de base</expansion>
         <description>When Pete draws from the Common Item, Unique Item, or Spell deck, he may draw from either the top or the bottom of that deck, his choice. Pete look at the bottom card of those decks at any time.</description>
         <occupation>Drifter</occupation>
         <home>River Docks</home>
