@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<investigators_list>
+    <investigator name="Beta Test">
+        <expansion>Le roi en Jaune</expansion>
+        <occupation>Betatesteur</occupation>
+        <description>Fake profile for testing | It should be on a second line.</description>
+        <home>Black Cave</home>
+        <sanity>4</sanity>
+        <stamina>6</stamina>
+        <focus>2</focus>
+        <skill name ="speed">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="sneak">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="fight">
+            <min>2</min>
+            <max>5</max>
+        </skill>
+        <skill name ="will">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="lore">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="luck">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <inventory>
+        </inventory>
+    </investigator>
+
+    <investigator name="Amanda Sharpe">
+        <image>Amanda_Sharp.jpg</image>
+        <expansion>Jeu de base</expansion>
+        <description>Any: Whenever Amanda draws one or more cards from the Skill deck, she draws one extra and then discards one of the cards.</description>
+        <occupation>Student</occupation>
+        <home>Bank of Arkham</home>
+        <sanity>5</sanity>
+        <stamina>5</stamina>
+        <focus>3</focus>
+        <skill name ="speed">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="sneak">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="fight">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="will">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="lore">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="luck">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <inventory>
+            <money>1</money>
+            <clue_tokens>1</clue_tokens>
+            <skills>2</skills>
+            <unique_items>1</unique_items>
+            <common_items>2</common_items>
+            <spells>1</spells>
+        </inventory>
+    </investigator>
+    <investigator name="Ashcan Pete">
+        <image>Ashcan_Pete.jpg</image>
+        <expansion>Jeu de base</expansion>
+        <description>When Pete draws from the Common Item, Unique Item, or Spell deck, he may draw from either the top or the bottom of that deck, his choice. Pete look at the bottom card of those decks at any time.</description>
+        <occupation>Drifter</occupation>
+        <home>River Docks</home>
+        <sanity>4</sanity>
+        <stamina>6</stamina>
+        <focus>1</focus>
+        <skill name ="speed">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="sneak">
+            <min>3</min>
+            <max>6</max>
+        </skill>
+        <skill name ="fight">
+            <min>2</min>
+            <max>5</max>
+        </skill>
+        <skill name ="will">
+            <min>2</min>
+            <max>5</max>
+        </skill>
+        <skill name ="lore">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="luck">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <inventory>
+            <money>1</money>
+            <clue_tokens>3</clue_tokens>
+            <skills>1</skills>
+            <unique_items>1</unique_items>
+            <common_items>1</common_items>
+            <ally>Duke</ally>
+        </inventory>
+    </investigator>
+</investigators_list>
