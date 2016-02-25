@@ -48,9 +48,9 @@ class Deck:
         for _elt in root.findall(xml_file[:-6]):
             for exp in expansion_list:
                 if _elt.find('expansion').text == exp:
-                    if xml_file[:-6] == "investigator":
+                    if xml_file. find("investigator") > -1:
                         self.remaining_cards.append(Investigator(_elt))
-                    elif xml_file[:-6] == "common_item":
+                    elif xml_file. find("common_item") > -1:
                         new_item = CommonItem(_elt)
                         for _iel in range(0, new_item.count):
                             self.remaining_cards.append(new_item)
