@@ -80,7 +80,7 @@ class Investigator:
     def setup_inventory(self, common_items_deck):
         start(function())
         for _iel in range(0, self.inventory.common_items_nb):
-            new_possession = common_items_deck.pick_card()
+            new_possession = common_items_deck.draw_card()
             logging.info(self.player + self.name + ' draws a new common item: '
                         + BOLD_BLACK + new_possession.name + RESET)
             print(new_possession)

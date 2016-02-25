@@ -58,9 +58,9 @@ class Deck:
         shuffle(self.remaining_cards)
         self.cards_number = len(self.remaining_cards)
 
-    def pick_card(self):
+    def draw_card(self):
         """
-        Picks the first card of the deck (and remove it from the deck)
+        Draws the first card of the deck (and remove it from the deck)
         """
         card = self.remaining_cards.pop(0)
         return card
