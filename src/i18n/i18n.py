@@ -3,6 +3,11 @@
 import os, sys
 import locale
 import gettext
+try:
+    import __builtin__
+    input = getattr(__builtin__, 'raw_input')
+except (ImportError, AttributeError):
+    pass
  
 # Change this variable to your app name!
 #  The translation files will be under
@@ -17,8 +22,8 @@ LOCALE_DIR = os.path.join(APP_DIR, 'i18n') # .mo files will then be located in A
 # Now we need to choose the language. We will provide a list, and gettext
 # will use the first translation available in the list
 
-DEFAULT_LANGUAGES = os.environ.get('LANG', '').split(':')
-DEFAULT_LANGUAGES += ['en_US']
+#DEFAULT_LANGUAGES = os.environ.get('LANG', '').split(':')
+#DEFAULT_LANGUAGES = ['en_US']
 
 lc, encoding = locale.getdefaultlocale()
 if lc:
@@ -26,11 +31,13 @@ if lc:
 
 # Concat all languages (env + default locale),
 #  and here we have the languages and location of the translations
-languages += DEFAULT_LANGUAGES
+#languages += DEFAULT_LANGUAGES
+languages  = ['en_US', 'fr_FR']
 mo_location = LOCALE_DIR
  
 # Lets tell those details to gettext
 #  (nothing to change here for you)
+
 try: 
     gettext.install(True, localedir=None, unicode=1)
 except:
@@ -42,4 +49,10 @@ gettext.textdomain (APP_NAME)
 
 gettext.bind_textdomain_codeset(APP_NAME, "UTF-8")
 
-language = gettext.translation(APP_NAME, mo_location, languages=languages, fallback=True)
+_input = input(">> Choose language [en/fr]: ")
+for lang in languages:
+    if lang.find(_input.lower()) > -1:
+        language = gettext.translation(APP_NAME, mo_location, languages=[lang],
+                                       fallback=True)
+        _ = language.gettext
+        print(_("The game will be in English."))
