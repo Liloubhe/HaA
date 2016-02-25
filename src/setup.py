@@ -20,16 +20,26 @@ except (ImportError, AttributeError):
 #-------------------------------------------------------------------------------
 
 from main import __xml__
-from module.COLORS  import BOLD_BLACK, RESET
+from module.COLORS  import RESET
 from module.TUI     import *
 from module.debug   import *
 from Class.Deck     import Deck
 from Class.Location import Location
 
+try:
+    import i18n.i18n as i18n
+    _ = i18n.language.gettext
+except (ImportError, AttributeError):
+    import gettext
+    gettext.install(__appname__)
+
 #-------------------------------------------------------------------------------
 
 available_expansions = []
-available_expansions.append("Le roi en Jaune")
+available_expansions.append(_("King in Yellow"))
+available_expansions.append(_("Kingsport"))
+available_expansions.append(_("Black Goat of the Woods"))
+available_expansions.append(_("The lurker at the Threshold"))
 
 #-------------------------------------------------------------------------------
 
@@ -41,13 +51,15 @@ def choose_expansion(available_expansions):
     start(function())
 
     final_expansion_list = []
-    final_expansion_list.append("Jeu de base")
-    _str = "You choose to play with the expansion(s):\n"
+    final_expansion_list.append(_("Core game"))
+    _str = _("You choose to play with:\n")
     _str += "- " + final_expansion_list[0]
 
     for _iel, exp in enumerate(available_expansions):
-        _input = input(">> Do you want to play with: " + exp + "? [Y/n] ")
-        if _input.lower() == "y" or _input.lower() == "yes" or _input =="":
+        _input = input(_(">> Do you want to play with: ") + exp + _("? [Y/n] "))
+        if _input.lower() == "y" or _input.lower() == "yes"\
+        or _input.lower() == "o" or _input.lower() == "oui"\
+        or _input =="":
             _str += "\n- " + exp
             final_expansion_list.append(exp)
     _str += "\n"
@@ -88,7 +100,7 @@ def choose_investigators(expansion, nb_players):
 
     players = []
     names_already_used = []
-    investigators_list = Deck("investigators_list", expansion)
+    investigators_list = Deck(_("investigators_list"), expansion)
 
     _str  = "-"*TERM_WIDTH
     _str += "\nThere are " +str(investigators_list.cards_number) +\
@@ -133,7 +145,7 @@ def choose_new_investigator(expansion, players, number):
     start(function())
 
     names_already_used = []
-    investigators_list = Deck("investigators_list", expansion)
+    investigators_list = Deck(_("investigators_list"), expansion)
     logging.info(players[number].player + "has to choose a new investigator.")
 
     print("There are " +str(investigators_list.cards_number) +
@@ -178,7 +190,7 @@ def choose_new_investigator(expansion, players, number):
 
 def main_setup():
     start(function())
-    logging.info("Starting the game !!!")
+    logging.info(_("Starting the game !!!"))
 
     # General game setup: expansions
     chosen_expansions = choose_expansion(available_expansions)
@@ -189,11 +201,11 @@ def main_setup():
 
     # General game setup: common items
     global common_items_deck
-    common_items_deck = Deck("common_items_list", chosen_expansions)
+    common_items_deck = Deck(_("common_items_list"), chosen_expansions)
 
     # General game setup: numbers of players
-    nb_players = input(">> How many are you (choose between 2 and 7)? ")
-    logging.info("You are " + str(nb_players) + " players\n")
+    nb_players = input(_(">> How many are you (choose between 2 and 7)? "))
+    logging.info(_("You are ") + str(nb_players) + _(" players\n"))
 
     players = choose_investigators(chosen_expansions, nb_players)
 
