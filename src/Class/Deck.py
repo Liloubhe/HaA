@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 """
 This module defines the main application classes for the decks.
@@ -11,31 +11,33 @@ This module defines the following classes:
 
 """
 
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Standard modules
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 from random import shuffle
 from xml.etree.ElementTree import parse
-#from __future__ import print_function
+# from __future__ import print_function
 
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Application modules
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
-from main import __xml__
+from main               import __xml__
 from module.debug       import *
 from Class.Investigator import Investigator
 from Class.CommonItem   import CommonItem
 
-#-------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
 # Deck container
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 class Deck:
     """
     Class gathering all the informations about a deck
     """
+
     def __init__(self, xml_file, expansion_list):
         """
         Initializes all the information about the deck
@@ -45,7 +47,7 @@ class Deck:
         root = tree.getroot()
         self.remaining_cards, self.discarding_cards = [], []
 
-        cut = xml_file.find('_list')-len(xml_file)-1
+        cut = xml_file.find('_list') - len(xml_file) - 1
         for _elt in root.findall(xml_file[:cut]):
             for exp in expansion_list:
                 if _elt.find('expansion').text == exp:
@@ -80,6 +82,6 @@ class Deck:
         self.discarding_cards = []
         shuffle(self.remaining_cards)
 
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # End
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
