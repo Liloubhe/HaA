@@ -9,7 +9,21 @@
         <cost>0</cost>
         <count>0</count>
     </common_item>
-    
+
+    <common_item name="Newspaper Assignment">
+        <expansion>Dunwich Horror</expansion>
+        <description>TODO</description>
+        <type>Task</type>
+        <cost>0</cost>
+        <count>1</count>
+    </common_item>
+    <common_item name="Old Journal">
+        <expansion>Core game</expansion>
+        <description>Movement: Exhaust ans spend 1 movement point to make a Lore (-1) check. If you pass, gain 3 Clue tokens and discard Old Journal. If you fail, nothing happens.</description>
+        <type>Tome</type>
+        <cost>1</cost>
+        <count>2</count>
+    </common_item>
     <common_item name="Patrolling the Streets">
         <expansion>Dunwich Horror</expansion>
         <description>TODO</description>
