@@ -9,7 +9,21 @@
         <cost>0</cost>
         <count>0</count>
     </common_item>
-
+    
+    <common_item name="Patrolling the Streets">
+        <expansion>Dunwich Horror</expansion>
+        <description>TODO</description>
+        <type>Task</type>
+        <bonus>check</bonus>
+        <cost>0</cost>
+        <count>1</count>
+    </common_item>
+    <common_item name="Press Pass">
+        <expansion>King in Yellow</expansion>
+        <description>Any: Exhaust when you gain one or more Clue tokens to gain 1 extra Clue token.</description>
+        <cost>5</cost>
+        <count>2</count>
+    </common_item>
     <common_item name="Research Materials">
         <expansion>Core game</expansion>
         <description>Any: Discard Research Materials instead of spending 1 Clue token.</description>
