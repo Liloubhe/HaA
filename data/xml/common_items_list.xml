@@ -34,13 +34,13 @@
     </common_item>
     <common_item name="Press Pass">
         <expansion>King in Yellow</expansion>
-        <description>Any: Exhaust when you gain one or more Clue tokens to gain 1 extra Clue token.</description>
+        <description>Any phase: Exhaust when you gain one or more Clue tokens to gain 1 extra Clue token.</description>
         <cost>5</cost>
         <count>2</count>
     </common_item>
     <common_item name="Research Materials">
         <expansion>Core game</expansion>
-        <description>Any: Discard Research Materials instead of spending 1 Clue token.</description>
+        <description>Any phase: Discard Research Materials instead of spending 1 Clue token.</description>
         <cost>1</cost>
         <count>2</count>
     </common_item>
@@ -66,7 +66,7 @@
     </common_item>
     <common_item name="Shotgun">
         <expansion>Core game</expansion>
-        <description>Any: When using Shotgun in combat, all 6's rolled count as 2 successes.</description>
+        <description>Any phase: When using Shotgun in combat, all 6's rolled count as 2 successes.</description>
         <type>Physical weapon</type>
         <bonus>+4 Combat check</bonus>
         <hands>2</hands>
@@ -90,7 +90,7 @@
     </common_item>
     <common_item name="Telescope">
         <expansion>Core game</expansion>
-        <description>Any: Discard Telescope to avoid being delayed.</description>
+        <description>Any phase: Discard Telescope to avoid being delayed.</description>
         <bonus>+1 Sneak check (but not Evade checks)</bonus>
         <cost>2</cost>
         <count>2</count>
@@ -118,7 +118,7 @@
     </common_item>
     <common_item name="Whiskey">
         <expansion>Core game</expansion>
-        <description>Any: Discard Whiskey to reduce any Sanity loss by 1.</description>
+        <description>Any phase: Discard Whiskey to reduce any Sanity loss by 1.</description>
         <cost>1</cost>
         <count>3</count>
     </common_item>
