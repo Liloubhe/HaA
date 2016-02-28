@@ -39,9 +39,9 @@
     <investigator name="Amanda Sharpe">
         <image>Amanda_Sharp.jpg</image>
         <expansion>Jeu de base</expansion>
-        <description>Any: Whenever Amanda draws one or more cards from the Skill deck, she draws one extra and then discards one of the cards.</description>
-        <occupation>Student</occupation>
-        <home>Bank of Arkham</home>
+        <description>N'importe quelle phase : quand Amanda pioche une ou plusieurs cartes du paquet de Compétences, elle pioche une carte de plus et défausse une des cartes.</description>
+        <occupation>L'étudiante</occupation>
+        <home>Banque d'Arkham</home>
         <sanity>5</sanity>
         <stamina>5</stamina>
         <focus>3</focus>
@@ -81,9 +81,9 @@
     <investigator name="Ashcan Pete">
         <image>Ashcan_Pete.jpg</image>
         <expansion>Jeu de base</expansion>
-        <description>When Pete draws from the Common Item, Unique Item, or Spell deck, he may draw from either the top or the bottom of that deck, his choice. Pete look at the bottom card of those decks at any time.</description>
-        <occupation>Drifter</occupation>
-        <home>River Docks</home>
+        <description>Quand Pete pioche une carte un paquets Objets Communs, Objets Uniques ou Sorts, il peut piocher la carte du dessus ou du dessous. Pete peut regarder la carte du dessous de cas paquet à tout moment.</description>
+        <occupation>Le vagabond</occupation>
+        <home>Les Quais</home>
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>1</focus>
