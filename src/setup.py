@@ -36,7 +36,7 @@ except (ImportError, AttributeError):
 #-------------------------------------------------------------------------------
 
 available_expansions = []
-available_expansions.append(_("King in Yellow"))
+available_expansions.append(_("The King in Yellow"))
 available_expansions.append(_("Kingsport"))
 available_expansions.append(_("Black Goat of the Woods"))
 available_expansions.append(_("The lurker at the Threshold"))
@@ -76,7 +76,7 @@ def setup_locations(expansions):
     """
     """
     start(function())
-    _xml_file = __xml__ + "locations_list.xml"
+    _xml_file = __xml__ + _("locations_list") + ".xml"
     tree = parse(_xml_file)
     root = tree.getroot()
     locations = []
@@ -102,9 +102,9 @@ def choose_investigators(expansion, nb_players):
     names_already_used = []
     investigators_list = Deck(_("investigators_list"), expansion)
 
-    _str  = "-"*TERM_WIDTH
-    _str += "\nThere are " +str(investigators_list.cards_number) +\
-            " investigators implemented in these expansions:\n"
+    _str  = "-"*TERM_WIDTH + "\n"
+    _str += _("There are ") +str(investigators_list.cards_number)\
+          + _(" investigators implemented in these expansions:\n")
     for _list, _elt in enumerate(investigators_list.remaining_cards):
         _str += indent(_elt.name, " | " + str(_list) + "/ ")
 
@@ -115,11 +115,12 @@ def choose_investigators(expansion, nb_players):
             print(_str)
             player_number = players_color[_iel - 1] + "[Player" + str(_iel)\
                                                     + "]" + RESET
-            name = input(player_number + " >> choose investigator " + "n° ")
+            name = input(player_number + _(" >> choose investigator ") + "n° ")
             if name in names_already_used:
-                print("This investigator is already taken. Choose another one.")
+                print(_("This investigator is already taken. ")\
+                        + _("Choose another one."))
             elif int(name) > investigators_list.cards_number - 1:
-                print("Wrong number! Choose a number between 0 and "\
+                print(_("Wrong number! Choose a number between 0 and ")\
                      + str(investigators_list.cards_number - 1) + ".")
             else:
                 new_player = investigators_list.remaining_cards[int(name)]
@@ -148,12 +149,12 @@ def choose_new_investigator(expansion, players, number):
     investigators_list = Deck(_("investigators_list"), expansion)
     logging.info(players[number].player + "has to choose a new investigator.")
 
-    print("There are " +str(investigators_list.cards_number) +
-          " investigators implemented in these expansions:")
+    _str += _("There are ") +str(investigators_list.cards_number)\
+          + _(" investigators implemented in these expansions:\n")
     for _iel, _elt in enumerate(investigators_list.remaining_cards):
         print(str(_iel) + ": " + _elt.name)
 
-    _str = "And these investigators are already taken: "
+    _str = _("And these investigators are already taken: ")
     for _elt in players.values():
         _str += _elt.name +", "
         names_already_used.append(_elt.name)
@@ -162,14 +163,15 @@ def choose_new_investigator(expansion, players, number):
     already_used = False
     while not already_used:
         name = input(">> " + players[number].player\
-                    + "choose investigator " + "n° ")
+                    + _("choose investigator ") + "n° ")
         if int(name) > investigators_list.cards_number - 1:
-            print("Wrong number! Choose a number between 0 and "\
+            print(_("Wrong number! Choose a number between 0 and ")\
                  + str(investigators_list.cards_number - 1) + ".")
         else:
             new_name = investigators_list.remaining_cards[int(name)].name
             if new_name in names_already_used:
-                print("This investigator is already taken. Choose another one.")
+                print(_("This investigator is already taken. ")\
+                        + _("Choose another one."))
             else:
                 del players[number]
                 new_player = investigators_list.remaining_cards[int(name)]
@@ -205,7 +207,7 @@ def main_setup():
 
     # General game setup: numbers of players
     nb_players = input(_(">> How many are you (choose between 2 and 7)? "))
-    logging.info(_("You are ") + str(nb_players) + _(" players\n"))
+    logging.info(_("You are ") + str(nb_players) + _(" players") + ".\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
 
