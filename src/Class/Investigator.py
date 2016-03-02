@@ -308,7 +308,7 @@ class Skill:
         """
         self.name  = _skill.get("name")
         self.place = 0
-        _min, _max = int(_skill.find('min').text), int(_skill.find('max').text)
+        _min, _max = int(_skill.get('min')), int(_skill.get('max'))
         if self.name == "sneak" or self.name == "will" or self.name == "luck":
             self.range = list(reversed(range(_min, _max +1)))
         else: 
