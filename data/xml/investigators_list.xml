@@ -120,4 +120,44 @@
             <ally>Duke</ally>
         </inventory>
     </investigator>
+    
+    <investigator name="Bob Jenkins">
+        <expansion>Core game</expansion>
+        <occupation>Salesman</occupation>
+        <description>Any phase: Whenever Bob draws one or more cards from the Common item deck, he draws one extra card and then discards one of the cards.</description>
+        <home>General Store</home>
+        <sanity>4</sanity>
+        <stamina>6</stamina>
+        <focus>1</focus>
+        <skill name ="speed">
+            <min>2</min>
+            <max>5</max>
+        </skill>
+        <skill name ="sneak">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="fight">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <skill name ="will">
+            <min>3</min>
+            <max>6</max>
+        </skill>
+        <skill name ="lore">
+            <min>0</min>
+            <max>3</max>
+        </skill>
+        <skill name ="luck">
+            <min>1</min>
+            <max>4</max>
+        </skill>
+        <inventory>
+            <money>9</money>
+            <common_items>2</common_items>
+            <unique_items>2</unique_items>
+            <skills>1</skills>
+        </inventory>
+    </investigator>
 </investigators_list>
