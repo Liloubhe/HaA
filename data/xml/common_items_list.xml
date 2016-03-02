@@ -33,7 +33,7 @@
         <count>1</count>
     </common_item>
     <common_item name="Press Pass">
-        <expansion>King in Yellow</expansion>
+        <expansion>The King in Yellow</expansion>
         <description>Any: Exhaust when you gain one or more Clue tokens to gain 1 extra Clue token.</description>
         <cost>5</cost>
         <count>2</count>
@@ -53,13 +53,13 @@
         <count>2</count>
     </common_item>
     <common_item name="Safety Deposit Key">
-        <expansion>King in Yellow</expansion>
+        <expansion>The King in Yellow</expansion>
         <description>Movement: Spend 1 movement point and discard this card while in the Bank of Arkham to make a Luck (-2) check. If you succeed, draw 1 Unique item. If you fail, gain 2 Clue tokens.</description>
         <cost>2</cost>
         <count>3</count>
     </common_item>
         <common_item name="Sedanette">
-        <expansion>King in Yellow</expansion>
+        <expansion>The King in Yellow</expansion>
         <description>You may automatically Evade monsters of toughness 1 while in the street.</description>
         <cost>4</cost>
         <count>2</count>
@@ -96,7 +96,7 @@
         <count>2</count>
     </common_item>
     <common_item name="Time Bomb">
-        <expansion>King in Yellow</expansion>
+        <expansion>The King in Yellow</expansion>
         <description>Upkeep: If this card is on a location or street area, discard 1 clue token from it.If there are no clue tokens left to discard, return all monsters in the location/area to the cup, reduce all investigators in the location/area to 0 stamina, and discard this card. | Movement: You may place this card on your current Arkham location or street area with up to 3 clue tokens from the bank on it.</description>
         <count>3</count>
         <cost>3</cost>
@@ -110,7 +110,7 @@
         <count>2</count>
     </common_item>
     <common_item name="Understudy's Script">
-        <expansion>King in Yellow</expansion>
+        <expansion>The King in Yellow</expansion>
         <type>Tome</type>
         <description>Movement: Exhaust and spend 2 movement points to make a Will (-2) check. If you pass, draw 1 spell, gain 2 clue tokens, and discard Understudy's Script. If you fail, you loose 1 sanity.</description>
         <cost>3</cost>
