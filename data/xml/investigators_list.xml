@@ -8,30 +8,12 @@
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>2</focus>
-        <skill name ="speed">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="sneak">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="fight">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="will">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="lore">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="luck">
-            <min>1</min>
-            <max>4</max>
-        </skill>
+        <skill name = "speed" min = "0" max = "3"/>
+        <skill name = "sneak" min = "1" max = "4"/>
+        <skill name = "fight" min = "2" max = "5"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "1" max = "4"/>
         <inventory>
         </inventory>
     </investigator>
@@ -45,30 +27,12 @@
         <sanity>5</sanity>
         <stamina>5</stamina>
         <focus>3</focus>
-        <skill name ="speed">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="sneak">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="fight">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="will">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="lore">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="luck">
-            <min>1</min>
-            <max>4</max>
-        </skill>
+        <skill name = "speed" min = "1" max = "4"/>
+        <skill name = "sneak" min = "1" max = "4"/>
+        <skill name = "fight" min = "1" max = "4"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "1" max = "4"/>
+        <skill name = "luck" min = "1" max = "4"/>
         <inventory>
             <money>1</money>
             <clue_tokens>1</clue_tokens>
@@ -87,30 +51,12 @@
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>1</focus>
-        <skill name ="speed">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="sneak">
-            <min>3</min>
-            <max>6</max>
-        </skill>
-        <skill name ="fight">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="will">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="lore">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="luck">
-            <min>0</min>
-            <max>3</max>
-        </skill>
+        <skill name = "speed" min = "0" max = "3"/>
+        <skill name = "sneak" min = "3" max = "6"/>
+        <skill name = "fight" min = "2" max = "5"/>
+        <skill name = "will" min = "2" max = "5"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "0" max = "3"/>
         <inventory>
             <money>1</money>
             <clue_tokens>3</clue_tokens>
@@ -129,30 +75,12 @@
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>1</focus>
-        <skill name ="speed">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="sneak">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="fight">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="will">
-            <min>3</min>
-            <max>6</max>
-        </skill>
-        <skill name ="lore">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="luck">
-            <min>1</min>
-            <max>4</max>
-        </skill>
+        <skill name = "speed" min = "2" max = "5"/>
+        <skill name = "sneak" min = "0" max = "3"/>
+        <skill name = "fight" min = "1" max = "4"/>
+        <skill name = "will" min = "3" max = "6"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "1" max = "4"/>
         <inventory>
             <money>9</money>
             <common_items>2</common_items>
