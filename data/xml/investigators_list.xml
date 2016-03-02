@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <investigators_list>
     <investigator name="Beta Test">
-        <expansion>King in Yellow</expansion>
+        <expansion>The King in Yellow</expansion>
         <occupation>Betatesteur</occupation>
         <description>Fake profile for testing | It should be on a second line.</description>
         <home>Black Cave</home>
