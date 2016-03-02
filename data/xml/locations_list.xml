@@ -1,150 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locations_list>
     <location name="Administration Building">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Streets of Miskatonik University"/>
     </location>
     <location name="Arkham Asylum">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Downton</neighborhood>
         <neighbor name="Streets of Downton"/>
     </location>
     <location name="Bank of Arkham">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Downton</neighborhood>
         <neighbor name="Streets of Downton"/>
     </location>
     <location name="Black Cave">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Streets of Rivertown"/>
         <unstable>True</unstable>
     </location>
     <location name="Curiositie Shoppe">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Northside</neighborhood>
         <neighbor name="Streets of Northside"/>
     </location>
     <location name="General Store">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Streets of Rivertown"/>
     </location>
     <location name="Graveyard">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Streets of Rivertown"/>
         <unstable>True</unstable>
     </location>
     <location name="Hibb's Roadhouse'">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Streets of Easttown"/>
         <unstable>True</unstable>
     </location>
     <location name="Historical Society">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Southside</neighborhood>
         <neighbor name="Streets of Southside"/>
         <unstable>True</unstable>
     </location>
     <location name="Independance Square">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Downtown</neighborhood>
         <neighbor name="Streets of Downtown"/>
         <unstable>True</unstable>
     </location>
     <location name="Library">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Streets of Miskatonik University"/>
     </location>
     <location name="Ma's Boarding House">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Southside</neighborhood>
         <neighbor name="Streets of Southside"/>
     </location>
     <location name="Newspaper">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Northside</neighborhood>
         <neighbor name="Streets of Northside"/>
     </location>
     <location name="Police Station">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Streets of Easttown"/>
     </location>
     <location name="River Docks">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Streets of Merchant District"/>
         <aquatic>True</aquatic>
     </location>
     <location name="Science Building">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Streets of Miskatonik University"/>
         <unstable>True</unstable>
     </location>
     <location name="Silver Twilight Lodge">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="Streets of French Hill"/>
         <unstable>True</unstable>
     </location>
     <location name="South Church">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Southside</neighborhood>
         <neighbor name="Streets of Southside"/>
     </location>
     <location name="St. Mary's Hospital">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Uptown</neighborhood>
         <neighbor name="Streets of Uptown"/>
     </location>
     <location name="The Unnamable">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Streets of Merchant District"/>
         <unstable>True</unstable>
     </location>
     <location name="The Witch House">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="Streets of French Hill"/>
         <unstable>True</unstable>
     </location>
     <location name="Train Station">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Northside</neighborhood>
         <neighbor name="Streets of Northside"/>
     </location>
     <location name="Unvisited Isle">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Streets of Merchant District"/>
         <unstable>True</unstable>
         <aquatic>True</aquatic>
     </location>
     <location name="Velma's Dinner">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Streets of Easttown"/>
     </location>
     <location name="Woods">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Uptown</neighborhood>
         <neighbor name="Streets of Uptown"/>
         <unstable>True</unstable>
     </location>
     <location name="Ye Olde Magick Shoppe">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Uptown</neighborhood>
         <neighbor name="Streets of Uptown"/>
     </location>
     <location name="Streets of Downtown">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Downtown</neighborhood>
         <neighbor name="Arkham Asylum"/>
         <neighbor name="Bank of Arkham"/>
@@ -154,7 +154,7 @@
         <neighbor name="Streets of Easttown"/>
     </location>
     <location name="Streets of Easttown">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Hibb's Roadhouse"/>
         <neighbor name="Police Station"/>
@@ -163,27 +163,27 @@
         <neighbor name="Streets of Rivertown"/>
     </location>
     <location name="Streets of French Hill">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="Silver Twilight Lodge"/>
         <neighbor name="The Witch House"/>
         <neighbor name="Streets of Southside"/>
-        <neighbor name="Streets of University Miskatonik"/>
+        <neighbor name="Streets of Miskatonik University"/>
         <neighbor name="Streets of Rivertown"/>
     </location>
     <location name="Streets of Merchant District">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="River Docks"/>
         <neighbor name="The Unnamable"/>
         <neighbor name="Unvisited Isle"/>
-        <neighbor name="Streets of University Miskatonik"/>
+        <neighbor name="Streets of Miskatonik University"/>
         <neighbor name="Streets of Rivertown"/>
         <neighbor name="Streets of Northside"/>
         <neighbor name="Streets of Downtown"/>
     </location>
     <location name="Streets of Miskatonik University">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Administration Building"/>
         <neighbor name="Library"/>
@@ -193,7 +193,7 @@
         <neighbor name="Streets of Merchant District"/>
     </location>
     <location name="Streets of Northside">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Northside</neighborhood>
         <neighbor name="Curiositie Shoppe"/>
         <neighbor name="Newspaper"/>
@@ -202,7 +202,7 @@
         <neighbor name="Streets of Downtown"/>
     </location>
     <location name="Streets of Rivertown">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Black Cave"/>
         <neighbor name="General Store"/>
@@ -212,7 +212,7 @@
         <neighbor name="Streets of Easttown"/>
     </location>
     <location name="Streets of Southside">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Southside</neighborhood>
         <neighbor name="Historical Society"/>
         <neighbor name="Ma's Boarding House"/>
@@ -221,12 +221,12 @@
         <neighbor name="Streets of French Hill"/>
     </location>
     <location name="Streets of Uptown">
-        <expansion>Jeu de base</expansion>
+        <expansion>Core game</expansion>
         <neighborhood>Uptown</neighborhood>
         <neighbor name="St. Mary's Hospital"/>
         <neighbor name="Woods"/>
         <neighbor name="Ye Olde Magick Shoppe"/>
         <neighbor name="Streets of Southside"/>
-        <neighbor name="Streets of University Miskatonik"/>
+        <neighbor name="Streets of Miskatonik University"/>
     </location>
 </locations_list>
