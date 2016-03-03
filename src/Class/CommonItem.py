@@ -49,8 +49,6 @@ class CommonItem:
             self.description = str(elt.find('description').text)
         if elt.find('type') is not None:
             more = elt.find('type')
-            print(more.get('name'))
-            print(elt.get('name'))
             self.type        = more.get('name')
             if more.find('hands') is not None:
                 self.hands   = int(more.find('hands').text)
