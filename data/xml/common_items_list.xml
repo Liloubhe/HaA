@@ -12,23 +12,49 @@
 
     <common_item name="Newspaper Assignment">
         <expansion>Dunwich Horror</expansion>
-        <description>TODO</description>
-        <type>Task</type>
+        <description>Go to: | 1/ Arkham Asylum | 2/ The Witch House | 3/ Newspaper | to gain 5$ and 5 clue tokens.</description>
+        <type name="Task">
+            <location name="Arkham Asylum"/>
+            <location name="The Witch House"/>
+            <location name="Newspaper"/>
+            <payoff>
+                <money>5</money>
+                <clue_tokens>4</clue_tokens>
+                <discard>True</discard>
+            </payoff>
+        </type>
         <cost>0</cost>
         <count>1</count>
     </common_item>
     <common_item name="Old Journal">
         <expansion>Core game</expansion>
         <description>Movement: Exhaust ans spend 1 movement point to make a Lore (-1) check. If you pass, gain 3 Clue tokens and discard Old Journal. If you fail, nothing happens.</description>
-        <type>Tome</type>
+        <type name="Tome">
+            <phase>Movement</phase>
+            <action check="Lore" modificator="-1">Exhaust ans spend 1 movement point</action>
+            <success description="gain 3 Clue tokens and discard Old Journal">
+                <clue_tokens>3</clue_tokens>
+                <discard>True</discard>
+            </success>
+            <failure description="nothing happens"></failure>
+        </type>
         <cost>1</cost>
         <count>2</count>
     </common_item>
     <common_item name="Patrolling the Streets">
         <expansion>Dunwich Horror</expansion>
-        <description>TODO</description>
-        <type>Task</type>
-        <bonus>check</bonus>
+        <description>Go to: | 1/ Easttown Streets | 2/ Uptown Streets | 3/ Police Station | to draw 1 Common item and gain 5$ and 1 clue token.</description>
+        <type name="Task">
+            <location name="Easttown Streets"/>
+            <location name="Uptown Streets"/>
+            <location name="Police Station"/>
+            <payoff>
+                <money>5</money>
+                <clue_tokens>1</clue_tokens>
+                <common_items>1</common_items>
+                <discard>True</discard>
+            </payoff>
+        </type>
         <cost>0</cost>
         <count>1</count>
     </common_item>
@@ -46,9 +72,11 @@
     </common_item>
     <common_item name="Rifle">
         <expansion>Core game</expansion>
-        <type>Physical weapon</type>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">5</modificator>
+        </type>
         <bonus>+5 Combat check</bonus>
-        <hands>2</hands>
         <cost>6</cost>
         <count>2</count>
     </common_item>
@@ -67,18 +95,23 @@
     <common_item name="Shotgun">
         <expansion>Core game</expansion>
         <description>Any: When using Shotgun in combat, all 6's rolled count as 2 successes.</description>
-        <type>Physical weapon</type>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">4</modificator>
+        </type>
         <bonus>+4 Combat check</bonus>
-        <hands>2</hands>
         <cost>6</cost>
         <count>2</count>
     </common_item>
     <common_item name="Sledgehammer">
         <expansion>The lurker at the Threshold</expansion>
         <description>Reduce the thoughness of monsters you fight by 1 to a minimum of 1 (this does not affect their values as trophies).</description>
-        <type>Physical weapon</type>
-        <bonus>+3 to Combat checks and +1 to Fight checks</bonus>
-        <hands>2</hands>
+        <bonus >+3 to Combat checks and +1 to Fight checks</bonus>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">3</modificator>
+            <modificator check="Fight">1</modificator>
+        </type>
         <cost>6</cost>
         <count>1</count>
     </common_item>
@@ -103,15 +136,22 @@
     </common_item>
     <common_item name="Tommy Gun">
         <expansion>Core game</expansion>
-        <type>Physical weapon</type>
         <bonus>+6 Combat check</bonus>
-        <hands>2</hands>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">6</modificator>
+        </type>
         <cost>7</cost>
         <count>2</count>
     </common_item>
     <common_item name="Understudy's Script">
         <expansion>The King in Yellow</expansion>
-        <type>Tome</type>
+        <type name="Tome">
+            <phase>Movement</phase>
+            <action check="Will" modificator="-2">Exhaust and spend 2 movement points</action>
+            <success>gain 2 clue tokens and discard</success>
+            <failure>loose 1 sanity</failure>
+        </type>
         <description>Movement: Exhaust and spend 2 movement points to make a Will (-2) check. If you pass, draw 1 spell, gain 2 clue tokens, and discard Understudy's Script. If you fail, you loose 1 sanity.</description>
         <cost>3</cost>
         <count>3</count>
