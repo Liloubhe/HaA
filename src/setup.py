@@ -205,13 +205,17 @@ def main_setup():
     global common_items_deck
     common_items_deck = Deck(_("common_items_list"), chosen_expansions)
 
+    # General game setup: monsters
+    global monsters_deck
+    monsters_deck = Deck(_("monsters_list"), chosen_expansions)
+
     # General game setup: numbers of players
     nb_players = input(_(">> How many are you (choose between 2 and 7)? "))
     logging.info(_("You are ") + str(nb_players) + _(" players") + ".\n")
 
     players = choose_investigators(chosen_expansions, nb_players)
 
-    return players, locations_list, common_items_deck
+    return players, locations_list, common_items_deck, monsters_deck
 
     end(function())
 
