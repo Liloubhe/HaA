@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
-    <monster name="Yithians">
+    <monster name="Yithian">
         <expansion>Kingsport</expansion>
         <specifications movemement="normal" dimension="triangle"/>
         <description>If you fail a Horror check againsy Yithian, you are lost in time and space.</description>
         <special>TODO</special>
-        <abilities name="undead"/>
         <awareness>-1</awareness>
         <combat_stat>
             <toughness>3</toughness>
