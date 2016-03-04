@@ -91,7 +91,7 @@ class Investigator:
 
     def move_to(self, location):
         start(function())
-        if hasattr(self, 'location'):
+        if self.location is not None:
             self.location.leaving_investigator(self.player + self.name)
         self.location = location
         location.incoming_investigator(self.player + self.name)
