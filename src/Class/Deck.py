@@ -27,6 +27,7 @@ from main               import __xml__
 from module.debug       import *
 from Class.Investigator import Investigator
 from Class.CommonItem   import CommonItem
+from Class.Monster      import Monster
 
 
 # ------------------------------------------------------------------------------
@@ -55,6 +56,10 @@ class Deck:
                         self.remaining_cards.append(Investigator(_elt))
                     elif xml_file.find("common_item") > -1:
                         new_item = CommonItem(_elt)
+                        for _iel in range(0, new_item.count):
+                            self.remaining_cards.append(new_item)
+                    elif xml_file.find("monster") > -1:
+                        new_item = Monster(_elt)
                         for _iel in range(0, new_item.count):
                             self.remaining_cards.append(new_item)
         shuffle(self.remaining_cards)
