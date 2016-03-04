@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monsters_list>
+    <monster name="Yithians">
+        <expansion>Kingsport</expansion>
+        <specifications movemement="normal" dimension="triangle"/>
+        <description>If you fail a Horror check againsy Yithian, you are lost in time and space.</description>
+        <special>TODO</special>
+        <abilities name="undead"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="0"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Zombie">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>She screamd and fired again, but still the thing shambled on, teeth dripping as it groaned its horrible cry.</description>
+        <abilities name="undead"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-1" damage="2"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+</monsters_list>
