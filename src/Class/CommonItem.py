@@ -48,10 +48,9 @@ class CommonItem:
         if elt.find('description') is not None:
             self.description = str(elt.find('description').text)
         if elt.find('type') is not None:
-            more = elt.find('type')
-            self.type        = more.get('name')
-            if more.find('hands') is not None:
-                self.hands   = int(more.find('hands').text)
+            self.type        = elt.find('type').get('name')
+            if elt.find('type').find('hands') is not None:
+                self.hands   = int(elt.find('type').find('hands').text)
         if elt.find('bonus') is not None:
             self.bonus       = elt.find('bonus').text
 
@@ -71,11 +70,11 @@ class CommonItem:
         _str += indent("-"*len(self.name))
         _str += indent("Cost: " + str(self.cost) + "$")
         
+        if self.type is not None:
+            _str += indent("Type: " + self.type)
         if self.hands > 0:
             _str += indent("Require " + str(self.hands) + " hand"\
                            + ("s" if self.hands > 1 else ""))
-        if self.type is not None:
-            _str += indent("Type: " + self.type)
         if self.description is not None:
             _str += indent(self.description)
         if self.bonus is not None:
