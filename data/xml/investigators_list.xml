@@ -66,7 +66,6 @@
             <ally>Duke</ally>
         </inventory>
     </investigator>
-    
     <investigator name="Bob Jenkins">
         <expansion>Core game</expansion>
         <occupation>Salesman</occupation>
@@ -83,6 +82,28 @@
         <skill name = "luck" min = "1" max = "4"/>
         <inventory>
             <money>9</money>
+            <common_items>2</common_items>
+            <unique_items>2</unique_items>
+            <skills>1</skills>
+        </inventory>
+    </investigator>
+    <investigator name="Carolyn Fern">
+        <expansion>Core game</expansion>
+        <occupation>Psychologist</occupation>
+        <description>Upkeep: Dr. Fern may restore 1 Sanity to herself or another character in her location. She caonnot raise a character's Sanity higher than that character's maximum Sanity.</description>
+        <home>Arkham Asylum</home>
+        <sanity>6</sanity>
+        <stamina>4</stamina>
+        <focus>2</focus>
+        <skill name = "speed" min = "0" max = "3"/>
+        <skill name = "sneak" min = "0" max = "3"/>
+        <skill name = "fight" min = "1" max = "4"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "2" max = "5"/>
+        <skill name = "luck" min = "2" max = "5"/>
+        <inventory>
+            <money>7</money>
+            <clue_tokens>1</clue_tokens>
             <common_items>2</common_items>
             <unique_items>2</unique_items>
             <skills>1</skills>
