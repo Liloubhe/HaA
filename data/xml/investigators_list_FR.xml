@@ -109,4 +109,27 @@
             <skills>1</skills>
         </inventory>
     </investigator>
+    <investigator name="Darrell Simmons">
+        <expansion>Jeu de base</expansion>
+        <occupation>Le photographe</occupation>
+        <description>Rencontre en Ville : pour la pioche de rencontres de lieu à Arkham, Darrell pioche deux cartes et en choisi une. Cette capacité ne fonctionne pas pour les rencontres de portail dans les Autres Mondes.</description>
+        <home>Journal</home>
+        <sanity>4</sanity>
+        <stamina>6</stamina>
+        <focus>2</focus>
+        <skill name = "speed" min = "2" max = "5"/>
+        <skill name = "sneak" min = "0" max = "3"/>
+        <skill name = "fight" min = "2" max = "5"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "1" max = "4"/>
+        <inventory>
+            <money>4</money>
+            <clue_tokens>1</clue_tokens>
+            <special name="accompte"/>
+            <common_items>1</common_items>
+            <unique_items>2</unique_items>
+            <skills>1</skills>
+        </inventory>
+    </investigator>
 </investigators_list>
