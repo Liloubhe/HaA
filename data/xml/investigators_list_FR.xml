@@ -66,7 +66,6 @@
             <ally>Duke</ally>
         </inventory>
     </investigator>
-    
     <investigator name="Bob Jenkins">
         <expansion>Jeu de base</expansion>
         <occupation>Le représentant</occupation>
@@ -83,6 +82,28 @@
         <skill name = "luck" min = "1" max = "4"/>
         <inventory>
             <money>9</money>
+            <common_items>2</common_items>
+            <unique_items>2</unique_items>
+            <skills>1</skills>
+        </inventory>
+    </investigator>
+    <investigator name="Carolyn Fern">
+        <expansion>Jeu de base</expansion>
+        <occupation>La psychologue</occupation>
+        <description>Entretien : Le Dr Fern peut restaurer 1 point de Santé Mentale à elle-même ou à un autre personnage se trouvant au même endroit qu'elle. Elle ne peut pas augmenter la Santé Mental d'un personnage au-delà de son maximum.</description>
+        <home>Asile d'Arkham</home>
+        <sanity>6</sanity>
+        <stamina>4</stamina>
+        <focus>2</focus>
+        <skill name = "speed" min = "0" max = "3"/>
+        <skill name = "sneak" min = "0" max = "3"/>
+        <skill name = "fight" min = "1" max = "4"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "2" max = "5"/>
+        <skill name = "luck" min = "2" max = "5"/>
+        <inventory>
+            <money>7</money>
+            <clue_tokens>1</clue_tokens>
             <common_items>2</common_items>
             <unique_items>2</unique_items>
             <skills>1</skills>
