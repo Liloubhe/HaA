@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Wizard Whateley">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="circle"/>
+        <description>If you pass a Combat check against Wizard Whateley, return him to the box and draw 1 Spell.</description>
+        <special>TODO</special>
+        <abilities name="magical immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Wraith">
         <expansion>Dunwich Horror</expansion>
         <specifications movemement="flying" dimension="moon"/>
