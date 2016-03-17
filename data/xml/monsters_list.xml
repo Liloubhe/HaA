@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Wraith">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="flying" dimension="moon"/>
+        <abilities name="undead"/>
+        <abilities name="physical immunity"/>
+        <abilities name="nightmarish" value="1"/>
+        <abilities name="overwhelming" value="1"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="1"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
     <monster name="Yithian">
         <expansion>Kingsport</expansion>
         <specifications movemement="normal" dimension="triangle"/>
