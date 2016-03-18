@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Wailing Writher" type="Mask">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="stationary" dimension="diamond"/>
+        <description>If you fail an Evade check against Wailing Writher, ou are devoured.</description>
+        <special>TODO</special>
+        <abilities name="endless"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-3" damage="4"/>
+            <combat rating="-3" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Warlock">
         <expansion>Core game</expansion>
         <specifications movemement="stationary" dimension="circle"/>
