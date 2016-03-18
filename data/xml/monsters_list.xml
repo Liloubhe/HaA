@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Vampire">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="moon"/>
+        <description>It was a beast born in the grave. It stretched its hands toward us and curcled its lips, drawn to the blood in our veins.</description>
+        <abilities name="physical resistance"/>
+        <abilities name="undead"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="0" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Wailing Writher" type="Mask">
         <expansion>Innsmouth Horror</expansion>
         <specifications movemement="stationary" dimension="diamond"/>
