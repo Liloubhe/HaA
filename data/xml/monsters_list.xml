@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Warlock">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="circle"/>
+        <description>If you pass a Combat check against Warlock, return it to the box and gain 2 Clue tokens.</description>
+        <special>TODO</special>
+        <abilities name="magical immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-3" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
     <monster name="Werewolf">
         <expansion>Kingsport Horror</expansion>
         <specifications movemement="unique" dimension="moon"/>
