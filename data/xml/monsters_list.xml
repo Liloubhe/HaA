@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="The Dunwich Horror" type="spawn">
+        <expansion>Dunwich Horror/expansion>
+        <specifications movemement="unique" dimension="moon"/>
+        <description>Instead of moving, roll a die. On a 4-6, add a doom token to the doom track. | Before making a Horror check, draw a Dunwich Horror card to determine its attributes.</description>
+        <special>TODO</special>
+        <awareness>2</awareness>
+        <combat_stat>
+            <toughness>5</toughness>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="The Skinless One" type="Mask">
         <expansion>Kingsport Horror</expansion>
         <specifications movemement="fast" dimension="circle"/>
