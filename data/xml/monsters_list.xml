@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="The Dark Pharoah" type="Mask">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="slash"/>
+        <description>Use Lore in combat with the Dark Pharoah instead of Fight.</description>
+        <special>TODO</special>
+        <abilities name="endless"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="The Dunwich Horror" type="spawn">
         <expansion>Dunwich Horror/expansion>
         <specifications movemement="unique" dimension="moon"/>
