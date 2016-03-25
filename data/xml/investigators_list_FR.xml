@@ -8,30 +8,12 @@
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>2</focus>
-        <skill name ="speed">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="sneak">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="fight">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="will">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="lore">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="luck">
-            <min>1</min>
-            <max>4</max>
-        </skill>
+        <skill name = "speed" min = "0" max = "3"/>
+        <skill name = "sneak" min = "1" max = "4"/>
+        <skill name = "fight" min = "2" max = "5"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "1" max = "4"/>
         <inventory>
         </inventory>
     </investigator>
@@ -39,36 +21,18 @@
     <investigator name="Amanda Sharpe">
         <image>Amanda_Sharp.jpg</image>
         <expansion>Jeu de base</expansion>
-        <description>Any: Whenever Amanda draws one or more cards from the Skill deck, she draws one extra and then discards one of the cards.</description>
-        <occupation>Student</occupation>
-        <home>Bank of Arkham</home>
+        <description>N'importe quelle phase : quand Amanda pioche une ou plusieurs cartes du paquet de Compétences, elle pioche une carte de plus et défausse une des cartes.</description>
+        <occupation>L'étudiante</occupation>
+        <home>Banque d'Arkham</home>
         <sanity>5</sanity>
         <stamina>5</stamina>
         <focus>3</focus>
-        <skill name ="speed">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="sneak">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="fight">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="will">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="lore">
-            <min>1</min>
-            <max>4</max>
-        </skill>
-        <skill name ="luck">
-            <min>1</min>
-            <max>4</max>
-        </skill>
+        <skill name = "speed" min = "1" max = "4"/>
+        <skill name = "sneak" min = "1" max = "4"/>
+        <skill name = "fight" min = "1" max = "4"/>
+        <skill name = "will" min = "1" max = "4"/>
+        <skill name = "lore" min = "1" max = "4"/>
+        <skill name = "luck" min = "1" max = "4"/>
         <inventory>
             <money>1</money>
             <clue_tokens>1</clue_tokens>
@@ -81,36 +45,18 @@
     <investigator name="Ashcan Pete">
         <image>Ashcan_Pete.jpg</image>
         <expansion>Jeu de base</expansion>
-        <description>When Pete draws from the Common Item, Unique Item, or Spell deck, he may draw from either the top or the bottom of that deck, his choice. Pete look at the bottom card of those decks at any time.</description>
-        <occupation>Drifter</occupation>
-        <home>River Docks</home>
+        <description>Quand Pete pioche une carte un paquets Objets Communs, Objets Uniques ou Sorts, il peut piocher la carte du dessus ou du dessous. Pete peut regarder la carte du dessous de cas paquet à tout moment.</description>
+        <occupation>Le vagabond</occupation>
+        <home>Les Quais</home>
         <sanity>4</sanity>
         <stamina>6</stamina>
         <focus>1</focus>
-        <skill name ="speed">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="sneak">
-            <min>3</min>
-            <max>6</max>
-        </skill>
-        <skill name ="fight">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="will">
-            <min>2</min>
-            <max>5</max>
-        </skill>
-        <skill name ="lore">
-            <min>0</min>
-            <max>3</max>
-        </skill>
-        <skill name ="luck">
-            <min>0</min>
-            <max>3</max>
-        </skill>
+        <skill name = "speed" min = "0" max = "3"/>
+        <skill name = "sneak" min = "3" max = "6"/>
+        <skill name = "fight" min = "2" max = "5"/>
+        <skill name = "will" min = "2" max = "5"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "0" max = "3"/>
         <inventory>
             <money>1</money>
             <clue_tokens>3</clue_tokens>
@@ -118,6 +64,28 @@
             <unique_items>1</unique_items>
             <common_items>1</common_items>
             <ally>Duke</ally>
+        </inventory>
+    </investigator>
+    
+    <investigator name="Bob Jenkins">
+        <expansion>Jeu de base</expansion>
+        <occupation>Le représentant</occupation>
+        <description>N'importe quelle phase : quand Bob pioche une ou plusieuurs cartes du paquet d'Objets Communs, il pioche une carte de plus et défausse une des cartes.</description>
+        <home>Magasin</home>
+        <sanity>4</sanity>
+        <stamina>6</stamina>
+        <focus>1</focus>
+        <skill name = "speed" min = "2" max = "5"/>
+        <skill name = "sneak" min = "0" max = "3"/>
+        <skill name = "fight" min = "1" max = "4"/>
+        <skill name = "will" min = "3" max = "6"/>
+        <skill name = "lore" min = "0" max = "3"/>
+        <skill name = "luck" min = "1" max = "4"/>
+        <inventory>
+            <money>9</money>
+            <common_items>2</common_items>
+            <unique_items>2</unique_items>
+            <skills>1</skills>
         </inventory>
     </investigator>
 </investigators_list>

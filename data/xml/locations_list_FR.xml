@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations_list>
+    <location name="Administration">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Université Miskatonic</neighborhood>
+        <neighbor name="Rues du Quartier de l'Université Miskatonic"/>
+    </location>
+    <location name="Asile d'Arkham">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Downton</neighborhood>
+        <neighbor name="Streets of Downton"/>
+    </location>
+    <location name="Banque d'Arkham">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Downton</neighborhood>
+        <neighbor name="Streets of Downton"/>
+    </location>
+    <location name="Caverne Noire">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier de la Rivière</neighborhood>
+        <neighbor name="Rues du Quartier de la Rivière"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Boutique de Souvenirs">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Nord</neighborhood>
+        <neighbor name="Rues du Quartier Nord"/>
+    </location>
+    <location name="Magasin">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier de la Rivière</neighborhood>
+        <neighbor name="Rues du Quartier de la Rivière"/>
+    </location>
+    <location name="Cimetière">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier de la Rivière</neighborhood>
+        <neighbor name="Rues du Quartier de la Rivière"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Relais Routier de Hibb'">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Est</neighborhood>
+        <neighbor name="Rues du Quartier Est"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Société des Historiens">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Sud</neighborhood>
+        <neighbor name="Rues du Quartier Sud"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Square de l'Indépendance">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Centre-Ville</neighborhood>
+        <neighbor name="Rues du Centre-Ville"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Bibliothèque">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Université Miskatonic</neighborhood>
+        <neighbor name="Rues du Quartier de l'Université Miskatonic"/>
+    </location>
+    <location name="Pension de Ma">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Sud</neighborhood>
+        <neighbor name="Rues du Quartier Sud"/>
+    </location>
+    <location name="Journal">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Nord</neighborhood>
+        <neighbor name="Rues du Quartier Nord"/>
+    </location>
+    <location name="Poste de Police">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Est</neighborhood>
+        <neighbor name="Rues du Quartier Est"/>
+    </location>
+    <location name="Les Quais">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Marchand</neighborhood>
+        <neighbor name="Rues du Quartier Marchand"/>
+        <aquatic>True</aquatic>
+    </location>
+    <location name="Département Scientifique">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Université Miskatonic</neighborhood>
+        <neighbor name="Rues du Quartier de l'Université Miskatonic"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Loge du Crépuscule d'Argent">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>French Hill</neighborhood>
+        <neighbor name="Rues de French Hill"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Eglise Méridionale">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Sud</neighborhood>
+        <neighbor name="Rues du Quartier Sud"/>
+    </location>
+    <location name="Hôpital Sainte Marie">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Résidentiel</neighborhood>
+        <neighbor name="Rues du Quartier Résidentiel"/>
+    </location>
+    <location name="L'Innommable">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Marchand</neighborhood>
+        <neighbor name="Rues du Quartier Marchand"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Maison de la Sorcière">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>French Hill</neighborhood>
+        <neighbor name="Rues de French Hill"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="Gare">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Nord</neighborhood>
+        <neighbor name="Rues du Quartier Nord"/>
+    </location>
+    <location name="Ile Inexplorée">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Marchand</neighborhood>
+        <neighbor name="Rues du Quartier Marchand"/>
+        <unstable>True</unstable>
+        <aquatic>True</aquatic>
+    </location>
+    <location name="Velma's Dinner">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Est</neighborhood>
+        <neighbor name="Rues du Quartier Est"/>
+    </location>
+    <location name="Bois">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Résidentiel</neighborhood>
+        <neighbor name="Rues du Quartier Résidentiel"/>
+        <unstable>True</unstable>
+    </location>
+    <location name="La Vieille Echoppe de Magie">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Résidentiel</neighborhood>
+        <neighbor name="Rues du Quartier Résidentiel"/>
+    </location>
+    <location name="Rues du Centre-Ville">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Centre-Ville</neighborhood>
+        <neighbor name="Asile d'Arkham"/>
+        <neighbor name="Banque d'Arkham"/>
+        <neighbor name="Square de l'Indépendance"/>
+        <neighbor name="Rues du Quartier Nord"/>
+        <neighbor name="Rues du Quartier Marchand"/>
+        <neighbor name="Rues du Quartier Est"/>
+    </location>
+    <location name="Rues du Quartier Est">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Est</neighborhood>
+        <neighbor name="Relais Routier de Hibb"/>
+        <neighbor name="Poste de Police"/>
+        <neighbor name="Restaurant de Velma"/>
+        <neighbor name="Rues du Centre-Ville"/>
+        <neighbor name="Rues du Quartier de la Rivière"/>
+    </location>
+    <location name="Rues de French Hill">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>French Hill</neighborhood>
+        <neighbor name="Loge du Crépuscule d'Argent"/>
+        <neighbor name="Maison de la Sorcière"/>
+        <neighbor name="Rues du Quartier Sud"/>
+        <neighbor name="Streets of University Miskatonik"/>
+        <neighbor name="Rues du Quartier de la Rivière"/>
+    </location>
+    <location name="Rues du Quartier Marchand">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Marchand</neighborhood>
+        <neighbor name="Les Quais"/>
+        <neighbor name="L'Innommable"/>
+        <neighbor name="Ile Inexplorée"/>
+        <neighbor name="Streets of University Miskatonik"/>
+        <neighbor name="Rues du Quartier de la Rivière"/>
+        <neighbor name="Rues du Quartier Nord"/>
+        <neighbor name="Rues du Centre-Ville"/>
+    </location>
+    <location name="Rues du Quartier de l'Université Miskatonic">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Université Miskatonic</neighborhood>
+        <neighbor name="Administration"/>
+        <neighbor name="Bibliothèque"/>
+        <neighbor name="Département Scientifique"/>
+        <neighbor name="Rues du Quartier Résidentiel"/>
+        <neighbor name="Rues de French Hill"/>
+        <neighbor name="Rues du Quartier Marchand"/>
+    </location>
+    <location name="Rues du Quartier Nord">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Nord</neighborhood>
+        <neighbor name="Boutique de Souvenirs"/>
+        <neighbor name="Journal"/>
+        <neighbor name="Gare"/>
+        <neighbor name="Rues du Quartier Marchand"/>
+        <neighbor name="Rues du Centre-Ville"/>
+    </location>
+    <location name="Rues du Quartier de la Rivière">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier de la Rivière</neighborhood>
+        <neighbor name="Caverne Noire"/>
+        <neighbor name="Magasin"/>
+        <neighbor name="Cimetière"/>
+        <neighbor name="Rues de French Hill"/>
+        <neighbor name="Rues du Quartier Marchand"/>
+        <neighbor name="Rues du Quartier Est"/>
+    </location>
+    <location name="Rues du Quartier Sud">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Sud</neighborhood>
+        <neighbor name="Société des Historiens"/>
+        <neighbor name="Pension de Ma"/>
+        <neighbor name="Eglise Méridionale"/>
+        <neighbor name="Rues du Quartier Résidentiel"/>
+        <neighbor name="Rues de French Hill"/>
+    </location>
+    <location name="Rues du Quartier Résidentiel">
+        <expansion>Jeu de base</expansion>
+        <neighborhood>Quartier Résidentiel</neighborhood>
+        <neighbor name="Hôpital Sainte Marie"/>
+        <neighbor name="Bois"/>
+        <neighbor name="La Vieille Echoppe de Magie"/>
+        <neighbor name="Rues du Quartier Sud"/>
+        <neighbor name="Rues du Quartier de l'Université Miskatonic"/>
+    </location>
+</locations_list>

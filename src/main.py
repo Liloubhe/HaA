@@ -41,7 +41,7 @@ except (ImportError, AttributeError):
 def launch_game():
     start(function())
 
-    players, locations_list, common_items_deck = main_setup()
+    players, locations_list, common_items_deck, monsters_deck = main_setup()
 
     end(function())
 
