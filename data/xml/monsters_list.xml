@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monsters_list>
+    <monster name="The Dark Pharoah" type="Mask">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="slash"/>
+        <description>Use Lore in combat with the Dark Pharoah instead of Fight.</description>
+        <special>TODO</special>
+        <abilities name="endless"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="The Dunwich Horror" type="spawn">
+        <expansion>Dunwich Horror/expansion>
+        <specifications movemement="unique" dimension="moon"/>
+        <description>Instead of moving, roll a die. On a 4-6, add a doom token to the doom track. | Before making a Horror check, draw a Dunwich Horror card to determine its attributes.</description>
+        <special>TODO</special>
+        <awareness>2</awareness>
+        <combat_stat>
+            <toughness>5</toughness>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="The Skinless One" type="Mask">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="fast" dimension="circle"/>
+        <description>If you fail either the Horror check or the Combat check against the Skinless One, you are devoured.</description>
+        <special>TODO</special>
+        <abilities name="endless"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2"/>
+            <combat rating="-2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Vampire">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="moon"/>
+        <description>It was a beast born in the grave. It stretched its hands toward us and curcled its lips, drawn to the blood in our veins.</description>
+        <abilities name="physical resistance"/>
+        <abilities name="undead"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="0" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Wailing Writher" type="Mask">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="stationary" dimension="diamond"/>
+        <description>If you fail an Evade check against Wailing Writher, ou are devoured.</description>
+        <special>TODO</special>
+        <abilities name="endless"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-3" damage="4"/>
+            <combat rating="-3" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Warlock">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="circle"/>
+        <description>If you pass a Combat check against Warlock, return it to the box and gain 2 Clue tokens.</description>
+        <special>TODO</special>
+        <abilities name="magical immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-3" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Werewolf">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="unique" dimension="moon"/>
+        <description>Werewolf moves as a fast monster. If it enters an area containing any investigators, each investigator in that area loses 2 Stamina.</description>
+        <special>TODO</special>
+        <abilities name="physical immunity"/>
+        <abilities name="elusive"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-3" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Witch">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="circle"/>
+        <description>She was lovely and terrible all at once. A strange light shone in her eyes as she chanted. "Iä! Iä! Shub-Niggurath! The Goat with a Thousand Young!"</description>
+        <abilities name="magical resistance"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="-3" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Wizard Whateley">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="circle"/>
+        <description>If you pass a Combat check against Wizard Whateley, return him to the box and draw 1 Spell.</description>
+        <special>TODO</special>
+        <abilities name="magical immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Wraith">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="flying" dimension="moon"/>
+        <abilities name="undead"/>
+        <abilities name="physical immunity"/>
+        <abilities name="nightmarish" value="1"/>
+        <abilities name="overwhelming" value="1"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="1"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Yithian">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="triangle"/>
+        <description>If you fail a Horror check againsy Yithian, you are lost in time and space.</description>
+        <special>TODO</special>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="0"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Zombie">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>She screamd and fired again, but still the thing shambled on, teeth dripping as it groaned its horrible cry.</description>
+        <abilities name="undead"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-1" damage="2"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+</monsters_list>

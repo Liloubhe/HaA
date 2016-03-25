@@ -44,6 +44,7 @@ class Investigator:
         """
         self.name          = elt.get('name')
         self.init_location = elt.find('home').text
+        self.location      = None
         self.occupation    = elt.find('occupation').text
         self.expansion     = elt.find('expansion').text
         self.description   = elt.find('description').text
@@ -90,7 +91,7 @@ class Investigator:
 
     def move_to(self, location):
         start(function())
-        if hasattr(self, 'location'):
+        if self.location is not None:
             self.location.leaving_investigator(self.player + self.name)
         self.location = location
         location.incoming_investigator(self.player + self.name)
