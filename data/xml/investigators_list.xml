@@ -21,7 +21,7 @@
     <investigator name="Amanda Sharpe">
         <image>Amanda_Sharp.jpg</image>
         <expansion>Core game</expansion>
-        <description>Any: Whenever Amanda draws one or more cards from the Skill deck, she draws one extra and then discards one of the cards.</description>
+        <description>Any phase: Whenever Amanda draws one or more cards from the Skill deck, she draws one extra and then discards one of the cards.</description>
         <occupation>Student</occupation>
         <home>Bank of Arkham</home>
         <sanity>5</sanity>
