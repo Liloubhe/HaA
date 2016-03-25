@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-25 14:50+0100\n"
+"POT-Creation-Date: 2016-03-02 14:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,28 +57,64 @@ msgstr ""
 msgid "? [Y/n] "
 msgstr ""
 
-#: setup.py:103 setup.py:148
+#: setup.py:79
+msgid "locations_list"
+msgstr ""
+
+#: setup.py:103 setup.py:149
 msgid "investigators_list"
 msgstr ""
 
-#: setup.py:193
+#: setup.py:106 setup.py:152
+msgid "There are "
+msgstr ""
+
+#: setup.py:107 setup.py:153
+msgid " investigators implemented in these expansions:\n"
+msgstr ""
+
+#: setup.py:118
+msgid " >> choose investigator "
+msgstr ""
+
+#: setup.py:120 setup.py:173
+msgid "This investigator is already taken. "
+msgstr ""
+
+#: setup.py:121 setup.py:174
+msgid "Choose another one."
+msgstr ""
+
+#: setup.py:123 setup.py:168
+msgid "Wrong number! Choose a number between 0 and "
+msgstr ""
+
+#: setup.py:157
+msgid "And these investigators are already taken: "
+msgstr ""
+
+#: setup.py:166
+msgid "choose investigator "
+msgstr ""
+
+#: setup.py:195
 msgid "Starting the game !!!"
 msgstr ""
 
-#: setup.py:204
+#: setup.py:206
 msgid "common_items_list"
 msgstr ""
 
-#: setup.py:207
+#: setup.py:209
 msgid ">> How many are you (choose between 2 and 7)? "
 msgstr ""
 
-#: setup.py:208
+#: setup.py:210
 msgid "You are "
 msgstr ""
 
-#: setup.py:208
-msgid " players\n"
+#: setup.py:210
+msgid " players"
 msgstr ""
 
 #: i18n/i18n.py:58
