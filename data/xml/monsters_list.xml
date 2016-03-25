@@ -15,7 +15,7 @@
         <count>1</count>
     </monster>
     <monster name="The Dunwich Horror" type="spawn">
-        <expansion>Dunwich Horror/expansion>
+        <expansion>Dunwich Horror</expansion>
         <specifications movemement="unique" dimension="moon"/>
         <description>Instead of moving, roll a die. On a 4-6, add a doom token to the doom track. | Before making a Horror check, draw a Dunwich Horror card to determine its attributes.</description>
         <special>TODO</special>
