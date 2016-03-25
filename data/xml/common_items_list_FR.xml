@@ -18,9 +18,11 @@
     </common_item>
     <common_item name="Rifle">
         <expansion>Jeu de base</expansion>
-        <type>Physical weapon</type>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">5</modificator>
+        </type>
         <bonus>+5 Combat check</bonus>
-        <hands>2</hands>
         <cost>6</cost>
         <count>2</count>
     </common_item>
@@ -39,18 +41,23 @@
     <common_item name="Shotgun">
         <expansion>Jeu de base</expansion>
         <description>Any: When using Shotgun in combat, all 6's rolled count as 2 successes.</description>
-        <type>Physical weapon</type>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">4</modificator>
+        </type>
         <bonus>+4 Combat check</bonus>
-        <hands>2</hands>
         <cost>6</cost>
         <count>2</count>
     </common_item>
     <common_item name="Sledgehammer">
         <expansion>The lurker at the Threshold</expansion>
         <description>Reduce the thoughness of monsters you fight by 1 to a minimum of 1 (this does not affect their values as trophies).</description>
-        <type>Physical weapon</type>
-        <bonus>+3 to Combat checks and +1 to Fight checks</bonus>
-        <hands>2</hands>
+        <bonus >+3 to Combat checks and +1 to Fight checks</bonus>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">3</modificator>
+            <modificator check="Fight">1</modificator>
+        </type>
         <cost>6</cost>
         <count>1</count>
     </common_item>
@@ -75,15 +82,22 @@
     </common_item>
     <common_item name="Tommy Gun">
         <expansion>Jeu de base</expansion>
-        <type>Physical weapon</type>
         <bonus>+6 Combat check</bonus>
-        <hands>2</hands>
+        <type name="Physical weapon">
+            <hands>2</hands>
+            <modificator check="Combat">6</modificator>
+        </type>
         <cost>7</cost>
         <count>2</count>
     </common_item>
     <common_item name="Understudy's Script">
         <expansion>Le roi en Jaune</expansion>
-        <type>Tome</type>
+        <type name="Tome">
+            <phase>Movement</phase>
+            <action check="Will" modificator="-2">Exhaust and spend 2 movement points</action>
+            <success>gain 2 clue tokens and discard</success>
+            <failure>loose 1 sanity</failure>
+        </type>
         <description>Movement: Exhaust and spend 2 movement points to make a Will (-2) check. If you pass, draw 1 spell, gain 2 clue tokens, and discard Understudy's Script. If you fail, you loose 1 sanity.</description>
         <cost>3</cost>
         <count>3</count>
