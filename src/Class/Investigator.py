@@ -44,6 +44,7 @@ class Investigator:
         """
         self.name          = elt.get('name')
         self.init_location = elt.find('home').text
+        self.location      = None
         self.occupation    = elt.find('occupation').text
         self.expansion     = elt.find('expansion').text
         self.description   = elt.find('description').text
@@ -90,7 +91,7 @@ class Investigator:
 
     def move_to(self, location):
         start(function())
-        if hasattr(self, 'location'):
+        if self.location is not None:
             self.location.leaving_investigator(self.player + self.name)
         self.location = location
         location.incoming_investigator(self.player + self.name)
@@ -308,7 +309,7 @@ class Skill:
         """
         self.name  = _skill.get("name")
         self.place = 0
-        _min, _max = int(_skill.find('min').text), int(_skill.find('max').text)
+        _min, _max = int(_skill.get('min')), int(_skill.get('max'))
         if self.name == "sneak" or self.name == "will" or self.name == "luck":
             self.range = list(reversed(range(_min, _max +1)))
         else: 

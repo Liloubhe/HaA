@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: C 41270\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-25 14:50+0100\n"
+"POT-Creation-Date: 2016-03-02 15:15+0100\n"
 "PO-Revision-Date: 2016-02-24 16:57+0100\n"
 "Last-Translator: Lucie BERTHON <liloubhe@gmail.com>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -27,7 +27,7 @@ msgid "[END] "
 msgstr "[FIN] "
 
 #: setup.py:39
-msgid "King in Yellow"
+msgid "The King in Yellow"
 msgstr "Le roi en Jaune"
 
 #: setup.py:40
@@ -58,29 +58,65 @@ msgstr ">> Voulez-vous jouer avec : "
 msgid "? [Y/n] "
 msgstr " ? [O/n] "
 
-#: setup.py:103 setup.py:148
+#: setup.py:79
+msgid "locations_list"
+msgstr "locations_list_FR"
+
+#: setup.py:103 setup.py:149
 msgid "investigators_list"
 msgstr "investigators_list_FR"
 
-#: setup.py:193
+#: setup.py:106 setup.py:152
+msgid "There are "
+msgstr "Il y a "
+
+#: setup.py:107 setup.py:153
+msgid " investigators implemented in these expansions:\n"
+msgstr " investigateurs disponibles pour ces extensions :\n"
+
+#: setup.py:118
+msgid " >> choose investigator "
+msgstr " >> choisi l'investigateur "
+
+#: setup.py:120 setup.py:173
+msgid "This investigator is already taken. "
+msgstr "Cet investigateur est déjà pris. "
+
+#: setup.py:121 setup.py:174
+msgid "Choose another one."
+msgstr "Choisis en un autre."
+
+#: setup.py:123 setup.py:168
+msgid "Wrong number! Choose a number between 0 and "
+msgstr "Mauvaise numéro ! Choisis un numéro entre 0 et "
+
+#: setup.py:157
+msgid "And these investigators are already taken: "
+msgstr "Et ces investigateurs ont déjà été pris : "
+
+#: setup.py:166
+msgid "choose investigator "
+msgstr "choisi l'investigateur '"
+
+#: setup.py:195
 msgid "Starting the game !!!"
 msgstr "C'est parti !!!"
 
-#: setup.py:204
+#: setup.py:206
 msgid "common_items_list"
 msgstr "common_items_list_FR"
 
-#: setup.py:207
+#: setup.py:209
 msgid ">> How many are you (choose between 2 and 7)? "
-msgstr ">> A combien voulez-vous jouer (choississez un nombre en 2 et 7) ? "
+msgstr ">> A combien voulez-vous jouer (choisissez un nombre entre 2 et 7) ? "
 
-#: setup.py:208
+#: setup.py:210
 msgid "You are "
 msgstr "Vous êtes "
 
-#: setup.py:208
-msgid " players\n"
-msgstr " joueurs\n"
+#: setup.py:210
+msgid " players"
+msgstr " joueurs"
 
 #: i18n/i18n.py:58
 msgid "The game will be in English."

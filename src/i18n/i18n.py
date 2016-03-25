@@ -50,6 +50,8 @@ gettext.textdomain (APP_NAME)
 gettext.bind_textdomain_codeset(APP_NAME, "UTF-8")
 
 _input = input(">> Choose language [en/fr]: ")
+if _input == "":
+    languages = ['en_US']
 for lang in languages:
     if lang.find(_input.lower()) > -1:
         language = gettext.translation(APP_NAME, mo_location, languages=[lang],
