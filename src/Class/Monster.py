@@ -66,6 +66,7 @@ class Monster:
         self.awareness = int(elt.find("awareness").text)
         for _stat in elt.findall("combat_stat"):
             self.toughness     = int(_stat.find("toughness").text)
+            # bug
             self.horror_rating = int(_stat.find("horror").get("rating"))
             self.horror_damage = int(_stat.find("horror").get("damage"))
             self.combat_rating = int(_stat.find("combat").get("rating"))
