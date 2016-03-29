@@ -41,9 +41,12 @@ class Monster:
         Initializes all the information about a monster
         """
         self.name            = elt.get("name")
-        print("On met les " + self.name + " dans la tasse.")
         self.expansion       = elt.find("expansion").text
         self.count           = int(elt.find("count").text)
+        print(_("We put ") + str(self.count)\
+                + _(" card") + ("s" if self.count > 1  else "") \
+                +" '" + self.name +  _("' on the bag."))
+        
         self.location        = None
         for _spec in elt.findall("specifications"):
             self.movemement  = _spec.get("movemement")
@@ -52,11 +55,42 @@ class Monster:
                 self.symbole = u"\u25B2".encode("utf-8")
             elif self.dimension == "moon":
                 self.symbole = u"\u263E".encode("utf-8")
+            elif self.dimension == "slash":
+                self.symbole = u"\u005C".encode("utf-8")
+            elif self.dimension == "circle":
+                self.symbole = u"\u25CF".encode("utf-8")
+            elif self.dimension == "plus":
+                self.symbole = u"\u002B".encode("utf-8")
+            elif self.dimension == "square":
+                self.symbole = u"\u25A0".encode("utf-8")
+            elif self.dimension == "hexagon":
+                self.symbole = u"\u2B22".encode("utf-8")
+            elif self.dimension == "diamond":
+                self.symbole = u"\u2666".encode("utf-8")
+            elif self.dimension == "star":
+                self.symbole = u"\u2736".encode("utf-8")
+            else:
+                self.symbole = "-"
 
         if self.movemement == "normal":
             self.color = BOLD_BLACK
         elif self.movemement == "flying":
             self.color = BOLD_BLUE
+        elif self.movemement == "stationary":
+            self.color = BOLD_YELLOW
+        elif self.movemement == "unique":
+            self.color = BOLD_GREEN
+        elif self.movemement == "fast":
+            self.color = BOLD_RED
+        elif self.movemement == "stationary":
+            self.color = BOLD_YELLOW
+        elif self.movemement == "stalker":
+            self.color = BOLD_PURPLE
+        elif self.movemement == "aquatic":
+            self.color = BOLD_CYAN
+        else:
+            self.color = BOLD_GREY
+        
         self.description     = None
         if elt.find("description") is not None:
             self.description = str(elt.find("description").text)
@@ -66,12 +100,16 @@ class Monster:
         self.awareness = int(elt.find("awareness").text)
         for _stat in elt.findall("combat_stat"):
             self.toughness     = int(_stat.find("toughness").text)
-            # bug
-            self.horror_rating = int(_stat.find("horror").get("rating"))
-            self.horror_damage = int(_stat.find("horror").get("damage"))
-            self.combat_rating = int(_stat.find("combat").get("rating"))
-            self.combat_damage = int(_stat.find("combat").get("damage"))
-
+            self.horror_rating, self.horror_damage = "-", "-"
+            self.combat_rating, self.combat_damage = "-", "-"
+            if _stat.find("horror") is not None:
+                self.horror_rating = int(_stat.find("horror").get("rating"))
+                self.horror_damage = int(_stat.find("horror").get("damage"))
+            if _stat.find("combat") is not None:
+                self.combat_rating = int(_stat.find("combat").get("rating"))
+                self.combat_damage = int(_stat.find("combat").get("damage"))
+        print(self)
+    
     # Displaying info in text
     # -----------------------
 

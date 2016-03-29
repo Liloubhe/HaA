@@ -99,7 +99,7 @@
     <monster name="Witch">
         <expansion>Core game</expansion>
         <specifications movemement="normal" dimension="circle"/>
-        <description>She was lovely and terrible all at once. A strange light shone in her eyes as she chanted. "Iä! Iä! Shub-Niggurath! The Goat with a Thousand Young!"</description>
+        <description>She was lovely and terrible all at once. A strange light shone in her eyes as she chanted. "Ia! Ia! Shub-Niggurath! The Goat with a Thousand Young!"</description>
         <abilities name="magical resistance"/>
         <awareness>-1</awareness>
         <combat_stat>
