@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="The Bloated Woman" type="Mask">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="hexagon"/>
+        <description>Before making a Horror check, pass a Will (-2) check or automatically fail the Horror check and the Combat check.</description>
+        <special>TODO</special>
+        <abilities name="endless"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="The Dark Pharoah" type="Mask">
         <expansion>Core game</expansion>
         <specifications movemement="stationary" dimension="slash"/>

@@ -29,7 +29,7 @@ from module.COLORS import *
 from module.TUI    import *
 
 #-------------------------------------------------------------------------------
-# Investigator container
+# Monster container
 #-------------------------------------------------------------------------------
 
 class Monster:
