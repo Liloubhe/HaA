@@ -53,17 +53,22 @@ class Deck:
             for exp in expansion_list:
                 if _elt.find('expansion').text == exp:
                     if xml_file.find("investigator") > -1:
+                        self.name = "investigators' deck"
                         self.remaining_cards.append(Investigator(_elt))
                     elif xml_file.find("common_item") > -1:
+                        self.name = "common items' deck"
                         new_item = CommonItem(_elt)
                         for _iel in range(0, new_item.count):
                             self.remaining_cards.append(new_item)
                     elif xml_file.find("monster") > -1:
+                        self.name = "monsters' bag"
                         new_item = Monster(_elt)
                         for _iel in range(0, new_item.count):
                             self.remaining_cards.append(new_item)
-        shuffle(self.remaining_cards)
+        # shuffle(self.remaining_cards)
         self.cards_number = len(self.remaining_cards)
+        print(_("We put ") + str(self.cards_number)+ _(" cards")
+                + _(" in the ") + self.name + ".")
 
     def draw_card(self):
         """

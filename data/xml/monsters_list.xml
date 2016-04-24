@@ -1,5 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monsters_list>>
+<monsters_list>
+    <monster name="Serpent People">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>While Serpent People is a monster trophy, it may be spent after failing a Combat check to add 3 bonus dice to the roll.</description>
+        <special>TODO</special>
+        <awareness>-2</awareness>
+        <abilities name="Magical Resistance"/>
+        <abilities name="Elusive"/>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="4"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Servant of Glaaki" type="spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>When Servant of Glaaki enters play, all investigators must discard 1 Spell, if able.</description>
+        <special>TODO</special>
+        <awareness>+1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="3"/>
+            <combat rating="-2" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Servant of Glaaki" type="spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>When Servant of Glaaki enters play, all investigators must discard 1 Common item, if able.</description>
+        <special>TODO</special>
+        <awareness>+1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="3"/>
+            <combat rating="-2" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Servant of Glaaki" type="spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>When Servant of Glaaki enters play, all investigators must discard 1 Unique item, if able.</description>
+        <special>TODO</special>
+        <awareness>+1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="3"/>
+            <combat rating="-2" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Servant of Glaaki" type="spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>When Servant of Glaaki enters play, all investigators must discard 2 Clue tokens, if able.</description>
+        <special>TODO</special>
+        <awareness>+1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="3"/>
+            <combat rating="-2" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Servant of Glaaki" type="spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>When Servant of Glaaki enters play, all investigators must discard 1 Skill, if able.</description>
+        <special>TODO</special>
+        <awareness>+1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="3"/>
+            <combat rating="-2" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Servitor of Outer Gods">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="flying" dimension="square"/>
+        <description>If you fail a Combat or Evade check against Servitor of Outer Gods, you are devoured.</description>
+        <special>TODO</special>
+        <abilities name="Nightmarish" value="2"/>
+        <abilities name="Overwhelming" value="1"/>
+        <abilities name="Endless"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-3" damage="3"/>
+            <combat rating="-2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Shadowy Figure" type="Mask">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="unique" dimension="moon"/>
+        <description>When it moves, Shadowy Figure moves to the nearest location or street containing clues. All clues in that area are then discarded.</description>
+        <abilities name="Endless"/>
+        <abilities name="Elusive"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Shan">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="flying" dimension="triangle"/>
+        <description>If you fail a Horror check against Shan, you are devoured.</description>
+        <special>TODO</special>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2"/>
+            <combat rating="-2" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Shoggoth">
+        <expansion>Core game</expansion>
+        <specifications movemement="fast" dimension="diamond"/>
+        <description>The stench was unbearable, and rising to the surface came a terrible cry, "Tekeli-li! Tekeli-li!"</description>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Nightmarish" value="1"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="3"/>
+            <combat rating="-1" damage="3"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Shoggoth">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="fast" dimension="diamond"/>
+        <description>The stench was unbearable, and rising to the surface came a terrible cry, "Tekeli-li! Tekeli-li!"</description>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Nightmarish" value="1"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="3"/>
+            <combat rating="-1" damage="3"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Shugeron" type="Mask">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="aquatic" dimension="plus"/>
+        <description>If you fail a combat check against Shugeron, add a doom token to the doom track.</description>
+        <special>TODO</special>
+        <abilities name="Endless"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Skeleton">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="aquatic" dimension="moon"/>
+        <description>Silently it emerged from the water and strode up the beach towards us. Although the bleached skeleton was picked free of flesh, still it moved with malignant purpose.</description>
+        <abilities name="Undead"/>
+        <abilities name="Physical Resistance"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-1" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Spectral Hunter">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stationary" dimension="square"/>
+        <description>If you pass a Combat check against Spectral Hunter, return it to the box and gain $5.</description>
+        <special>TODO</special>
+        <abilities name="Ambush"/>
+        <awareness>-4</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Star Spawn">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="plus"/>
+        <description>The bosun was the only one left alive. We dragged him screaming from the cargo hold. "That thing!" he wept, "Not a whale... not an island..."</description>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-3" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Star Vampire">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="star"/>
+        <abilities name="Physical Resistance"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-3" damage="3"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Tcho-tcho">
         <expansion>Dunwich Horror</expansion>
         <specifications movemement="normal" dimension="moon"/>

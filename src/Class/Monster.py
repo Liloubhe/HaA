@@ -144,7 +144,7 @@ class Monster:
                       + RED + "Rating   Damage")
         _str += indent(BLUE + " "   + str(self.horror_rating)\
                             + " "*8 + str(self.horror_damage) + RESET\
-                            + " "*8 + str(self.awareness) + RED\
+                            + " "*8 + str(self.toughness) + RED\
                             + " "*8 + str(self.combat_rating)\
                             + " "*8 + str(self.combat_damage) + RESET)
         _str += indent("-"*45 + "\n")
