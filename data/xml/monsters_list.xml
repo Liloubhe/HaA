@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Rat-thing">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="circle"/>
+        <description>Before you make a combat check against Rat-thing, you must discard 1 Item or automatically fail.</description>
+        <special>TODO</special>
+        <awareness>-4</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="0" damage="1"/>
+            <combat rating="-1" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Riot" type="Spawn">
+        <expansion>The King in Yellow</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>If you pass a Combat check against Riot, lose 1 Sanity and roll a die. On a 4-6, the terror level is increased by 1.</description>
+        <special>TODO</special>
+        <location>Miskatonic University Streets</location>
+        <abilities name="Overwhelming" value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <combat rating="-4" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Riot" type="Spawn">
+        <expansion>The King in Yellow</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>If you pass a Combat check against Riot, lose 1 Sanity and roll a die. On a 4-6, the terror level is increased by 1.</description>
+        <special>TODO</special>
+        <location>Southside Streets</location>
+        <abilities name="Overwhelming" value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <combat rating="-4" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Riot" type="Spawn">
+        <expansion>The King in Yellow</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>If you pass a Combat check against Riot, lose 1 Sanity and roll a die. On a 4-6, the terror level is increased by 1.</description>
+        <special>TODO</special>
+        <location>Northside Streets</location>
+        <abilities name="Overwhelming" value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <combat rating="-4" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Serpent People">
         <expansion>Kingsport Horror</expansion>
         <specifications movemement="normal" dimension="moon"/>
