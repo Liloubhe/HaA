@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Priest Of Dagon">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="aquatic" dimension="plus"/>
+        <description>...As I saw them I knew also of what that humped, tiaraed priest in the black church basement had fearsomely reminded me.</description>
+        <abilities name="Magical Immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Proto-Shoggoth">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="fast" dimension="diamond"/>
+        <description>The thing roiled and bubbled malignantly as it poured down the street towards us, eyes appearing and vanishing on its skin as it came.</description>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="0" damage="2"/>
+            <combat rating="0" damage="2"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
     <monster name="Rat-thing">
         <expansion>Dunwich Horror</expansion>
         <specifications movemement="stalker" dimension="circle"/>
