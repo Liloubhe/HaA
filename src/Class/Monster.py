@@ -48,6 +48,7 @@ class Monster:
                 +" '" + self.name +  _("' on the bag."))
         
         self.location        = None
+        self.abilities       = []
         for _spec in elt.findall("specifications"):
             self.movemement  = _spec.get("movemement")
             self.dimension   = _spec.get("dimension")
@@ -94,8 +95,11 @@ class Monster:
         self.description     = None
         if elt.find("description") is not None:
             self.description = str(elt.find("description").text)
-        if elt.find("abilities") is not None:
-            self.abilities = elt.find("abilities").get("name")
+        for _ability in elt.findall("abilities"):
+            name = _ability.get("name")
+            if _ability.get("value"):
+                name +=  " [" + str(_ability.get("value")) + "]"
+            self.abilities.append(name)
 
         self.awareness = int(elt.find("awareness").text)
         for _stat in elt.findall("combat_stat"):
@@ -103,11 +107,16 @@ class Monster:
             self.horror_rating, self.horror_damage = "-", "-"
             self.combat_rating, self.combat_damage = "-", "-"
             if _stat.find("horror") is not None:
-                self.horror_rating = int(_stat.find("horror").get("rating"))
-                self.horror_damage = int(_stat.find("horror").get("damage"))
+                if _stat.find("horror").get("rating"):
+                    self.horror_rating = int(_stat.find("horror").get("rating"))
+                if _stat.find("horror").get("damage"):
+                    self.horror_damage = int(_stat.find("horror").get("damage"))
+                    
             if _stat.find("combat") is not None:
-                self.combat_rating = int(_stat.find("combat").get("rating"))
-                self.combat_damage = int(_stat.find("combat").get("damage"))
+                if _stat.find("combat").get("rating"):
+                    self.combat_rating = int(_stat.find("combat").get("rating"))
+                if _stat.find("combat").get("damage"):
+                    self.combat_damage = int(_stat.find("combat").get("damage"))
         print(self)
     
     # Displaying info in text
@@ -121,8 +130,8 @@ class Monster:
         _str += indent("-"*len(self.name))
         _str += indent("( " + self.movemement + " - "+ self.symbole + " )")
         _str += indent("Awareness: " + str(self.awareness))
-        if self.abilities is not None:
-            _str += indent(self.abilities)
+        for _iel in self.abilities:
+            _str += indent(_iel)
         if self.description is not None:
             _str += indent("-"*45 + "\n")
             _str += indent(self.description)

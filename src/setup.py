@@ -36,8 +36,10 @@ except (ImportError, AttributeError):
 #-------------------------------------------------------------------------------
 
 available_expansions = []
+available_expansions.append(_("Kingsport Horror"))
+available_expansions.append(_("Dunwich Horror"))
+available_expansions.append(_("Innsmouth Horror"))
 available_expansions.append(_("The King in Yellow"))
-available_expansions.append(_("Kingsport"))
 available_expansions.append(_("Black Goat of the Woods"))
 available_expansions.append(_("The lurker at the Threshold"))
 

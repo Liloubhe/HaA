@@ -1,11 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monsters_list>
+<monsters_list>>
+    <monster name="Tcho-tcho">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>If you pass a Combat check against Tcho-tcho, return it to the box and draw 1 Common item.</description>
+        <special>TODO</special>
+        <abilities name="Ambush"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Tcho-tcho Priest">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="fast" dimension="moon"/>
+        <abilities name="Ambush"/>
+        <abilities name="Magical Immunity"/>
+        <abilities name="Nightmarish" value="1"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="3"/>
+            <combat rating="-3" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Tendril of Nyogtha">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="normal" dimension="diamond"/>
+        <description>If the Tendril of Nyogtha has not been evaded or defeated after the second round of combat, the investigator is devoured.</description>
+        <special>TODO</special>
+        <abilities name="Ambush"/>
+        <abilities name="Physical Immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="The Beast" type="Mask">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="star"/>
+        <description>If you fail both the Horror check and Combat check against the Beast, you are devoured.</description>
+        <special>TODO</special>
+        <abilities name="Endless"/>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Magical Resistance"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>4</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="The Black Man" type="Mask">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>Before making a Horror check, pass a Luck (-1) check or be devoured. If you pass, gain 2 Clue tokens. In either case, return the Black Man to the cup.</description>
+        <special>TODO</special>
+        <abilities name="Endless"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="The Bloated Woman" type="Mask">
         <expansion>Core game</expansion>
         <specifications movemement="normal" dimension="hexagon"/>
         <description>Before making a Horror check, pass a Will (-2) check or automatically fail the Horror check and the Combat check.</description>
         <special>TODO</special>
-        <abilities name="endless"/>
+        <abilities name="Endless"/>
         <awareness>-1</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -19,7 +89,7 @@
         <specifications movemement="stationary" dimension="slash"/>
         <description>Use Lore in combat with the Dark Pharoah instead of Fight.</description>
         <special>TODO</special>
-        <abilities name="endless"/>
+        <abilities name="Endless"/>
         <awareness>-1</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -44,7 +114,7 @@
         <specifications movemement="fast" dimension="circle"/>
         <description>If you fail either the Horror check or the Combat check against the Skinless One, you are devoured.</description>
         <special>TODO</special>
-        <abilities name="endless"/>
+        <abilities name="Endless"/>
         <awareness>-2</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -57,8 +127,8 @@
         <expansion>Core game</expansion>
         <specifications movemement="stationary" dimension="moon"/>
         <description>It was a beast born in the grave. It stretched its hands toward us and curcled its lips, drawn to the blood in our veins.</description>
-        <abilities name="physical resistance"/>
-        <abilities name="undead"/>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Undead"/>
         <awareness>-3</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -72,7 +142,7 @@
         <specifications movemement="stationary" dimension="diamond"/>
         <description>If you fail an Evade check against Wailing Writher, ou are devoured.</description>
         <special>TODO</special>
-        <abilities name="endless"/>
+        <abilities name="Endless"/>
         <awareness>-1</awareness>
         <combat_stat>
             <toughness>3</toughness>
@@ -86,7 +156,7 @@
         <specifications movemement="stationary" dimension="circle"/>
         <description>If you pass a Combat check against Warlock, return it to the box and gain 2 Clue tokens.</description>
         <special>TODO</special>
-        <abilities name="magical immunity"/>
+        <abilities name="Magical Immunity"/>
         <awareness>-2</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -100,8 +170,8 @@
         <specifications movemement="unique" dimension="moon"/>
         <description>Werewolf moves as a fast monster. If it enters an area containing any investigators, each investigator in that area loses 2 Stamina.</description>
         <special>TODO</special>
-        <abilities name="physical immunity"/>
-        <abilities name="elusive"/>
+        <abilities name="Physical Immunity"/>
+        <abilities name="Elusive"/>
         <awareness>-3</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -114,7 +184,7 @@
         <expansion>Core game</expansion>
         <specifications movemement="normal" dimension="circle"/>
         <description>She was lovely and terrible all at once. A strange light shone in her eyes as she chanted. "Ia! Ia! Shub-Niggurath! The Goat with a Thousand Young!"</description>
-        <abilities name="magical resistance"/>
+        <abilities name="Magical Resistance"/>
         <awareness>-1</awareness>
         <combat_stat>
             <toughness>1</toughness>
@@ -127,7 +197,7 @@
         <specifications movemement="normal" dimension="circle"/>
         <description>If you pass a Combat check against Wizard Whateley, return him to the box and draw 1 Spell.</description>
         <special>TODO</special>
-        <abilities name="magical immunity"/>
+        <abilities name="Magical Immunity"/>
         <awareness>-2</awareness>
         <combat_stat>
             <toughness>2</toughness>
@@ -139,10 +209,10 @@
     <monster name="Wraith">
         <expansion>Dunwich Horror</expansion>
         <specifications movemement="flying" dimension="moon"/>
-        <abilities name="undead"/>
-        <abilities name="physical immunity"/>
-        <abilities name="nightmarish" value="1"/>
-        <abilities name="overwhelming" value="1"/>
+        <abilities name="Undead"/>
+        <abilities name="Physical Immunity"/>
+        <abilities name="Nightmarish" value="1"/>
+        <abilities name="Overwhelming" value="1"/>
         <awareness>0</awareness>
         <combat_stat>
             <toughness>3</toughness>
@@ -168,7 +238,7 @@
         <expansion>Core game</expansion>
         <specifications movemement="normal" dimension="moon"/>
         <description>She screamd and fired again, but still the thing shambled on, teeth dripping as it groaned its horrible cry.</description>
-        <abilities name="undead"/>
+        <abilities name="Undead"/>
         <awareness>1</awareness>
         <combat_stat>
             <toughness>1</toughness>
