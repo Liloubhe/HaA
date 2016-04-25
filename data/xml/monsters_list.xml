@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Leng Spider">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="slash"/>
+        <abilities name="Ambushy"/>
+        <abilities name="Overwhelming" value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-1" damage="4"/>
+        </combat_stat>
+        <count>4</count>
+    </monster>
+    <monster name="Lloigor">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="unique" dimension="square"/>
+        <description>Instead of moving, all investigators in this or any adjacent locations or street areas lose 1 Sanity and 1 Stamina.</description>
+        <special>TODO</special>
+        <abilities name="Weapon Immunity"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="3"/>
+            <combat rating="-2" damage="3"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
     <monster name="Maniac">
         <expansion>Core game</expansion>
         <specifications movemement="normal" dimension="moon"/>
