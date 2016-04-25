@@ -1,5 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Maniac">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>If the terror level is at least 6, Maniac's fight rating increases to -2, his combat damage increases to 3 Stamina, and he gains Endless.</description>
+        <special>TODO</special>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="1" damage="1"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Mi-Go">
+        <expansion>Core game</expansion>
+        <specifications movemement="flying" dimension="circle"/>
+        <description>If you pass a Combat check against Migo, return it to the box and draw 1 Unique Item.</description>
+        <special>TODO</special>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="0" damage="1"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Mi-Go">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="flying" dimension="circle"/>
+        <description>If you pass a Combat check against Migo, return it to the box and draw 1 Unique Item.</description>
+        <special>TODO</special>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="0" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Moon-beast">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="aquatic" dimension="slash"/>
+        <description>Any investigator knocked unconscious or driven insane by Moon-beast is devoured instead.</description>
+        <special>TODO</special>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Mummy">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="moon"/>
+        <abilities name="Undead"/>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Magical Resistance"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="1"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Nightgaunt">
         <expansion>Core game</expansion>
         <specifications movemement="flying" dimension="slash"/>
