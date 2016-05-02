@@ -36,3 +36,22 @@ RESET = "\033[0m"
 
 players_color = [BOLD_GREEN, BOLD_BLUE, BOLD_RED, BOLD_YELLOW,
                  BOLD_PURPLE, BOLD_CYAN, BOLD_GREY]
+
+TRIANGLE = u"\u25B2".encode("utf-8")
+MOON     = u"\u263E".encode("utf-8")
+SLASH    = u"\u005C".encode("utf-8")
+CIRCLE   = u"\u25CF".encode("utf-8")
+PLUS     = u"\u002B".encode("utf-8")
+SQUARE   = u"\u25A0".encode("utf-8")
+HEXAGON  = u"\u2B22".encode("utf-8")
+DIAMOND  = u"\u2666".encode("utf-8")
+STAR     = u"\u2736".encode("utf-8")
+SYMBOLS  = {"triangle" : TRIANGLE,
+            "moon"     : MOON,
+            "slash"    : SLASH,
+            "circle"   : CIRCLE,
+            "plus"     : PLUS,
+            "square"   : SQUARE,
+            "hexagon"  : HEXAGON,
+            "diamond"  : DIAMOND,
+            "star"     : STAR}

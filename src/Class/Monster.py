@@ -29,6 +29,19 @@ from module.COLORS import *
 from module.TUI    import *
 
 #-------------------------------------------------------------------------------
+# Global
+#-------------------------------------------------------------------------------
+
+MOVEMENT = {"normal"     : BOLD_BLACK,
+            "flying"     : BOLD_BLUE,
+            "stationary" : BOLD_YELLOW,
+            "unique"     : BOLD_GREEN,
+            "fast"       : BOLD_RED,
+            "stalker"    : BOLD_PURPLE,
+            "aquatic"    : BOLD_CYAN}
+            
+
+#-------------------------------------------------------------------------------
 # Monster container
 #-------------------------------------------------------------------------------
 
@@ -50,47 +63,9 @@ class Monster:
         self.location        = None
         self.abilities       = []
         for _spec in elt.findall("specifications"):
-            self.movemement  = _spec.get("movemement")
-            self.dimension   = _spec.get("dimension")
-            if self.dimension == "triangle":
-                self.symbole = u"\u25B2".encode("utf-8")
-            elif self.dimension == "moon":
-                self.symbole = u"\u263E".encode("utf-8")
-            elif self.dimension == "slash":
-                self.symbole = u"\u005C".encode("utf-8")
-            elif self.dimension == "circle":
-                self.symbole = u"\u25CF".encode("utf-8")
-            elif self.dimension == "plus":
-                self.symbole = u"\u002B".encode("utf-8")
-            elif self.dimension == "square":
-                self.symbole = u"\u25A0".encode("utf-8")
-            elif self.dimension == "hexagon":
-                self.symbole = u"\u2B22".encode("utf-8")
-            elif self.dimension == "diamond":
-                self.symbole = u"\u2666".encode("utf-8")
-            elif self.dimension == "star":
-                self.symbole = u"\u2736".encode("utf-8")
-            else:
-                self.symbole = "-"
-
-        if self.movemement == "normal":
-            self.color = BOLD_BLACK
-        elif self.movemement == "flying":
-            self.color = BOLD_BLUE
-        elif self.movemement == "stationary":
-            self.color = BOLD_YELLOW
-        elif self.movemement == "unique":
-            self.color = BOLD_GREEN
-        elif self.movemement == "fast":
-            self.color = BOLD_RED
-        elif self.movemement == "stationary":
-            self.color = BOLD_YELLOW
-        elif self.movemement == "stalker":
-            self.color = BOLD_PURPLE
-        elif self.movemement == "aquatic":
-            self.color = BOLD_CYAN
-        else:
-            self.color = BOLD_GREY
+            self.movemement = _spec.get("movemement")
+            self.symbole    = SYMBOLS.get(_spec.get("dimension"), "-")
+            self.color      = MOVEMENT.get(self.movemement, BOLD_GREY)
         
         self.description     = None
         if elt.find("description") is not None:
