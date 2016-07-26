@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Haunter of the Dark" type="Mask">
+        <expansion>Core game</expansion>
+        <specifications movemement="flying" dimension="square"/>
+        <description>If the Blackest Night card is in play, Haunter of the Dark's fight rating increases to -5.</description>
+        <special>TODO</special>
+        <abilities name="Endless"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="2" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="High Priest">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="plus"/>
+        <description>"We will not cease our struggle," intoned the robed figure, "Until we have built Carcosa upon this land of ruined Reason.".</description>
+        <abilities name="Magical Immunity"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="1" damage="1"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Hound of Tindalos">
+        <expansion>Core game</expansion>
+        <specifications movemement="unique" dimension="square"/>
+        <description>When it moves, the Hound of Tindalos moves directly to the nearest investigator inside a location in Arkham (Other than the Hospital or Asylum).</description>
+        <special>TODO</special>
+        <abilities name="Physical Immunity"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="4"/>
+            <combat rating="-1" damage="3"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Hunting Horror">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="unique" dimension="diamond"/>
+        <description>When it moves, Hunting Horror moves to the nearest investigator in a street area or unstable location.</description>
+        <special>TODO</special>
+        <abilities name="Magical Resistance"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
     <monster name="Leng Spider">
         <expansion>Kingsport Horror</expansion>
         <specifications movemement="normal" dimension="slash"/>
