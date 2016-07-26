@@ -1,5 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Dark Druid">
+        <expansion>Black Goat of the Woods</expansion>
+        <specifications movemement="unique" dimension="hexagon"/>
+        <description>Dark Druid is treated as a Cultist. When Dark Druid moves on a black path, all other monsters move on black after their normal movement.</description>
+        <special>TODO</special>
+        <abilities name="Physical Resistance"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-2" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Dark Young">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stationary" dimension="hexagon"/>
+        <description>The trees trembled, leaves fluttering around us. The earth shook as the thuds of giant hooved feet grew ever closer...</description>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="0" damage="3"/>
+            <combat rating="-1" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Dark Young">
+        <expansion>Black Goat of the Woods</expansion>
+        <specifications movemement="stationary" dimension="hexagon"/>
+        <description>The trees trembled, leaves fluttering around us. The earth shook as the thuds of giant hooved feet grew ever closer...</description>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="0" damage="3"/>
+            <combat rating="-1" damage="3"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Dark Young">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="hexagon"/>
+        <description>The trees trembled, leaves fluttering around us. The earth shook as the thuds of giant hooved feet grew ever closer...</description>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="0" damage="3"/>
+            <combat rating="-1" damage="3"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Deep One">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="aquatic" dimension="plus"/>
+        <description>And yet I saw them in a limitless stream - flopping, hopping, croaking, bleating - surging inhumanly through the spectral moonlight in a grotesque, malignant saraband of fantastic nightmare.</description>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-1" damage="2"/>
+        </combat_stat>
+        <count>6</count>
+    </monster>
+    <monster name="Deep One Hybrid">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="aquatic" dimension="plus"/>
+        <description>One man moved in a positively simian way, with long arms frequently touching the ground; while another figure - robed and tiaraed - seemed to progress in an almost hopping fashion.</description>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="0" damage="2"/>
+        </combat_stat>
+        <count>4</count>
+    </monster>
+    <monster name="Dhole">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="circle"/>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Magical Resistance"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <abilities name="Overwhelming"  value="1"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="4"/>
+            <combat rating="-3" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Dimensional Shambler">
+        <expansion>Core game</expansion>
+        <specifications movemement="fast" dimension="square"/>
+        <description>If you fail a Combat check against Dimensional Shambler, you are lost in time and space.</description>
+        <special>TODO</special>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-2" damage="1"/>
+            <combat rating="-2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
     <monster name="Elder Thing">
         <expansion>Innsmouth Horror</expansion>
         <specifications movemement="normal" dimension="diamond"/>
