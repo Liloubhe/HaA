@@ -1,5 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Child of Abhoth">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="moon"/>
+        <description>Before you make a Combat check against Child Of Abhoth, you must discard 1 Clue token or automatically fail.</description>
+        <special>TODO</special>
+        <abilities name="Physical Immunity"/>
+        <abilities name="Overwhelming"  value="2"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Child of Abhoth">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="moon"/>
+        <description>Before you make a Horror check against Child Of Abhoth, you must discard 1 Clue token or automatically fail.</description>
+        <special>TODO</special>
+        <abilities name="Magical Immunity"/>
+        <abilities name="Nightmarish"  value="2"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="4"/>
+            <combat rating="-1" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Child of Abhoth">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="stalker" dimension="moon"/>
+        <description>If you pass a Combat check against Child Of Abhoth, you must discard 1 Spell or Weapon, if able.</description>
+        <special>TODO</special>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Magical Resistance"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <abilities name="Overwhelming"  value="1"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Child of the Goat">
+        <expansion>Black Goat of the Woods</expansion>
+        <specifications movemement="normal" dimension="hexagon"/>
+        <description>Child of the Goat is treated as a Cultist. If you fail a Combat check or Evade check against Child of the Goat, you are delayed.</description>
+        <special>TODO</special>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="1"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Chthonian">
+        <expansion>Core game</expansion>
+        <specifications movemement="unique" dimension="triangle"/>
+        <description>Instead of moving, roll a die. On a 4-6, all investigators in Arkham lose 1 Stamina.</description>
+        <special>TODO</special>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Colour Out of Space">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="unique" dimension="square"/>
+        <description>Instead of moving, roll a die. On a 4-6, all Investigators in Arkham lose 1 Sanity.</description>
+        <special>TODO</special>
+        <abilities name="Physical Immunity"/>
+        <abilities name="Magical Immunity"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-3" damage="4"/>
+            <combat rating="0" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Crawling One">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="circle"/>
+        <description>Before making a Combat check against Crawling One, roll a die. X is equal to the result of the die roll.</description>
+        <special>TODO</special>
+        <abilities name="Physical Resistance"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-3" damage="3"/>
+            <combat damage="2"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Cultist">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>Ia! Ia! Cthulhu Fthagn! Ph'nglui mglw'nfah Cthulhu R'lyeh wgah'nagl fhtagn!</description>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="1" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Cultist">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>Ia! Ia! Cthulhu Fthagn! Ph'nglui mglw'nfah Cthulhu R'lyeh wgah'nagl fhtagn!</description>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="1" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Cultist">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>Ia! Ia! Cthulhu Fthagn! Ph'nglui mglw'nfah Cthulhu R'lyeh wgah'nagl fhtagn!</description>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="1" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Cultist">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="moon"/>
+        <description>Ia! Ia! Cthulhu Fthagn! Ph'nglui mglw'nfah Cthulhu R'lyeh wgah'nagl fhtagn!</description>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="1" damage="1"/>
+        </combat_stat>
+        <count>6</count>
+    </monster>
     <monster name="Dark Druid">
         <expansion>Black Goat of the Woods</expansion>
         <specifications movemement="unique" dimension="hexagon"/>
