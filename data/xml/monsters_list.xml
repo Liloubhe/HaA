@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Barnabas Marsh">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="aquatic" dimension="plus"/>
+        <description>If you pass a Combat check against Barnabas Marsh, return him to the box and remove 1 doom token from the doom track.</description>
+        <special>TODO</special>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Magical Resistance"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Being of Ib" type="Spawn">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="none" dimension="slash"/>
+        <description>Investigators receive a -1 penalty to Luck checks. | If Bokrug awakens, place three extra doom tokens on him.</description>
+        <special>TODO</special>
+        <count>1</count>
+    </monster>
+    <monster name="Being of Ib" type="Spawn">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="none" dimension="slash"/>
+        <description>Investigators receive a -1 penalty to Evade checks. | If Bokrug awakens, place three extra doom tokens on him.</description>
+        <special>TODO</special>
+        <count>1</count>
+    </monster>
+    <monster name="Being of Ib" type="Spawn">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="none" dimension="slash"/>
+        <description>Investigators receive a -1 penalty to close or seal gates. | If Bokrug awakens, his Magical Resistance is upgraded to Magical Immunity.</description>
+        <special>TODO</special>
+        <count>1</count>
+    </monster>
+    <monster name="Being of Ib" type="Spawn">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="none" dimension="slash"/>
+        <description>Investigators receive a -1 penalty to Horror checks. | If Bokrug awakens, his Physical Resistance is upgraded to Physical Immunity.</description>
+        <special>TODO</special>
+        <count>1</count>
+    </monster>
+    <monster name="Byakhee">
+        <expansion>Core game</expansion>
+        <specifications movemement="flying" dimension="circle"/>
+        <description>It shrieked and flapped its wings. I thought of the empty shell of a beetle, and the soft loam of rotting earth. It cocked its carapaced head at me, black teeth clicking against each other.</description>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="0" damage="2"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
     <monster name="Child of Abhoth">
         <expansion>Dunwich Horror</expansion>
         <specifications movemement="stalker" dimension="moon"/>

@@ -76,11 +76,15 @@ class Monster:
                 name +=  " [" + str(_ability.get("value")) + "]"
             self.abilities.append(name)
 
-        self.awareness = int(elt.find("awareness").text)
+        try:
+            self.awareness = int(elt.find("awareness").text)
+        except:
+            self.awareness = "-"
+        self.horror_rating, self.horror_damage = "-", "-"
+        self.combat_rating, self.combat_damage = "-", "-"
+        self.toughness = "-"
         for _stat in elt.findall("combat_stat"):
-            self.toughness     = int(_stat.find("toughness").text)
-            self.horror_rating, self.horror_damage = "-", "-"
-            self.combat_rating, self.combat_damage = "-", "-"
+            self.toughness = int(_stat.find("toughness").text)
             if _stat.find("horror") is not None:
                 if _stat.find("horror").get("rating"):
                     self.horror_rating = int(_stat.find("horror").get("rating"))
