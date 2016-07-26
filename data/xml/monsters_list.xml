@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Elder Thing">
+        <expansion>Innsmouth Horror</expansion>
+        <specifications movemement="normal" dimension="diamond"/>
+        <description>When you fail a Combat check against Elder Thing, you must discard 1 of your Weapons or Spells (your choice), if able. When you fail an Evade check, you must discard 1 of your Weapons or Spells as well.</description>
+        <special>TODO</special>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-3" damage="2"/>
+            <combat rating="0" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Elder Thing">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="diamond"/>
+        <description>When you fail a Combat check against Elder Thing, you must discard 1 of your Weapons or Spells (your choice), if able. When you fail an Evade check, you must discard 1 of your Weapons or Spells as well.</description>
+        <special>TODO</special>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-3" damage="2"/>
+            <combat rating="0" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
     <monster name="Fire Vampire">
         <expansion>Core game</expansion>
         <specifications movemement="normal" dimension="star"/>
