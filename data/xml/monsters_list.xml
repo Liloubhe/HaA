@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Fire Vampire">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="star"/>
+        <description>A thousand tiny fires, the size of match-flames, swept from the night sky. The old man was suddenly radiant with light.</description>
+        <abilities name="Ambush"/>
+        <abilities name="Physical Immunity"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Flying Polyp">
+        <expansion>Core game</expansion>
+        <specifications movemement="flying" dimension="hexagon"/>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <abilities name="Overwhelming"  value="1"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-2" damage="4"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Formless Spawn">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="hexagon"/>
+        <description>From the darkened alley a patch of darkness seemed to detach itself, curling along the bricks and rising to block our path.</description>
+        <abilities name="Physical Immunity"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Formless Spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="normal" dimension="hexagon"/>
+        <description>From the darkened alley a patch of darkness seemed to detach itself, curling along the bricks and rising to block our path.</description>
+        <abilities name="Physical Immunity"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Formless Spawn">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="hexagon"/>
+        <description>From the darkened alley a patch of darkness seemed to detach itself, curling along the bricks and rising to block our path.</description>
+        <abilities name="Physical Immunity"/>
+        <awareness>0</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="2"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
     <monster name="Ghast">
         <expansion>Kingsport Horror</expansion>
         <specifications movemement="normal" dimension="circle"/>
