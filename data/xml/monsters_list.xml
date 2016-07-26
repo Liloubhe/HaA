@@ -1,5 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monsters_list>
+    <monster name="Ghast">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="circle"/>
+        <description>The creature's strange leaping gait and scabrous skin only added to its alien aspect, but were not so disturbing as its curiously human face.</description>
+        <abilities name="Ambush"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="0" damage="1"/>
+            <combat rating="-3" damage="1"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Ghost">
+        <expansion>Core game</expansion>
+        <specifications movemement="stationary" dimension="moon"/>
+        <abilities name="Undead"/>
+        <abilities name="Physical Immunity"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="-2" damage="2"/>
+            <combat rating="-3" damage="2"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Ghoul">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="hexagon"/>
+        <description>Most of the bodies, while roughly bipedal, had a forward slumping, and vaguely canine cast. The texture of the majority was a kind of unpleasant rubberiness.</description>
+        <abilities name="Ambush"/>
+        <awareness>-3</awareness>
+        <combat_stat>
+            <toughness>1</toughness>
+            <horror rating="0" damage="1"/>
+            <combat rating="-1" damage="1"/>
+        </combat_stat>
+        <count>3</count>
+    </monster>
+    <monster name="Gnoph-Keh">
+        <expansion>Kingsport Horror</expansion>
+        <specifications movemement="normal" dimension="square"/>
+        <abilities name="Physical Resistance"/>
+        <abilities name="Overwhelming"  value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-3" damage="3"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Goat Spawn">
+        <expansion>Black Goat of the Woods</expansion>
+        <specifications movemement="fast" dimension="hexagon"/>
+        <description>The creature was at once terrible and graceful, the result of blasphemous trafficks with some otherworldly horror.</description>
+        <abilities name="Physical Resistance"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-2" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="Goat Spawn">
+        <expansion>Dunwich Horror</expansion>
+        <specifications movemement="fast" dimension="hexagon"/>
+        <description>The creature was at once terrible and graceful, the result of blasphemous trafficks with some otherworldly horror.</description>
+        <abilities name="Physical Resistance"/>
+        <awareness>-1</awareness>
+        <combat_stat>
+            <toughness>2</toughness>
+            <horror rating="-1" damage="1"/>
+            <combat rating="-2" damage="1"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
+    <monster name="God of the Bloody Tongue" type="Mask">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="triangle"/>
+        <abilities name="Endless"/>
+        <abilities name="Overwhelming"  value="1"/>
+        <abilities name="Nightmarish"  value="1"/>
+        <awareness>1</awareness>
+        <combat_stat>
+            <toughness>4</toughness>
+            <horror rating="-3" damage="3"/>
+            <combat rating="-4" damage="4"/>
+        </combat_stat>
+        <count>1</count>
+    </monster>
+    <monster name="Gug">
+        <expansion>Core game</expansion>
+        <specifications movemement="normal" dimension="slash"/>
+        <description>I caught confused glimpses of a terrible, wrongly-angled mouth, multi-jointed arms, and protruding eyes as big as a man's head.</description>
+        <abilities name="Overwhelming"  value="1"/>
+        <awareness>-2</awareness>
+        <combat_stat>
+            <toughness>3</toughness>
+            <horror rating="-1" damage="2"/>
+            <combat rating="-2" damage="4"/>
+        </combat_stat>
+        <count>2</count>
+    </monster>
     <monster name="Haunter of the Dark" type="Mask">
         <expansion>Core game</expansion>
         <specifications movemement="flying" dimension="square"/>
@@ -58,7 +163,7 @@
     <monster name="Leng Spider">
         <expansion>Kingsport Horror</expansion>
         <specifications movemement="normal" dimension="slash"/>
-        <abilities name="Ambushy"/>
+        <abilities name="Ambush"/>
         <abilities name="Overwhelming" value="1"/>
         <awareness>-2</awareness>
         <combat_stat>
