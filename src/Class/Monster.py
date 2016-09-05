@@ -56,16 +56,16 @@ class Monster:
         self.name            = elt.get("name")
         self.expansion       = elt.find("expansion").text
         self.count           = int(elt.find("count").text)
-        print(_("We put ") + str(self.count)\
-                + _(" card") + ("s" if self.count > 1  else "") \
-                +" '" + self.name +  _("' on the bag."))
+#        print(_("We put ") + str(self.count)\
+#                + _(" card") + ("s" if self.count > 1  else "") \
+#                +" '" + self.name +  _("' on the bag."))
         
         self.location        = None
         self.abilities       = []
         for _spec in elt.findall("specifications"):
-            self.movemement = _spec.get("movemement")
-            self.symbole    = SYMBOLS.get(_spec.get("dimension"), "-")
-            self.color      = MOVEMENT.get(self.movemement, BOLD_GREY)
+            self.movemement  = _spec.get("movemement")
+            self.symbole     = SYMBOLS.get(_spec.get("dimension"), "-")
+            self.color       = MOVEMENT.get(self.movemement, BOLD_GREY)
         
         self.description     = None
         if elt.find("description") is not None:
@@ -96,7 +96,7 @@ class Monster:
                     self.combat_rating = int(_stat.find("combat").get("rating"))
                 if _stat.find("combat").get("damage"):
                     self.combat_damage = int(_stat.find("combat").get("damage"))
-        print(self)
+#        print(self)
     
     # Displaying info in text
     # -----------------------

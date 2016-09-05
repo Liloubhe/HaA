@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 
@@ -210,7 +210,6 @@ def main_setup():
     # General game setup: monsters
     global monsters_deck
     monsters_deck = Deck(_("monsters_list"), chosen_expansions)
-    print(monsters_deck.remaining_cards[0])
 
     # General game setup: numbers of players
     nb_players = input(_(">> How many are you (choose between 2 and 7)? "))

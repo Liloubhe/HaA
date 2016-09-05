@@ -15,11 +15,10 @@
         <neighborhood>Downtown</neighborhood>
         <neighbor name="Downtown Streets"/>
     </location>
-    <location name="Black Cave">
+    <location name="Black Cave" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Rivertown Streets"/>
-        <unstable>True</unstable>
     </location>
     <location name="Curiositie Shoppe">
         <expansion>Core game</expansion>
@@ -31,29 +30,25 @@
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Rivertown Streets"/>
     </location>
-    <location name="Graveyard">
+    <location name="Graveyard" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Rivertown</neighborhood>
         <neighbor name="Rivertown Streets"/>
-        <unstable>True</unstable>
     </location>
-    <location name="Hibb's Roadhouse'">
+    <location name="Hibb's Roadhouse'" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Easttown Streets"/>
-        <unstable>True</unstable>
     </location>
-    <location name="Historical Society">
+    <location name="Historical Society" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Southside</neighborhood>
         <neighbor name="Southside Streets"/>
-        <unstable>True</unstable>
     </location>
-    <location name="Independance Square">
+    <location name="Independance Square" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Downtown</neighborhood>
         <neighbor name="Downtown Streets"/>
-        <unstable>True</unstable>
     </location>
     <location name="Library">
         <expansion>Core game</expansion>
@@ -75,23 +70,20 @@
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Easttown Streets"/>
     </location>
-    <location name="River Docks">
+    <location name="River Docks" aquatic="True">
         <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Merchant District Streets"/>
-        <aquatic>True</aquatic>
     </location>
-    <location name="Science Building">
+    <location name="Science Building" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Miskatonik University</neighborhood>
         <neighbor name="Miskatonik University Streets"/>
-        <unstable>True</unstable>
     </location>
-    <location name="Silver Twilight Lodge">
+    <location name="Silver Twilight Lodge" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="French Hill Streets"/>
-        <unstable>True</unstable>
     </location>
     <location name="South Church">
         <expansion>Core game</expansion>
@@ -103,40 +95,35 @@
         <neighborhood>Uptown</neighborhood>
         <neighbor name="Uptown Streets"/>
     </location>
-    <location name="The Unnamable">
+    <location name="The Unnamable" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Merchant District Streets"/>
-        <unstable>True</unstable>
     </location>
-    <location name="The Witch House">
+    <location name="The Witch House" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>French Hill</neighborhood>
         <neighbor name="French Hill Streets"/>
-        <unstable>True</unstable>
     </location>
     <location name="Train Station">
         <expansion>Core game</expansion>
         <neighborhood>Northside</neighborhood>
         <neighbor name="Northside Streets"/>
     </location>
-    <location name="Unvisited Isle">
+    <location name="Unvisited Isle" unstable="True" aquatic="True">
         <expansion>Core game</expansion>
         <neighborhood>Merchant District</neighborhood>
         <neighbor name="Merchant District Streets"/>
-        <unstable>True</unstable>
-        <aquatic>True</aquatic>
     </location>
     <location name="Velma's Dinner">
         <expansion>Core game</expansion>
         <neighborhood>Easttown</neighborhood>
         <neighbor name="Easttown Streets"/>
     </location>
-    <location name="Woods">
+    <location name="Woods" unstable="True">
         <expansion>Core game</expansion>
         <neighborhood>Uptown</neighborhood>
         <neighbor name="Uptown Streets"/>
-        <unstable>True</unstable>
     </location>
     <location name="Ye Olde Magick Shoppe">
         <expansion>Core game</expansion>
@@ -228,5 +215,155 @@
         <neighbor name="Ye Olde Magick Shoppe"/>
         <neighbor name="Southside Streets"/>
         <neighbor name="Miskatonik University Streets"/>
+    </location>
+    <location name="Bishop's Brook Bridge">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Village Commons</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Cold Spring Glen">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Backwoods Country</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Darke's Carnival">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Village Commons</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Devil's Hopyard">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Blasted Heath</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Dunwich Village">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Village Commons</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Gardners'Place">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Blasted Heath</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Harney Jone's Shack">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Blasted Heath</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Whateley Farm">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Backwoods Country</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Wizard's Hill">
+        <expansion>Dunwich Horror</expansion>
+        <neighborhood>Backwoods Country</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="607 Water St.">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Harborside</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="7th House on the Left">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Central Hill</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Artists'Colony">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>South Shore</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Congregational Hospital">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Central Hill</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Hall School">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>South Shore</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Neil's Curiosity Shop">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>South Shore</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="North Point Lighthouse">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Harborside</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="St. Erasmus's Home">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Central Hill</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Strange High House">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Kingsport Head</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="The Causeway">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Kingsport Head</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="The Rope and Anchor">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Harborside</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Wireless station">
+        <expansion>Kingsport Horror</expansion>
+        <neighborhood>Kingsport Head</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Devil Reef">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Innsmouth Shore</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Esoteric Order of Dragon">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Church Green</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Falcon Point">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Innsmouth Shore</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="First Natinoal Grocery">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Factory District</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Gilman House Hotel">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Factory District</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Innsmouth Jail">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Church Green</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Jail Cell">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Church Green</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Marsh Refinery">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Factory District</neighborhood>
+        <neighbor name="TODO"/>
+    </location>
+    <location name="Y'ha-nthlei">
+        <expansion>Innsmouth Horror</expansion>
+        <neighborhood>Innsmouth Shore</neighborhood>
+        <neighbor name="TODO"/>
     </location>
 </locations_list>

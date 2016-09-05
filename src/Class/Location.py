@@ -47,16 +47,12 @@ class Location:
         for neighbor in elt.findall('neighbor'):
             self.neighbors.append(neighbor.get('name'))
 
-        self.aquatic  = True if elt.find('aquatic') is not None else False
-        if elt.find('unstable') is not None:
-            self.unstable, self.clue_tokens = True, 1
-        else:
-            self.unstable, self.clue_tokens = False, 0
+        self.aquatic      = elt.get('aquatic', default=False)
+        self.unstable     = elt.get('unstable', default=False)
+        self.clue_tokens  = 1 if self.unstable else 0
 
-        # Is there something in this place?
-        self.investigators = []
-        self.monsters      = []
-        self.portal        = []
+        self.investigators, self.monsters, self.portal = [], [], []
+        print(self)
 
     def incoming_investigator(self, investigator_name):
         logging.info(investigator_name + " arrives in: " + self.name_colored)
@@ -72,22 +68,22 @@ class Location:
         """
         _str = self.name + "\n" + "=" * len(self.name) + "\n"
         if self.unstable:
-            _str += "--> unstable location\n"
+            _str += "(unstable location)\n"
         if self.aquatic:
-            _str += "--> aquatic location\n"
+            _str += "(aquatic location)\n"
 
-        _str += "- clue token(s):   " + str(self.clue_tokens)
-        _str += "\n- investigator(s): "
+        _str += "- clue token(s)   : " + str(self.clue_tokens)
+        _str += "\n- investigator(s) : "
         if len(self.investigators) >0:
             _str += ', '.join(self.investigators)
         else:
             _str += "None"
-        _str += "\n- monster(s):      "
+        _str += "\n- monster(s)      : "
         if len(self.monsters) >0:
             _str += ', '.join(self.monsters)
         else:
             _str += "None"
-        _str += "\n- portal:          "
+        _str += "\n- portal          : "
         if len(self.portal) >0:
             _str += ', '.join(self.portal)
         else:
